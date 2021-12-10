@@ -83,7 +83,7 @@
             </div>
 
             <div class="page-section border-bottom-2">
-                <div class="container page__container">
+                <div class="containe page__container" style="padding:20px;">
                     <div class="row align-items-end mb-16pt mb-md-32pt">
                         <div class="col-md-auto mb-32pt mb-md-0">
                             <div class="page-headline page-headline--title text-center text-md-left p-0">
@@ -124,12 +124,14 @@
                                             <div class="flex">
                                                 <a class="card-title" href="course.html">Learn Angular fundamentals</a>
                                                 <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                <p>What other students turned professionals have to say about us after learning with us and reaching their goals.</p>
                                             </div>
+                                            
                                             <a href="course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
                                         </div>
                                         <div class="d-flex">
                                             <div class="rating flex">
-                                                <span class="rating__item"><span class="material-icons">star</span></span>
+                                                <span class="rating__item"><a class="fa fa-edit">star</span></span>
                                                 <span class="rating__item"><span class="material-icons">star</span></span>
                                                 <span class="rating__item"><span class="material-icons">star</span></span>
                                                 <span class="rating__item"><span class="material-icons">star</span></span>
@@ -146,7 +148,10 @@
                                         <img src="assets/images/paths/angular_40x40@2x.png" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
-                                        <div class="card-title mb-0">Learn Angular fundamentals</div>
+                                        <div class="card-title mb-0">
+                                            Learn Angular fundamentals
+                                            <p>lkjhgf opiuytr uytd</p>
+                                        </div>
                                         <p class="lh-1 mb-0">
                                             <span class="text-black-50 small">with</span>
                                             <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
