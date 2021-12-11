@@ -11,14 +11,14 @@
                     <!-- Navbar Brand -->
                     <a href="index.html" class="navbar-brand">
                         <img class="navbar-brand-icon mr-0 mr-md-8pt" src="assets/images/logo/white-100@2x.png" width="30" alt="Tutorio">
-                        <span class="d-none d-md-block">Tutorio</span>
+                        <span class="d-none d-md-block">THENADAKA</span>
                     </a>
 
-                    <button class="btn btn-black mr-16pt" data-toggle="modal" data-target="#courses">Courses <i class="material-icons">arrow_drop_down</i></button>
+                    <button class="btn btn-black mr-16pt" data-toggle="modal" data-target="#courses">CATEGORIES <i class="fa fa-edit"></i></button>
 
                     <form class="search-form search-form--black search-form-courses d-none d-md-flex" action="library-filters.html">
                         <input type="text" class="form-control" placeholder="What would you like to learn?">
-                        <button class="btn" type="submit" role="button"><i class="material-icons">search</i></button>
+                        <button class="btn" type="submit" role="button"><i class="fa fa-edit"></i></span></button>
                     </form>
 
                     <!-- Main Navigation -->
@@ -26,12 +26,12 @@
                     <ul class="nav navbar-nav ml-auto flex-nowrap" style="white-space: nowrap;">
                         <li class="ml-16pt nav-item">
                             <a href="login.html" class="nav-link">
-                                <i class="material-icons">lock_open</i>
+                            <i class="fa fa-user"></i>
                                 <span class="sr-only">Login</span>
                             </a>
                         </li>
                         <li class="d-none d-sm-flex nav-item">
-                            <a href="pricing.html" class="btn btn-accent">Get started</a>
+                            <a href="pricing.html" class="btn btn-accent">Add Listing</a>
                         </li>
                     </ul>
 
