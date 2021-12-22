@@ -1,36 +1,26 @@
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Directro - Directory and Listing Template" />
+    <meta name="author" content="potenzaglobalsolutions.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Home</title>
+    <title>Directro - Directory and Listing Template</title>
 
-    <!-- Prevent the demo from appearing in search engines -->
-    <meta name="robots" content="noindex">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
 
-    <!-- Perfect Scrollbar -->
-    <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="../../fonts.googleapis.com/css2.css">
 
-    <!-- Fix Footer CSS -->
-    <link type="text/css" href="assets/vendor/fix-footer.css" rel="stylesheet">
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" href="assets/css/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="assets/css/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
 
-    <!-- Material Design Icons -->
-    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/material-icons.rtl.css" rel="stylesheet">
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" href="assets/css/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup/magnific-popup.css" />
 
-    <!-- Font Awesome Icons -->
-    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/fontawesome.rtl.css" rel="stylesheet">
-
-    <!-- Preloader -->
-    <link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/preloader.rtl.css" rel="stylesheet">
-
-    <!-- App CSS -->
-    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet">
+    <!-- Template Style -->
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>

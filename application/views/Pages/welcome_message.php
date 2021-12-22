@@ -1,2540 +1,756 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+  <head>
+   
+  <?php $this->load->view("Templates/head") ?>
 
-<?php $this->load->view("Templates/head") ?>
+  </head>
 
-<body class="layout-navbar-mini-fixed-bottom">
-    <div class="preloader">
-        <div class="sk-double-bounce">
-            <div class="sk-child sk-double-bounce1"></div>
-            <div class="sk-child sk-double-bounce2"></div>
-        </div>
+<body>
+
+<?php $this->load->view("Templates/header") ?>
+
+<!--=================================
+banner -->
+<section class="banner bg-holder bg-overlay-black-50" style="background-image: url(assets/images/bg/01.jpg);background-size:cover;">
+  <div class="container">
+    <div class="row justify-content-center position-relative">
+      <div class="col-lg-10 text-center">
+        <h1 class="text-white">Discover secret places in the city</h1>
+        <p class="text-white banner-sub-title">Find the best places to visit, hotel, spa, cafe, and many more from local experts.</p>
+      </div>
     </div>
-
-    <!-- Header Layout -->
-    <div class="mdk-header-layout js-mdk-header-layout">
-
-        <!-- Header -->
-
-        <?php $this->load->view("Templates/Header") ?>
-
-        <!-- // END Header -->
-
-        <!-- Header Layout Content -->
-        <div class="mdk-header-layout__content page-content ">
-            <div class="mdk-box mdk-box--bg-gradient-primary bg-dark js-mdk-box position-relative overflow-hidden mb-0"
-                data-effects="parallax-background blend-background"
-                style="background-image: url(assets/images/back2.png);background-size:cover;background-attatchment:fixed;">
-                <div class="mdk-box__bg">
-                    <div class="mdk-box__bg-front"></div>
-                </div>
-                <div class="mdk-box__content">
-                    <div class="container page__container py-64pt py-md-112pt">
-                        <div class="row align-items-center text-center text-md-left">
-                            <div class="col-md-12 col-lg-12 order-1 order-md-0">
-                                <h1 class="text-white text-center">Easly find <span
-                                        class="d-block d-md-inline-block text-scramble js-text-scramble">Development</span>
-                                </h1>
-                                <p class="lead mb-32pt mb-lg-48pt text-white text-center">Business, Technology and
-                                    Creative Skills
-                                    taught by industry experts. Explore a wide range of skills with our professional
-                                    tutorials.</p>
-                                <!-- <a href="library.html" class="btn btn-lg btn-white btn--raised mb-16pt">Browse Courses</a>
-                                <p class="mb-0"><a href="index.html" class="text-white-70 text-underline"><strong>Are you a teacher?</strong></a></p> -->
-                                <div class="barnersearch">
-                                    <form action="https://www.radiustheme.com/demo/wordpress/themes/classima/all-ads/"
-                                        class="form-vertical rtcl-widget-search-form rtcl-search-inline-form classima-listing-search-form rtin-style-popup rtin-count-3">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                                                <div class="form-group">
-                                                    <div class="rtcl-search-input-button rtcl-search-input-location">
-                                                        <span class="search-input-label location-name">
-                                                            Select Location </span>
-                                                        <input type="hidden" class="rtcl-term-field"
-                                                            name="rtcl_location" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6 col-sm-6 col-12 category">
-                                                <div class="form-group">
-                                                    <div class="rtcl-search-input-button rtcl-search-input-category">
-                                                        <span class="search-input-label category-name">
-                                                            Select Category </span>
-                                                        <span class="search-input-label category-name">
-                                                            <input type="hidden" name="rtcl_category"
-                                                                class="rtcl-term-field" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-sm-6 col-12 keyword">
-                                                <div class="form-group">
-                                                    <div class="rtcl-search-input-button rtin-keyword">
-                                                        <input type="text" data-type="listing" name="q"
-                                                            class="rtcl-autocomplete ui-autocomplete-input"
-                                                            placeholder="Enter Keyword here ..." value=""
-                                                            autocomplete="off">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-6 col-sm-6 col-12 rtin-btn-holder">
-                                                <button type="submit"
-                                                    class="rtin-search-btn rdtheme-button-1">Search</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-
-                            </div>
-                            <!-- <div class="col-md-6 col-lg-7 order-0 order-md-1 text-center mb-32pt mb-md-0">
-                                <img src="assets/images/macbooek.png" alt="macbook" class="home-macbook">
-                            </div> -->
-                        </div>
-                    </div>
-                    <!-- <div class="hero container text-center py-112pt">
-      <h1 class="text-white">Learn to Code</h1>
-      <p class="lead measure-hero-lead mx-auto mb-48pt text-white">Business, Technology and Creative Skills taught by industry experts. Explore a wide range of skills with our professional tutorials.</p>
-      <a href="library.html" class="btn btn-lg btn-outline-white">Browse Courses</a>
-    </div> -->
-                </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <form class="home-search">
+          <div class="row mt-3 mt-lg-5">
+            <div class="col-sm-6 col-lg-5 col-xl-5">
+              <div class="form-group mb-3 mb-lg-0">
+                <span>What?</span>
+                <input type="text" class="form-control" placeholder="Ex: restaurants, hotels, cares, bars">
+              </div>
             </div>
-
-            <div class="bg-white border-bottom-2 py-16pt py-sm-24pt py-md-32pt ">
-                <div class="container page__container">
-                    <div class="row align-items-center">
-                        <div
-                            class="d-flex col-md align-items-center border-bottom border-md-0 mb-16pt mb-md-0 pb-16pt pb-md-0">
-                            <div
-                                class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <div class="flex">
-                                <p class="mb-0"><strong>8,000+ Courses</strong></p>
-                                <p class="text-black-70 mb-0">Explore a wide range of skills.</p>
-                            </div>
-                        </div>
-                        <div
-                            class="d-flex col-md align-items-center border-bottom border-md-0 mb-16pt mb-md-0 pb-16pt pb-md-0">
-                            <div
-                                class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <div class="flex">
-                                <p class="mb-0"><strong>By Industry Experts</strong></p>
-                                <p class="text-black-70 mb-0">Professional development from the best people.</p>
-                            </div>
-                        </div>
-                        <div class="d-flex col-md align-items-center">
-                            <div
-                                class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <div class="flex">
-                                <p class="mb-0"><strong>Unlimited Access</strong></p>
-                                <p class="text-black-70 mb-0">Unlock Library and learn any topic with one subscription.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-sm-6 col-lg-4 col-xl-5">
+              <div class="form-group mb-3 mb-lg-0 form-location">
+                <span>Whare?</span>
+                <input type="text" class="form-control" placeholder="Ex: Choose your city or location">
+                <a class="location-icon" href="index.html#"> <i class="far fa-compass"></i> </a>
+              </div>
             </div>
-            <section class="m" data-id="79747a8" data-element_type="section">
-                <div class="elementor-container elementor-column-gap-default " style="padding:20px;">
-                    <div class="elementor-row">
-                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3d52e8e"
-                            data-id="3d52e8e" data-element_type="column">
-                            <div class="elementor-column-wrap elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-element-018fa10 elementor-widget elementor-widget-rt-title"
-                                        data-id="018fa10" data-element_type="widget"
-                                        data-widget_type="rt-title.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="rt-el-title rtin-style-3">
-                                                <h2 class="rtin-title text-center">Browse From Top Categories</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-47a2146 elementor-widget elementor-widget-rt-listing-cat-box"
-                                        data-id="47a2146" data-element_type="widget"
-                                        data-widget_type="rt-listing-cat-box.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="rt-el-listing-cat-box">
-                                                <div class="row auto-clear">
-                                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                                        <div class="rtin-item-wrap">
-                                                            <div class="rtin-item">
-
-                                                                <a class="rtin-title-area"
-                                                                    href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/business-industry/">
-                                                                    <div class="rtin-icon justify-content-center"><img loading="lazy"
-                                                                            src="https://www.radiustheme.com/demo/wordpress/themes/classima/wp-content/uploads/2019/08/industry.png"
-                                                                            alt="Business &amp; Industry" width="50"
-                                                                            height="50"></div>
-                                                                    <h3 class="rtin-title text-center">Business &amp; Industry</h3>
-                                                                    <div class="rtin-count">0 Ads</div>
-                                                                </a>
-                                                                <ul class="rtin-sub-cats">
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/business-industry/industry-machinery-tools/">Industry
-                                                                            Machinery &amp; Tools (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/business-industry/licences-titles-tenders/">Licences,
-                                                                            Titles &amp; Tenders (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/business-industry/medical-equipment-supplies/">Medical
-                                                                            Equipment &amp; Supplies (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/business-industry/office-supplies-stationary/">Office
-                                                                            Supplies &amp; Stationary (0)</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                                        <div class="rtin-item-wrap">
-                                                            <div class="rtin-item">
-                                                                <a class="rtin-title-area"
-                                                                    href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/cars-vehicles/">
-                                                                    <div class="rtin-icon"><img loading="lazy"
-                                                                            src="https://www.radiustheme.com/demo/wordpress/themes/classima/wp-content/uploads/2018/07/service2.png"
-                                                                            alt="Cars &amp; Vehicles" width="50"
-                                                                            height="50"></div>
-                                                                    <h3 class="rtin-title text-center">Cars &amp; Vehicles</h3>
-                                                                    <div class="rtin-count">0 Ads</div>
-                                                                </a>
-                                                                <ul class="rtin-sub-cats">
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/cars-vehicles/motorbikes-scooters/">Motorbikes
-                                                                            &amp; Scooters (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/cars-vehicles/trucks-vans-buses/">Trucks,
-                                                                            Vans &amp; Buses (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/cars-vehicles/auto-parts-accessories/">Auto
-                                                                            Parts &amp; Accessories (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/cars-vehicles/bicycles-and-three-wheelers/">Bicycles
-                                                                            and Three Wheelers (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/cars-vehicles/cars/">Cars
-                                                                            (0)</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                                        <div class="rtin-item-wrap">
-                                                            <div class="rtin-item">
-                                                                <a class="rtin-title-area"
-                                                                    href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/electronics/">
-                                                                    <div class="rtin-icon"><img loading="lazy"
-                                                                            src="https://www.radiustheme.com/demo/wordpress/themes/classima/wp-content/uploads/2018/07/service1.png"
-                                                                            alt="Electronics" width="50" height="50">
-                                                                    </div>
-                                                                    <h3 class="rtin-title text-center">Electronics</h3>
-                                                                    <div class="rtin-count">4 Ads</div>
-                                                                </a>
-                                                                <ul class="rtin-sub-cats">
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/electronics/computers-tablets/">Computers
-                                                                            &amp; Tablets (2)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/electronics/mobile-phone/">Mobile
-                                                                            Phone (1)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/electronics/cameras-camcorders/">Cameras
-                                                                            &amp; Camcorders (1)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/electronics/freeze/">Freeze
-                                                                            (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/electronics/tv-video-accessories/">TV
-                                                                            &amp; Video Accessories (0)</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                                        <div class="rtin-item-wrap">
-                                                            <div class="rtin-item">
-                                                                <a class="rtin-title-area"
-                                                                    href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/health-beauty/">
-                                                                    <div class="rtin-icon"><img loading="lazy"
-                                                                            src="https://www.radiustheme.com/demo/wordpress/themes/classima/wp-content/uploads/2019/08/beauty.png"
-                                                                            alt="Health &amp; Beauty" width="50"
-                                                                            height="50"></div>
-                                                                    <h3 class="rtin-title text-center">Health &amp; Beauty</h3>
-                                                                    <div class="rtin-count">0 Ads</div>
-                                                                </a>
-                                                                <ul class="rtin-sub-cats">
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/health-beauty/shoes-footwear/">Shoes
-                                                                            &amp; Footwear (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/health-beauty/watches/">Watches
-                                                                            (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/health-beauty/health-beauty-items/">Health
-                                                                            &amp; Beauty Items (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/health-beauty/jewellery/">Jewellery
-                                                                            (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/health-beauty/other-personal-items/">Other
-                                                                            Personal Items (0)</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                                        <div class="rtin-item-wrap">
-                                                            <div class="rtin-item">
-                                                                <a class="rtin-title-area"
-                                                                    href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/hobby-sport-kids/">
-                                                                    <div class="rtin-icon"><img loading="lazy"
-                                                                            src="https://www.radiustheme.com/demo/wordpress/themes/classima/wp-content/uploads/2018/07/service5.png"
-                                                                            alt="Hobby, Sport &amp; Kids" width="50"
-                                                                            height="50"></div>
-                                                                    <h3 class="rtin-title text-center">Hobby, Sport &amp; Kids</h3>
-                                                                    <div class="rtin-count">4 Ads</div>
-                                                                </a>
-                                                                <ul class="rtin-sub-cats">
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/hobby-sport-kids/sports-equipment/">Sports
-                                                                            Equipment (3)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/hobby-sport-kids/childrens-items/">Children's
-                                                                            Items (1)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/hobby-sport-kids/music-books-movies/">Music,
-                                                                            Books &amp; Movies (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/hobby-sport-kids/musical-instruments/">Musical
-                                                                            Instruments (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/hobby-sport-kids/handicrafts-decoration/">Handicrafts
-                                                                            &amp; Decoration (0)</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                                        <div class="rtin-item-wrap">
-                                                            <div class="rtin-item">
-                                                                <a class="rtin-title-area"
-                                                                    href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/pets-animals/">
-                                                                    <div class="rtin-icon"><img loading="lazy"
-                                                                            src="https://www.radiustheme.com/demo/wordpress/themes/classima/wp-content/uploads/2018/07/service4.png"
-                                                                            alt="Pets &amp; Animals" width="50"
-                                                                            height="50"></div>
-                                                                    <h3 class="rtin-title text-center">Pets &amp; Animals</h3>
-                                                                    <div class="rtin-count">0 Ads</div>
-                                                                </a>
-                                                                <ul class="rtin-sub-cats">
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/pets-animals/farm-animals/">Farm
-                                                                            Animals (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/pets-animals/animal-accessories/">Animal
-                                                                            Accessories (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/pets-animals/others-animals/">Others
-                                                                            Animals (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/pets-animals/pets/">Pets
-                                                                            (0)</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                                        <div class="rtin-item-wrap">
-                                                            <div class="rtin-item">
-                                                                <a class="rtin-title-area"
-                                                                    href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/property/">
-                                                                    <div class="rtin-icon"><img loading="lazy"
-                                                                            src="https://www.radiustheme.com/demo/wordpress/themes/classima/wp-content/uploads/2018/07/service6.png"
-                                                                            alt="Property" width="50" height="50"></div>
-                                                                    <h3 class="rtin-title text-center">Property</h3>
-                                                                    <div class="rtin-count">12 Ads</div>
-                                                                </a>
-                                                                <ul class="rtin-sub-cats">
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/property/apartments-flats/">Apartments
-                                                                            &amp; Flats (9)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/property/houses/">Houses
-                                                                            (2)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/property/commercial-property/">Commercial
-                                                                            Property (1)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/property/garages/">Garages
-                                                                            (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/property/plots-land/">Plots
-                                                                            &amp; Land (0)</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                                        <div class="rtin-item-wrap">
-                                                            <div class="rtin-item">
-                                                                <a class="rtin-title-area"
-                                                                    href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/services/">
-                                                                    <div class="rtin-icon"><img loading="lazy"
-                                                                            src="https://www.radiustheme.com/demo/wordpress/themes/classima/wp-content/uploads/2019/08/service.png"
-                                                                            alt="Services" width="50" height="50"></div>
-                                                                    <h3 class="rtin-title text-center">Services</h3>
-                                                                    <div class="rtin-count">0 Ads</div>
-                                                                </a>
-                                                                <ul class="rtin-sub-cats">
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/services/tickets/">Tickets
-                                                                            (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/services/travel-visa/">Travel
-                                                                            &amp; Visa (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/services/business-technical-services/">Business
-                                                                            &amp; Technical Services (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/services/domestic-personal/">Domestic
-                                                                            &amp; Personal (0)</a></li>
-                                                                    <li><a
-                                                                            href="https://www.radiustheme.com/demo/wordpress/themes/classima/listing-category/services/events-hospitality/">Events
-                                                                            &amp; Hospitality (0)</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="page-section border-bottom-2 bg-white">
-                <div class="containe page__container" style="padding:20px;">
-                    <div class="row align-items-end mb-16pt mb-md-32pt">
-                        <div class="col-md-auto mb-32pt mb-md-0">
-                            <div class="page-headline page-headline--title text-center text-md-left p-0">
-                                <h2>Top Most Viewed</h2>
-                            </div>
-                        </div>
-                        <div class="col-md text-center text-md-right d-flex justify-content-md-end align-items-center flex-wrap"
-                            style="white-space: nowrap;">
-                            <h5 class="mr-24pt mb-md-0 d-md-inline-block">Popular Searches</h5>
-                            <a href="library-development.html"
-                                class="chip mb-16pt mb-md-0 chip-secondary">Hotels</a>
-                            <a href="library-development.html"
-                                class="chip mb-16pt mb-md-0 chip-outline-secondary">Schools</a>
-                            <a href="library-development.html"
-                                class="chip mb-16pt mb-md-0 chip-outline-secondary">Hospitals</a>
-                            <a href="library-development.html"
-                                class="chip mb-16pt mb-md-0 chip-outline-secondary d-md-none d-lg-inline-flex">Farms</a>
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-
-                            <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal "
-                                data-partial-height="40" data-toggle="popover" data-trigger="click">
-
-
-                                <a href="course.html" class="js-image" data-position="center">
-                                    <img src="assets/images/paths/angular_430x168.png" alt="course">
-                                    <span class="overlay__content">
-                                        <span class="overlay__action d-flex flex-column text-center">
-                                            <i class="material-icons">play_circle_outline</i>
-                                            <small>Preview course</small>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <span
-                                    class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-accent text-white">NEW</span>
-
-                                <div class="mdk-reveal__content">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="flex">
-                                                <a class="card-title" href="course.html">Learn Angular fundamentals</a>
-                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
-                                                <p>What other students turned professionals have to say about us after
-                                                    learning with us and reaching their goals.</p>
-                                            </div>
-
-                                            <a href="course.html"
-                                                class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="rating flex">
-                                                <span class="rating__item"><a class="fa fa-edit">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star_border</span></span>
-                                            </div>
-                                            <small class="text-50">6 hours</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popoverContainer d-none">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="assets/images/paths/angular_40x40@2x.png" width="40" height="40"
-                                            alt="Angular" class="rounded">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="card-title mb-0">
-                                            Learn Angular fundamentals
-                                            <p>lkjhgf opiuytr uytd</p>
-                                        </div>
-                                        <p class="lh-1 mb-0">
-                                            <span class="text-black-50 small">with</span>
-                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how
-                                    to create basic applications.</p>
-
-                                <div class="mb-16pt">
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with
-                                                Angular</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular
-                                                applications</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular
-                                                CLI</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency
-                                                Injection</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
-                                    </div>
-                                </div>
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="col text-right">
-                                        <a href="course.html" class="btn btn-primary">Watch trailer</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-
-                            <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal "
-                                data-partial-height="40" data-toggle="popover" data-trigger="click">
-
-
-                                <a href="course.html" class="js-image" data-position="center">
-                                    <img src="assets/images/paths/swift_430x168.png" alt="course">
-                                    <span class="overlay__content">
-                                        <span class="overlay__action d-flex flex-column text-center">
-                                            <i class="material-icons">play_circle_outline</i>
-                                            <small>Preview course</small>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <div class="mdk-reveal__content">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="flex">
-                                                <a class="card-title" href="course.html">Build an iOS Application in
-                                                    Swift</a>
-                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
-                                            </div>
-                                            <a href="course.html"
-                                                class="ml-4pt material-icons text-accent card-course__icon-favorite">favorite</a>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="rating flex">
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star_border</span></span>
-                                            </div>
-                                            <small class="text-50">6 hours</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popoverContainer d-none">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="assets/images/paths/swift_40x40@2x.png" width="40" height="40"
-                                            alt="Angular" class="rounded">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="card-title mb-0">Build an iOS Application in Swift</div>
-                                        <p class="lh-1 mb-0">
-                                            <span class="text-black-50 small">with</span>
-                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how
-                                    to create basic applications.</p>
-
-                                <div class="mb-16pt">
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with
-                                                Angular</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular
-                                                applications</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular
-                                                CLI</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency
-                                                Injection</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
-                                    </div>
-                                </div>
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="col text-right">
-                                        <a href="course.html" class="btn btn-primary">Watch trailer</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-
-                            <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal "
-                                data-partial-height="40" data-toggle="popover" data-trigger="click">
-
-
-                                <a href="course.html" class="js-image" data-position="center">
-                                    <img src="assets/images/paths/wordpress_430x168.png" alt="course">
-                                    <span class="overlay__content">
-                                        <span class="overlay__action d-flex flex-column text-center">
-                                            <i class="material-icons">play_circle_outline</i>
-                                            <small>Preview course</small>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <div class="mdk-reveal__content">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="flex">
-                                                <a class="card-title" href="course.html">Build a WordPress Website</a>
-                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
-                                            </div>
-                                            <a href="course.html"
-                                                class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="rating flex">
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star_border</span></span>
-                                            </div>
-                                            <small class="text-50">6 hours</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popoverContainer d-none">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="assets/images/paths/wordpress_40x40@2x.png" width="40" height="40"
-                                            alt="Angular" class="rounded">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="card-title mb-0">Build a WordPress Website</div>
-                                        <p class="lh-1 mb-0">
-                                            <span class="text-black-50 small">with</span>
-                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how
-                                    to create basic applications.</p>
-
-                                <div class="mb-16pt">
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with
-                                                Angular</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular
-                                                applications</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular
-                                                CLI</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency
-                                                Injection</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
-                                    </div>
-                                </div>
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="col text-right">
-                                        <a href="course.html" class="btn btn-primary">Watch trailer</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-
-                            <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal "
-                                data-partial-height="40" data-toggle="popover" data-trigger="click">
-
-
-                                <a href="course.html" class="js-image" data-position="left">
-                                    <img src="assets/images/paths/react_430x168.png" alt="course">
-                                    <span class="overlay__content">
-                                        <span class="overlay__action d-flex flex-column text-center">
-                                            <i class="material-icons">play_circle_outline</i>
-                                            <small>Preview course</small>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <div class="mdk-reveal__content">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="flex">
-                                                <a class="card-title" href="course.html">Become a React Native
-                                                    Developer</a>
-                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
-                                            </div>
-                                            <a href="course.html"
-                                                class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="rating flex">
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star_border</span></span>
-                                            </div>
-                                            <small class="text-50">6 hours</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popoverContainer d-none">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="assets/images/paths/react_40x40@2x.png" width="40" height="40"
-                                            alt="Angular" class="rounded">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="card-title mb-0">Become a React Native Developer</div>
-                                        <p class="lh-1 mb-0">
-                                            <span class="text-black-50 small">with</span>
-                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how
-                                    to create basic applications.</p>
-
-                                <div class="mb-16pt">
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with
-                                                Angular</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular
-                                                applications</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular
-                                                CLI</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency
-                                                Injection</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
-                                    </div>
-                                </div>
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="col text-right">
-                                        <a href="course.html" class="btn btn-primary">Watch trailer</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-
-                            <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal "
-                                data-partial-height="40" data-toggle="popover" data-trigger="click">
-
-
-                                <a href="course.html" class="js-image" data-position="center">
-                                    <img src="assets/images/paths/redis_430x168.png" alt="course">
-                                    <span class="overlay__content">
-                                        <span class="overlay__action d-flex flex-column text-center">
-                                            <i class="material-icons">play_circle_outline</i>
-                                            <small>Preview course</small>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <div class="mdk-reveal__content">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="flex">
-                                                <a class="card-title" href="course.html">Become a Redis Developer</a>
-                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
-                                            </div>
-                                            <a href="course.html"
-                                                class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="rating flex">
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star_border</span></span>
-                                            </div>
-                                            <small class="text-50">6 hours</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popoverContainer d-none">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="assets/images/paths/redis_40x40@2x.png" width="40" height="40"
-                                            alt="Angular" class="rounded">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="card-title mb-0">Become a Redis Developer</div>
-                                        <p class="lh-1 mb-0">
-                                            <span class="text-black-50 small">with</span>
-                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how
-                                    to create basic applications.</p>
-
-                                <div class="mb-16pt">
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with
-                                                Angular</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular
-                                                applications</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular
-                                                CLI</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency
-                                                Injection</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
-                                    </div>
-                                </div>
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="col text-right">
-                                        <a href="course.html" class="btn btn-primary">Watch trailer</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-
-                            <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal "
-                                data-partial-height="40" data-toggle="popover" data-trigger="click">
-
-
-                                <a href="course.html" class="js-image" data-position="left">
-                                    <img src="assets/images/paths/typescript_430x168.png" alt="course">
-                                    <span class="overlay__content">
-                                        <span class="overlay__action d-flex flex-column text-center">
-                                            <i class="material-icons">play_circle_outline</i>
-                                            <small>Preview course</small>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <div class="mdk-reveal__content">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="flex">
-                                                <a class="card-title" href="course.html">Introduction to Typescript</a>
-                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
-                                            </div>
-                                            <a href="course.html"
-                                                class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="rating flex">
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star_border</span></span>
-                                            </div>
-                                            <small class="text-50">6 hours</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popoverContainer d-none">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="assets/images/paths/typescript_40x40@2x.png" width="40" height="40"
-                                            alt="Angular" class="rounded">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="card-title mb-0">Introduction to Typescript</div>
-                                        <p class="lh-1 mb-0">
-                                            <span class="text-black-50 small">with</span>
-                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how
-                                    to create basic applications.</p>
-
-                                <div class="mb-16pt">
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with
-                                                Angular</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular
-                                                applications</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular
-                                                CLI</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency
-                                                Injection</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
-                                    </div>
-                                </div>
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="col text-right">
-                                        <a href="course.html" class="btn btn-primary">Watch trailer</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-
-                            <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal "
-                                data-partial-height="40" data-toggle="popover" data-trigger="click">
-
-
-                                <a href="course.html" class="js-image" data-position="center">
-                                    <img src="assets/images/paths/devops_430x168.png" alt="course">
-                                    <span class="overlay__content">
-                                        <span class="overlay__action d-flex flex-column text-center">
-                                            <i class="material-icons">play_circle_outline</i>
-                                            <small>Preview course</small>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <div class="mdk-reveal__content">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="flex">
-                                                <a class="card-title" href="course.html">Become a DevOps Engineer</a>
-                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
-                                            </div>
-                                            <a href="course.html"
-                                                class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="rating flex">
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star_border</span></span>
-                                            </div>
-                                            <small class="text-50">6 hours</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popoverContainer d-none">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="assets/images/paths/devops_40x40@2x.png" width="40" height="40"
-                                            alt="Angular" class="rounded">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="card-title mb-0">Become a DevOps Engineer</div>
-                                        <p class="lh-1 mb-0">
-                                            <span class="text-black-50 small">with</span>
-                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how
-                                    to create basic applications.</p>
-
-                                <div class="mb-16pt">
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with
-                                                Angular</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular
-                                                applications</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular
-                                                CLI</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency
-                                                Injection</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
-                                    </div>
-                                </div>
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="col text-right">
-                                        <a href="course.html" class="btn btn-primary">Watch trailer</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-
-                            <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal "
-                                data-partial-height="40" data-toggle="popover" data-trigger="click">
-
-
-                                <a href="course.html" class="js-image" data-position="left">
-                                    <img src="assets/images/paths/angular_testing_430x168.png" alt="course">
-                                    <span class="overlay__content">
-                                        <span class="overlay__action d-flex flex-column text-center">
-                                            <i class="material-icons">play_circle_outline</i>
-                                            <small>Preview course</small>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <div class="mdk-reveal__content">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="flex">
-                                                <a class="card-title" href="course.html">Angular Unit Testing</a>
-                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
-                                            </div>
-                                            <a href="course.html"
-                                                class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="rating flex">
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star</span></span>
-                                                <span class="rating__item"><span
-                                                        class="material-icons">star_border</span></span>
-                                            </div>
-                                            <small class="text-50">6 hours</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popoverContainer d-none">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="assets/images/paths/angular_40x40@2x.png" width="40" height="40"
-                                            alt="Angular" class="rounded">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="card-title mb-0">Angular Unit Testing</div>
-                                        <p class="lh-1 mb-0">
-                                            <span class="text-black-50 small">with</span>
-                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <p class="my-16pt text-black-70">Learn the fundamentals of working with Angular and how
-                                    to create basic applications.</p>
-
-                                <div class="mb-16pt">
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with
-                                                Angular</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular
-                                                applications</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular
-                                                CLI</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency
-                                                Injection</small></p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
-                                        <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
-                                    </div>
-                                </div>
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>6 hours</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-4pt">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span
-                                                class="material-icons icon-16pt text-black-50 mr-4pt">assessment</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>Beginner</small></p>
-                                        </div>
-                                    </div>
-                                    <div class="col text-right">
-                                        <a href="course.html" class="btn btn-primary">Watch trailer</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="pt-md-16pt text-center">
-                        <a href="library.html" class="btn btn-outline-secondary">Browse Courses</a>
-                    </div>
-                </div>
+            <div class="col-lg-3 col-xl-2">
+              <a class="btn btn-secondary" href="index.html#"> <i class="fas fa-search-location"></i> Search </a>
             </div>
-
-
-
-
-
-            <div class="js-fix-footer bg-white border-top-2">
-                <div class="container page-section py-lg-48pt">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-6 col-md-4 mb-24pt mb-md-0">
-                                    <h4 class="text-70">Learn</h4>
-                                    <nav class="nav nav-links nav--flush flex-column">
-                                        <a class="nav-link" href="library.html">Library</a>
-                                        <a class="nav-link" href="library-featured.html">Featured</a>
-                                        <a class="nav-link" href="library-filters.html">Explore</a>
-                                        <a class="nav-link" href="paths.html">Learning Paths</a>
-                                    </nav>
-                                </div>
-                                <div class="col-6 col-md-4 mb-24pt mb-md-0">
-                                    <h4 class="text-70">Join us</h4>
-                                    <nav class="nav nav-links nav--flush flex-column">
-                                        <a class="nav-link" href="pricing.html">Pricing</a>
-                                        <a class="nav-link" href="login.html">Login</a>
-                                        <a class="nav-link" href="signup.html">Sign Up</a>
-                                        <a class="nav-link" href="signup-payment.html">Payment</a>
-                                    </nav>
-                                </div>
-                                <div class="col-6 col-md-4 mb-32pt mb-md-0">
-                                    <h4 class="text-70">Community</h4>
-                                    <nav class="nav nav-links nav--flush flex-column">
-                                        <a class="nav-link" href="student-discussions.html">Discussions</a>
-                                        <a class="nav-link" href="student-discussions-ask.html">Ask Question</a>
-                                        <a class="nav-link" href="student-profile.html">Student Profile</a>
-                                        <a class="nav-link" href="instructor-profile.html">Instructor Profile</a>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 text-md-right">
-                            <p class="text-70 brand justify-content-md-end">
-                                <img class="brand-icon" src="assets/images/logo/black-70@2x.png" width="30"
-                                    alt="Tutorio"> Tutorio
-                            </p>
-                            <p class="text-muted mb-0 mb-lg-16pt">Tutorio is an online learning platform that helps
-                                anyone achieve their personal and professional goals.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-footer page-section py-lg-32pt">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-4 mb-24pt mb-md-0">
-                                <p class="text-white-70 mb-8pt"><strong>Follow us</strong></p>
-                                <nav class="nav nav-links nav--flush">
-                                    <a href="index.html#" class="nav-link mr-8pt"><img
-                                            src="assets/images/icon/footer/facebook-square@2x.png" width="24"
-                                            height="24" alt="Facebook"></a>
-                                    <a href="index.html#" class="nav-link mr-8pt"><img
-                                            src="assets/images/icon/footer/twitter-square@2x.png" width="24" height="24"
-                                            alt="Twitter"></a>
-                                    <a href="index.html#" class="nav-link mr-8pt"><img
-                                            src="assets/images/icon/footer/vimeo-square@2x.png" width="24" height="24"
-                                            alt="Vimeo"></a>
-                                    <a href="index.html#" class="nav-link"><img
-                                            src="assets/images/icon/footer/youtube-square@2x.png" width="24" height="24"
-                                            alt="YouTube"></a>
-                                </nav>
-                            </div>
-                            <div class="col-md-6 col-sm-4 mb-24pt mb-md-0 d-flex align-items-center">
-                                <a href="index.html" class="btn btn-outline-white">English <span
-                                        class="icon--right material-icons">arrow_drop_down</span></a>
-                            </div>
-                            <div class="col-md-4 text-md-right">
-                                <p class="mb-8pt d-flex align-items-md-center justify-content-md-end">
-                                    <a href="index.html" class="text-white-70 text-underline mr-16pt">Terms</a>
-                                    <a href="index.html" class="text-white-70 text-underline">Privacy policy</a>
-                                </p>
-                                <p class="text-white-50 mb-0">Copyright 2019 &copy; All rights reserved.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- // END Header Layout Content -->
-
+          </div>
+        </form>
+      </div>
     </div>
-    <!-- // END Header Layout -->
+  </div>
+</section>
+<!--=================================
+banner -->
 
-    <div class="navbar navbar-expand-sm navbar-mini navbar-dark fixed-bottom bg-dark d-none d-md-flex p-0"
-        id="demo-navbar">
-        <div class="container-fluid">
-
-            <!-- Main Navigation -->
-            <ul class="nav navbar-nav flex-nowrap">
-                <li class="nav-item dropup active">
-                    <a href="index.html#" class="nav-link dropdown-toggle" data-toggle="dropdown">Catalog</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item active" href="index.html">Home page</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="library.html">Library</a>
-                        <a class="dropdown-item" href="library-featured.html">Featured</a>
-                        <a class="dropdown-item" href="library-development.html">Development</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="library-filters.html">Explore</a>
-                        <a class="dropdown-item" href="library-filters-list.html">Explore List</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="paths.html">Learning Paths</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="course.html">Course Details</a>
-                        <a class="dropdown-item" href="lesson.html">Lesson Details</a>
-                        <a class="dropdown-item" href="path.html">Path Details</a>
-                    </div>
-                </li>
-                <li class="nav-item dropup">
-                    <a href="index.html#" class="nav-link dropdown-toggle" data-toggle="dropdown">Student</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="student-dashboard.html">Dashboard</a>
-                        <a class="dropdown-item" href="student-my-courses.html">My Courses</a>
-                        <a class="dropdown-item" href="student-take-course.html">Take Course</a>
-                        <a class="dropdown-item" href="student-take-lesson.html">Take Lesson</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="student-take-quiz.html">Take Quiz</a>
-                        <a class="dropdown-item" href="student-quiz-result-details.html">Quiz Result</a>
-                        <a class="dropdown-item" href="student-quiz-results.html">My Quizzes</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="student-path-assessment.html">Skill Assessment</a>
-                        <a class="dropdown-item" href="student-path-assessment-result.html">Skill Result</a>
-                    </div>
-                </li>
-                <li class="nav-item dropup">
-                    <a href="index.html#" class="nav-link dropdown-toggle" data-toggle="dropdown">Instructor</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="instructor-dashboard.html">Dashboard</a>
-                        <a class="dropdown-item" href="instructor-courses.html">Courses</a>
-                        <a class="dropdown-item" href="instructor-quizzes.html">Quizzes</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="instructor-edit-course.html">Edit Course</a>
-                        <a class="dropdown-item" href="instructor-edit-quiz.html">Edit Quiz</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item"
-                            href="http://tutorio-bootstrap.frontendmatter.com/instructor-earnings.html">Earnings</a>
-                        <a class="dropdown-item"
-                            href="http://tutorio-bootstrap.frontendmatter.com/instructor-statement.html">Statement</a>
-                    </div>
-                </li>
-                <li class="nav-item dropup">
-                    <a href="index.html#" class="nav-link dropdown-toggle" data-toggle="dropdown">Community</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="student-discussions.html">Discussions</a>
-                        <a class="dropdown-item"
-                            href="http://tutorio-bootstrap.frontendmatter.com/student-discussion.html">Discussion
-                            Details</a>
-                        <a class="dropdown-item" href="student-discussions-ask.html">Ask Question</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="student-profile.html">Student Profile</a>
-                        <a class="dropdown-item" href="instructor-profile.html">Instructor Profile</a>
-                    </div>
-                </li>
-                <li class="nav-item dropup">
-                    <a href="index.html#" class="nav-link dropdown-toggle" data-toggle="dropdown">Account</a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="pricing.html">Pricing</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="login.html">Login</a>
-                        <a class="dropdown-item" href="signup.html">Signup</a>
-                        <a class="dropdown-item" href="signup-payment.html">Payment</a>
-                        <a class="dropdown-item" href="reset-password.html">Reset Password</a>
-                        <a class="dropdown-item" href="change-password.html">Change Password</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="student-edit-account.html">Edit Account</a>
-                        <a class="dropdown-item" href="student-edit-account-profile.html">Profile &amp; Privacy</a>
-                        <a class="dropdown-item" href="student-edit-account-notifications.html">Email Notifications</a>
-                        <a class="dropdown-item" href="student-edit-account-password.html">Account Password</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="student-billing.html">Subscription</a>
-                        <a class="dropdown-item" href="student-billing-upgrade.html">Upgrade Account</a>
-                        <a class="dropdown-item" href="student-billing-payment.html">Payment Information</a>
-                        <a class="dropdown-item" href="student-billing-history.html">Payment History</a>
-                        <a class="dropdown-item" href="student-billing-invoice.html">Invoice</a>
-                    </div>
-                </li>
-                <li class="nav-item dropup">
-                    <a href="index.html#" class="nav-link dropdown-toggle" data-toggle="dropdown">Components</a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="ui-buttons.html">Buttons</a>
-                        <a class="dropdown-item" href="ui-charts.html">Charts</a>
-                        <a class="dropdown-item" href="ui-avatars.html">Avatars</a>
-                        <a class="dropdown-item" href="ui-forms.html">Forms</a>
-                        <a class="dropdown-item" href="ui-loaders.html">Loaders</a>
-                        <a class="dropdown-item" href="ui-tables.html">Tables</a>
-                        <a class="dropdown-item" href="ui-cards.html">Cards</a>
-                        <a class="dropdown-item" href="ui-icons.html">Icons</a>
-                        <a class="dropdown-item" href="ui-tabs.html">Tabs</a>
-                        <a class="dropdown-item" href="ui-alerts.html">Alerts</a>
-                        <a class="dropdown-item" href="ui-badges.html">Badges</a>
-                        <a class="dropdown-item" href="ui-progress.html">Progress</a>
-                        <a class="dropdown-item" href="ui-pagination.html">Pagination</a>
-                    </div>
-                </li>
-            </ul>
-            <!-- // END Main Navigation -->
-
+<!--=================================
+Category -->
+<section class="py-4 border-bottom" style="background:lavender;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 mb-lg-0 mb-2">
+        <div class="d-flex align-items-center">
+          <h6>Or browse the highlights</h6>
+          <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
         </div>
+      </div>
+      <div class="col-lg-10">
+        <div class="owl-carousel" data-nav-dots="false" data-nav-arrow="false" data-items="6" data-md-items="5" data-sm-items="4" data-xs-items="2" data-xx-items="1" data-space="20" data-autoheight="false">
+          <div class="item">
+            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/01.jpg);" href="index.html#">
+              <span class="mb-0 text-white position-relative">Restaurant</span>
+            </a>
+          </div>
+          <div class="item">
+            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/02.jpg);" href="index.html#">
+              <span class="mb-0 text-white position-relative">Night life</span>
+            </a>
+          </div>
+          <div class="item">
+            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/03.jpg);" href="index.html#">
+              <span class="mb-0 text-white position-relative">Hotels</span>
+            </a>
+          </div>
+          <div class="item">
+            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/04.jpg);" href="index.html#">
+              <span class="mb-0 text-white position-relative">Cafe</span>
+            </a>
+          </div>
+          <div class="item">
+            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/05.jpg);" href="index.html#">
+              <span class="mb-0 text-white position-relative">Club & Bars</span>
+            </a>
+          </div>
+          <div class="item">
+            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/06.jpg);" href="index.html#">
+              <span class="mb-0 text-white position-relative">Museum</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- drawer -->
-    <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
-        <div class="mdk-drawer__content">
-            <div class="sidebar sidebar-dark sidebar-left" data-perfect-scrollbar>
-                <div class="sidebar-p-a sidebar-b-b sidebar-m-b pt-0">
+  </div>
+</section>
+<!--=================================
+ Category -->
 
-                    <!-- Brand -->
-                    <a href="index.html" class="sidebar-brand">
-                        <img class="sidebar-brand-icon" src="assets/images/logo/white-100.svg" width="30" alt="Tutorio">
-                        <span>Tutorio</span>
-                    </a>
-                    <!-- // END Brand -->
 
-                    <!-- Search -->
-                    <form action="library-filters.html" class="search-form search-form--black">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <button class="btn" type="submit" role="button"><i class="material-icons">search</i></button>
-                    </form>
 
-                </div>
-
-                <ul class="sidebar-menu">
-                    <li class="sidebar-menu-item active">
-                        <a class="sidebar-menu-button" href="index.html">Home Page</a>
-                    </li>
-                    <li class="sidebar-menu-item active open">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="index.html#catalog_menu">
-                            Catalog
-                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse show sm-indent" id="catalog_menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="library.html">Library</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="library-featured.html">Featured</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="library-development.html">Development</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="library-filters.html">Explore</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="library-filters-list.html">Explore List</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="paths.html">Learning Paths</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="course.html">Course Details</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="lesson.html">Lesson Details</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="path.html">Path Details</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div class="sidebar-heading">Pages</div>
-                <ul class="sidebar-menu">
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="index.html#student_menu">
-                            Student
-                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse sm-indent" id="student_menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-dashboard.html">Dashboard</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-my-courses.html">My Courses</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-quiz-results.html">My Quizzes</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-take-course.html">Take Course</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-take-lesson.html">Take Lesson</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-take-quiz.html">Take Quiz</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-quiz-result-details.html">Quiz Result</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-path-assessment.html">Skill Assessment</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-path-assessment-result.html">Skill
-                                    Result</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="index.html#instructor_menu">
-                            Instructor
-                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse sm-indent" id="instructor_menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-dashboard.html">Dashboard</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-courses.html">Manage Courses</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-quizzes.html">Manage Quizzes</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-edit-course.html">Edit Course</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-edit-quiz.html">Edit Quiz</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                    href="http://tutorio-bootstrap.frontendmatter.com/instructor-earnings.html">Earnings</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                    href="http://tutorio-bootstrap.frontendmatter.com/instructor-statement.html">Statement</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="index.html#account_menu">
-                            Account
-                            <span class="sidebar-menu-badge badge badge-primary badge-notifications ml-auto">2</span>
-                            <span class="sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse sm-indent" id="account_menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="login.html">Login</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="signup.html">Signup</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="signup-payment.html">Payment</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="reset-password.html">Reset Password</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="change-password.html">Change Password</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-edit-account.html">Edit Account</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-edit-account-profile.html">Profile &amp;
-                                    Privacy</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-edit-account-notifications.html">Email
-                                    Notifications</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-edit-account-password.html">Account
-                                    Password</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-billing.html">Subscription</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-billing-upgrade.html">Upgrade Account</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-billing-payment.html">Payment
-                                    Information</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-billing-history.html">Payment History</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-billing-invoice.html">Invoice</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="index.html#community_menu">
-                            Community
-                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse sm-indent" id="community_menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-discussions.html">Discussions</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                    href="http://tutorio-bootstrap.frontendmatter.com/student-discussion.html">Discussion
-                                    Details</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-discussions-ask.html">Ask Question</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-profile.html">Student Profile</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-profile.html">Instructor Profile</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div class="sidebar-heading">Components</div>
-                <ul class="sidebar-menu">
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="index.html#components_menu">
-                            Components
-                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-buttons.html">Buttons</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-charts.html">Charts</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-avatars.html">Avatars</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-forms.html">Forms</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-loaders.html">Loaders</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-tables.html">Tables</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-cards.html">Cards</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-icons.html">Icons</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-tabs.html">Tabs</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-alerts.html">Alerts</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-badges.html">Badges</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-progress.html">Progress</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-pagination.html">Pagination</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
+<!--=================================
+Places -->
+<section class="space-pb popup-gallery">
+  <div class="containe" style="width:98%;margin:auto;padding-top:80px;">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2>Most Common places near you</h2>
+          <div class="sub-title text-end"> <span> Make a list of your achievements toward your long-term goal</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 mb-4">
+        <div class="listing-item">
+          <div class="listing-image bg-overlay-half-bottom">
+            <img class="img-fluid" src="assets/images/listing/grid/01.jpg" alt="">
+            <div class="listing-quick-box">
+                <a class="category" href="index.html#"> <i class="flaticon-coffee-cup"></i> Cafe</a>
+                <a class="popup popup-single" href="assets/images/listing/grid/01.jpg" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                <a class="like" href="index.html#" data-bs-toggle="tooltip" data-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
             </div>
-        </div>
-    </div>
-    <!-- // END drawer -->
-    <!-- App Settings FAB -->
-    <!-- <div id="app-settings">
-        <app-settings theme-active="blue-light" :theme-location="{
-      'blue-light': 'http://tutorio-bootstrap.frontendmatter.com/index.html',
-      'blue-dark': 'http://tutorio-dark.frontendmatter.com/index.html',
-      'teal-light': 'http://tutorio-teal.frontendmatter.com/index.html',
-      'teal-dark': 'http://tutorio-teal-dark.frontendmatter.com/index.html'
-    }" sidebar-variant="bg-transparent border-0"></app-settings>
-    </div> -->
-    <!-- Modal -->
-    <div class="modal courses-modal" id="courses" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 col-i8-plus bg-body pr-0">
-                            <div class="py-16pt pl-16pt menu">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="index.html#courses-development"
-                                            data-toggle="tab">Development</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html#courses-design"
-                                            data-toggle="tab">Design</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html#courses-photography"
-                                            data-toggle="tab">Photography</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html#courses-marketing"
-                                            data-toggle="tab">Marketing</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html#courses-business"
-                                            data-toggle="tab">Business</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-sm-6 col-i8-plus-auto tab-content">
-
-
-                            <div id="courses-development" class="tab-pane show active">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Courses</h5>
-                                                <ul class="nav flex-column mb-24pt">
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Web Development</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">JavaScript</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">HTML</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">CSS</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">WordPress</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">PHP</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">iOS Development</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <a href="library.html"
-                                                    class="btn btn-block text-center btn-secondary">Library</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Learning Paths</h5>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/angular_40x40@2x.png" width="40"
-                                                            height="40" alt="Angular" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Angular</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">24
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/swift_40x40@2x.png" width="40"
-                                                            height="40" alt="Swift" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Swift</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">22
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/react_40x40@2x.png" width="40"
-                                                            height="40" alt="React Native" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">React Native</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">18
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/wordpress_40x40@2x.png" width="40"
-                                                            height="40" alt="WordPress" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">WordPress</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">13
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-24pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/devops_40x40@2x.png" width="40"
-                                                            height="40" alt="Development Tools"
-                                                            class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Development
-                                                                Tools</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">5
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="paths.html"
-                                                    class="btn btn-block text-center btn-outline-secondary">Learning
-                                                    Paths</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div id="courses-design" class="tab-pane">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Courses</h5>
-                                                <ul class="nav flex-column mb-24pt">
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Illustration</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Design Skills</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Design
-                                                            Techniques</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Page Layout</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Projects</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Drawing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Typography</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <a href="library.html"
-                                                    class="btn btn-block text-center btn-secondary">Library</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Learning Paths</h5>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/angular_40x40@2x.png" width="40"
-                                                            height="40" alt="Angular" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Angular</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">24
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/swift_40x40@2x.png" width="40"
-                                                            height="40" alt="Swift" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Swift</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">22
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/react_40x40@2x.png" width="40"
-                                                            height="40" alt="React Native" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">React Native</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">18
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/wordpress_40x40@2x.png" width="40"
-                                                            height="40" alt="WordPress" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">WordPress</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">13
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-24pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/devops_40x40@2x.png" width="40"
-                                                            height="40" alt="Development Tools"
-                                                            class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Development
-                                                                Tools</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">5
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="paths.html"
-                                                    class="btn btn-block text-center btn-outline-secondary">Learning
-                                                    Paths</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div id="courses-photography" class="tab-pane">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Courses</h5>
-                                                <ul class="nav flex-column mb-24pt">
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Cameras</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Raw Processing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Masking</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Compositing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Portraits</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Photo
-                                                            Management</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Lighting</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <a href="library.html"
-                                                    class="btn btn-block text-center btn-secondary">Library</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Learning Paths</h5>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/angular_40x40@2x.png" width="40"
-                                                            height="40" alt="Angular" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Angular</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">24
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/swift_40x40@2x.png" width="40"
-                                                            height="40" alt="Swift" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Swift</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">22
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/react_40x40@2x.png" width="40"
-                                                            height="40" alt="React Native" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">React Native</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">18
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/wordpress_40x40@2x.png" width="40"
-                                                            height="40" alt="WordPress" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">WordPress</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">13
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-24pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/devops_40x40@2x.png" width="40"
-                                                            height="40" alt="Development Tools"
-                                                            class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Development
-                                                                Tools</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">5
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="paths.html"
-                                                    class="btn btn-block text-center btn-outline-secondary">Learning
-                                                    Paths</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div id="courses-marketing" class="tab-pane">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Courses</h5>
-                                                <ul class="nav flex-column mb-24pt">
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Small Business</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Marketing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Enterprise
-                                                            Marketing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Content
-                                                            Marketing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Online
-                                                            Marketing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Social Media
-                                                            Marketing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Advertising</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <a href="library.html"
-                                                    class="btn btn-block text-center btn-secondary">Library</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Learning Paths</h5>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/angular_40x40@2x.png" width="40"
-                                                            height="40" alt="Angular" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Angular</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">24
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/swift_40x40@2x.png" width="40"
-                                                            height="40" alt="Swift" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Swift</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">22
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/react_40x40@2x.png" width="40"
-                                                            height="40" alt="React Native" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">React Native</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">18
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/wordpress_40x40@2x.png" width="40"
-                                                            height="40" alt="WordPress" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">WordPress</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">13
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-24pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/devops_40x40@2x.png" width="40"
-                                                            height="40" alt="Development Tools"
-                                                            class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Development
-                                                                Tools</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">5
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="paths.html"
-                                                    class="btn btn-block text-center btn-outline-secondary">Learning
-                                                    Paths</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div id="courses-business" class="tab-pane">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Courses</h5>
-                                                <ul class="nav flex-column mb-24pt">
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Business Skills</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Productivity</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Communication</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Leadership</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Management</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Career
-                                                            Development</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Spreadsheets</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <a href="library.html"
-                                                    class="btn btn-block text-center btn-secondary">Library</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Learning Paths</h5>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/angular_40x40@2x.png" width="40"
-                                                            height="40" alt="Angular" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Angular</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">24
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/swift_40x40@2x.png" width="40"
-                                                            height="40" alt="Swift" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Swift</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">22
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/react_40x40@2x.png" width="40"
-                                                            height="40" alt="React Native" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">React Native</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">18
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/wordpress_40x40@2x.png" width="40"
-                                                            height="40" alt="WordPress" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">WordPress</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">13
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-24pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="assets/images/paths/devops_40x40@2x.png" width="40"
-                                                            height="40" alt="Development Tools"
-                                                            class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Development
-                                                                Tools</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">5
-                                                                courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="paths.html"
-                                                    class="btn btn-block text-center btn-outline-secondary">Learning
-                                                    Paths</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+          </div>
+          <div class="listing-details">
+            <div class="listing-details-inner">
+              <div class="listing-title">
+                 <h6><a href="index.html#">Espresso macchiato</a></h6>
+                  <span class="listing-price">$$$</span>
+              </div>
+              <div class="listing-rating-call">
+                <a class="listing-rating" href="index.html#"><span>4.2</span> 12 Rating</a>
+                <a class="listing-call" href="index.html#"><i class="fas fa-phone-volume"></i> +666 658 447</a>
+              </div>
+              <div class="listing-info">
+                <img class="img-fluid" src="assets/images/listing-brand/01.png" alt="">
+                <p class="mb-0">For those of you who are serious about having more.</p>
+              </div>
             </div>
+            <div class="listing-bottom">
+              <a class="listing-loaction" href="index.html#"> <i class="fas fa-map-marker-alt"></i> Piper Drive Zion</a>
+              <span class="listing-open">Open</span>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4">
+        <div class="listing-item">
+          <div class="listing-image bg-overlay-half-bottom">
+            <img class="img-fluid" src="assets/images/listing/grid/02.jpg" alt="">
+            <div class="listing-quick-box">
+                <a class="category" href="index.html#"> <i class="flaticon-megaphone"></i> Nightlife</a>
+                <a class="popup popup-single" href="assets/images/listing/grid/02.jpg" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                <a class="like" href="index.html#" data-bs-toggle="tooltip" data-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
+            </div>
+          </div>
+          <div class="listing-details">
+            <div class="listing-details-inner">
+              <div class="listing-title">
+                 <h6><a href="index.html#">Fantastic Fridaze</a></h6>
+                  <span class="listing-price">$$$</span>
+              </div>
+              <div class="listing-rating-call">
+                <a class="listing-rating" href="index.html#"><span>4.6</span> 10 Rating</a>
+                <a class="listing-call" href="index.html#"><i class="fas fa-phone-volume"></i> +444 656 326</a>
+              </div>
+              <div class="listing-info">
+                <img class="img-fluid" src="assets/images/listing-brand/02.png" alt="">
+                <p class="mb-0">Let success motivate you. Find a pictu success to you.</p>
+              </div>
+            </div>
+            <div class="listing-bottom">
+              <a class="listing-loaction" href="index.html#"> <i class="fas fa-map-marker-alt"></i> 472 Carpenter Rd</a>
+              <span class="listing-open">Open</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4">
+        <div class="listing-item">
+          <div class="listing-image bg-overlay-half-bottom">
+            <img class="img-fluid" src="assets/images/listing/grid/03.jpg" alt="">
+            <div class="listing-quick-box">
+                <a class="category" href="index.html#"> <i class="flaticon-guitar"></i> Sound & music</a>
+                <a class="popup popup-single" href="assets/images/listing/grid/03.jpg" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                <a class="like" href="index.html#" data-bs-toggle="tooltip" data-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
+            </div>
+          </div>
+          <div class="listing-details">
+            <div class="listing-details-inner">
+              <div class="listing-title">
+                 <h6><a href="index.html#">Bike Tours Hollywood</a></h6>
+                  <span class="listing-price">$$$</span>
+              </div>
+              <div class="listing-rating-call">
+                <a class="listing-rating" href="index.html#"><span>4.1</span> 06 Rating</a>
+                <a class="listing-call" href="index.html#"><i class="fas fa-phone-volume"></i> +888 235 956</a>
+              </div>
+              <div class="listing-info">
+                <img class="img-fluid" src="assets/images/listing-brand/03.png" alt="">
+                <p class="mb-0">There are basically six key areas to higher achievement.</p>
+              </div>
+            </div>
+            <div class="listing-bottom">
+              <a class="listing-loaction" href="index.html#"> <i class="fas fa-map-marker-alt"></i> Lincolnton, NC 28092</a>
+              <span class="listing-close">Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-md-0 mb-4">
+        <div class="listing-item">
+          <div class="listing-image bg-overlay-half-bottom">
+            <img class="img-fluid" src="assets/images/listing/grid/04.jpg" alt="">
+            <div class="listing-quick-box">
+                <a class="category" href="index.html#"> <i class="flaticon-customer"></i> Art & Museums</a>
+                <a class="popup popup-single" href="assets/images/listing/grid/04.jpg" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                <a class="like" href="index.html#" data-bs-toggle="tooltip" data-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
+            </div>
+          </div>
+          <div class="listing-details">
+            <div class="listing-details-inner">
+              <div class="listing-title">
+                 <h6><a href="index.html#">The Vatican Museums</a></h6>
+                  <span class="listing-price">$$$</span>
+              </div>
+              <div class="listing-rating-call">
+                <a class="listing-rating" href="index.html#"><span>4.9</span> 03 Rating</a>
+                <a class="listing-call" href="index.html#"><i class="fas fa-phone-volume"></i> +222 356 457</a>
+              </div>
+              <div class="listing-info">
+                <img class="img-fluid" src="assets/images/listing-brand/04.png" alt="">
+                <p class="mb-0">If success is a process with a number of defined steps.</p>
+              </div>
+            </div>
+            <div class="listing-bottom">
+              <a class="listing-loaction" href="index.html#"> <i class="fas fa-map-marker-alt"></i> West Division Street</a>
+              <span class="listing-close">Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
+  </div>
+</section>
+<!--=================================
+Places -->
 
-    <!-- jQuery -->
-    <script src="assets/vendor/jquery.min.js"></script>
 
-    <!-- Bootstrap -->
-    <script src="assets/vendor/popper.min.js"></script>
-    <script src="assets/vendor/bootstrap.min.js"></script>
+<section class="space-ptb bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title-light">
+          <h2>Why choose us</h2>
+          <div class="sub-title text-end bg-transparent"> <span> Do it today. Remind yourself of someone you know who died.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-4">
+        <div class="feature-info-02 mb-lg-5 mb-4">
+          <div class="feature-icon">
+            <span>01</span>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">Excellent reputation</h5>
+            <p>Let success motivate you. Find a picture of what epitomizes success to you and then pull it out when.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-info-02 mb-lg-5 mb-4">
+          <div class="feature-icon">
+            <span>02</span>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">Best local agents</h5>
+            <p>Reflect and experiment until you find the right combination of motivators for your personality goals..</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-info-02 mb-lg-5 mb-4">
+          <div class="feature-icon">
+            <span>03</span>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">Peace of mind</h5>
+            <p>Success isn’t really that difficult. There is a significant portion of the population here in North America.</p>
+          </div>
+        </div>
+      </div>
+       <div class="col-lg-4">
+        <div class="feature-info-02 mb-4 mb-lg-0">
+          <div class="feature-icon">
+            <span>04</span>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">Tons of options</h5>
+            <p class="mb-lg-0">For those of you who are serious about having more, doing more, giving more and being more.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-info-02 mb-4 mb-lg-0">
+          <div class="feature-icon">
+            <span>05</span>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">Explore best places</h5>
+            <p class="mb-lg-0">Success is achievable with some understanding of what to do, some discipline around planning.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-info-02">
+          <div class="feature-icon">
+            <span>06</span>
+          </div>
+          <div class="feature-content">
+            <h5 class="feature-title">Make a listing</h5>
+            <p class="mb-0">The first thing to remember about success is that it is a process – nothing more, nothing less..</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Perfect Scrollbar -->
-    <script src="assets/vendor/perfect-scrollbar.min.js"></script>
 
-    <!-- DOM Factory -->
-    <script src="assets/vendor/dom-factory.js"></script>
+<section class="space-pb popup-gallery overflowx-h">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2>Most visited places</h2>
+          <div class="sub-title text-end"> <span> Make a list of your achievements toward your long-term goal</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="owl-carousel testimonial-center owl-loaded owl-drag" data-nav-dots="true" data-nav-arrow="false" data-items="3" data-md-items="3" data-sm-items="2" data-xs-items="2" data-xx-items="1" data-space="20" data-autoheight="false">
+          
+          
+          
+          
+          
+          
+        <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-3232px, 0px, 0px); transition: all 1s ease 0s; width: 4849px;"><div class="owl-item cloned" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/04.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-customer"></i> Art &amp; Museums</a>
+                  <a class="popup popup-single" href="images/listing/grid/04.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">The Vatican Museums</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.9</span> 03 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +222 356 457</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/04.png" alt="">
+                    <p class="mb-0">If success is a process with a number of defined steps.</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> West Division Street</a>
+                  <span class="listing-close">Closed</span>
+                </div>
+              </div>
+            </div>
+          </div></div><div class="owl-item cloned" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/05.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-wine"></i> Nightclub</a>
+                  <a class="popup popup-single" href="images/listing/grid/05.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">Liberty Club</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.6</span> 15 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +333 659 856</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/05.png" alt="">
+                    <p class="mb-0">For those of you who are serious about having more, doing more,</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> Fort Wayne, IN 46804</a>
+                  <span class="listing-open">Open</span>
+                </div>
+              </div>
+            </div>
+          </div></div><div class="owl-item cloned" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/06.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-food-serving"></i> Restaurant</a>
+                  <a class="popup popup-single" href="images/listing/grid/06.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">Honey Restaurant</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.2</span> 08 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +999 784 578</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/06.png" alt="">
+                    <p class="mb-0">So, make the decision to move forward commit your.</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> 442 Glenholme Street</a>
+                  <span class="listing-open">Open</span>
+                </div>
+              </div>
+            </div>
+          </div></div><div class="owl-item" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/01.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-coffee-cup"></i> Cafe</a>
+                  <a class="popup popup-single" href="images/listing/grid/01.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">Espresso macchiato</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.2</span> 12 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +666 658 447</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/01.png" alt="">
+                    <p class="mb-0">For those of you who are serious about having more.</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> Piper Drive Zion</a>
+                  <span class="listing-open">Open</span>
+                </div>
+              </div>
+            </div>
+          </div></div><div class="owl-item" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/02.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-megaphone"></i> Nightlife</a>
+                  <a class="popup popup-single" href="images/listing/grid/02.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">Fantastic Fridaze</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.6</span> 10 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +444 656 326</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/02.png" alt="">
+                    <p class="mb-0">Let success motivate you. Find a picture of what epitomizes success to you.</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> 472 Carpenter Rd</a>
+                  <span class="listing-open">Open</span>
+                </div>
+              </div>
+            </div>
+          </div></div><div class="owl-item" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/03.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-guitar"></i> Sound &amp; music</a>
+                  <a class="popup popup-single" href="images/listing/grid/03.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">Bike Tours Hollywood</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.1</span> 06 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +888 235 956</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/03.png" alt="">
+                    <p class="mb-0">There are basically six key areas to higher achievement.</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> Lincolnton, NC 28092</a>
+                  <span class="listing-close">Closed</span>
+                </div>
+              </div>
+            </div>
+          </div></div><div class="owl-item" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/04.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-customer"></i> Art &amp; Museums</a>
+                  <a class="popup popup-single" href="images/listing/grid/04.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">The Vatican Museums</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.9</span> 03 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +222 356 457</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/04.png" alt="">
+                    <p class="mb-0">If success is a process with a number of defined steps.</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> West Division Street</a>
+                  <span class="listing-close">Closed</span>
+                </div>
+              </div>
+            </div>
+          </div></div><div class="owl-item" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/05.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-wine"></i> Nightclub</a>
+                  <a class="popup popup-single" href="images/listing/grid/05.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">Liberty Club</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.6</span> 15 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +333 659 856</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/05.png" alt="">
+                    <p class="mb-0">For those of you who are serious about having more, doing more,</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> Fort Wayne, IN 46804</a>
+                  <span class="listing-open">Open</span>
+                </div>
+              </div>
+            </div>
+          </div></div><div class="owl-item active" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/06.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-food-serving"></i> Restaurant</a>
+                  <a class="popup popup-single" href="images/listing/grid/06.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">Honey Restaurant</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.2</span> 08 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +999 784 578</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/06.png" alt="">
+                    <p class="mb-0">So, make the decision to move forward commit your.</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> 442 Glenholme Street</a>
+                  <span class="listing-open">Open</span>
+                </div>
+              </div>
+            </div>
+          </div></div><div class="owl-item cloned active" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/01.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-coffee-cup"></i> Cafe</a>
+                  <a class="popup popup-single" href="images/listing/grid/01.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">Espresso macchiato</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.2</span> 12 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +666 658 447</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/01.png" alt="">
+                    <p class="mb-0">For those of you who are serious about having more.</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> Piper Drive Zion</a>
+                  <span class="listing-open">Open</span>
+                </div>
+              </div>
+            </div>
+          </div></div><div class="owl-item cloned" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/02.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-megaphone"></i> Nightlife</a>
+                  <a class="popup popup-single" href="images/listing/grid/02.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">Fantastic Fridaze</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.6</span> 10 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +444 656 326</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/02.png" alt="">
+                    <p class="mb-0">Let success motivate you. Find a picture of what epitomizes success to you.</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> 472 Carpenter Rd</a>
+                  <span class="listing-open">Open</span>
+                </div>
+              </div>
+            </div>
+          </div></div><div class="owl-item cloned" style="width: 384.078px; margin-right: 20px;"><div class="item">
+            <div class="listing-item">
+              <div class="listing-image bg-overlay-half-bottom">
+                <img class="img-fluid" src="assets/images/listing/grid/03.jpg" alt="">
+                <div class="listing-quick-box">
+                  <a class="category" href="index-02.html#"> <i class="flaticon-guitar"></i> Sound &amp; music</a>
+                  <a class="popup popup-single" href="images/listing/grid/03.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                  <a class="like" href="index-02.html#" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Like"> <i class="far fa-heart"></i> </a>
+                </div>
+              </div>
+              <div class="listing-details">
+                <div class="listing-details-inner">
+                  <div class="listing-title">
+                    <h6><a href="index-02.html#">Bike Tours Hollywood</a></h6>
+                    <span class="listing-price">$$$</span>
+                  </div>
+                  <div class="listing-rating-call">
+                    <a class="listing-rating" href="index-02.html#"><span>4.1</span> 06 Rating</a>
+                    <a class="listing-call" href="index-02.html#"><i class="fas fa-phone-volume"></i> +888 235 956</a>
+                  </div>
+                  <div class="listing-info">
+                    <img class="img-fluid" src="assets/images/listing-brand/03.png" alt="">
+                    <p class="mb-0">There are basically six key areas to higher achievement.</p>
+                  </div>
+                </div>
+                <div class="listing-bottom">
+                  <a class="listing-loaction" href="index-02.html#"> <i class="fas fa-map-marker-alt"></i> Lincolnton, NC 28092</a>
+                  <span class="listing-close">Closed</span>
+                </div>
+              </div>
+            </div>
+          </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i class="fas fa-chevron-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="fas fa-chevron-right"></i></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- MDK -->
-    <script src="assets/vendor/material-design-kit.js"></script>
+<section class="space-ptb bg-holder bg-overlay-black-50" style="background: url(images/bg/04.jpg);">
+  <div class="container">
+    <div class="row position-relative">
+      <div class="col-12 text-center">
+        <h2 class="text-white">Sell or Advertise anything online</h2>
+        <p class="text-white mb-4 mb-md-5">Buy and sell everything from used cars to mobile phones and computers, or search for property, jobs and more</p>
+        <a class="btn btn-primary mt-2 mt-sm-0 me-sm-2 mx-1" href="index-02.html#"> <i class="fas fa-plus-circle"></i> Add your  directory</a>
+        <a class="btn btn-light mt-2 mt-sm-0 ms-sm-2 mx-1" href="index-02.html#"><i class="fas fa-plus-circle"></i> Browse our  directory</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Fix Footer -->
-    <script src="assets/vendor/fix-footer.js"></script>
 
-    <!-- Chart.js -->
-    <script src="assets/vendor/Chart.min.js"></script>
-
-    <!-- App JS -->
-    <script src="assets/js/app.js"></script>
-
-    <!-- Highlight.js -->
-    <script src="assets/js/hljs.js"></script>
-
-    <!-- App Settings (safe to remove) -->
-    <script src="assets/js/app-settings.js"></script>
-
+<!--=================================
+footer-->
+<?php $this->load->view("Templates/footer") ?>
+<!--=================================
+footer-->
 
 
 
 </body>
-
 </html>
