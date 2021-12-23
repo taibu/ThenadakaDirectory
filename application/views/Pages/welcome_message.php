@@ -152,7 +152,7 @@ Places -->
           <div class="listing-image bg-overlay-half-bottom">
             <img class="img-fluid" src="assets/images/listing/grid/02.jpg" alt="">
             <div class="listing-quick-box">
-                <a class="category" href="index.html#"> <i class="flaticon-megaphone"></i> Nightlife</a>
+                <a class="category" href="<?php echo base_url('listing/1') ?>"> <i class="flaticon-megaphone"></i> Nightlife</a>
                 <a class="popup popup-single" href="assets/images/listing/grid/02.jpg" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
                 <a class="like" href="index.html#" data-bs-toggle="tooltip" data-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
             </div>
@@ -160,7 +160,7 @@ Places -->
           <div class="listing-details">
             <div class="listing-details-inner">
               <div class="listing-title">
-                 <h6><a href="index.html#">Fantastic Fridaze</a></h6>
+                 <h6><a href="<?php echo base_url('listing/1') ?>">Fantastic Fridaze</a></h6>
                   <span class="listing-price">$$$</span>
               </div>
               <div class="listing-rating-call">

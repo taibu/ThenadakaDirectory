@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
         <div class="footer-contact-info">
-           <a href="index.html"><img class="img-fluid footer-logo" src="images/logo-dark.svg" alt="logo"></a>
+           <a href="index.html"><img class="img-fluid footer-logo" src="<?php echo base_url('assets/images/logo-dark.svg') ?>" alt="logo"></a>
           <div class="contact-address mt-5 me-5 pe-5">
             <div class="contact-item">
               <p class="fw-normal">6580 Allison Turnpike Creminfort, AL 32808</p>
@@ -94,13 +94,25 @@ Back To Top-->
 Javascript -->
 
   <!-- JS Global Compulsory (Do not remove)-->
-  <script src="assets/js/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/popper/popper.min.js"></script>
-  <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+  <script src="<?php echo base_url('assets/js/jquery-3.6.0.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/popper/popper.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/bootstrap/bootstrap.min.js') ?>"></script>
 
   <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-  <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
-  <script src="assets/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="<?php echo base_url('assets/js/owl-carousel/owl.carousel.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/magnific-popup/jquery.magnific-popup.min.js') ?>"></script>
 
   <!-- Template Scripts (Do not remove)-->
-  <script src="assets/js/custom.js"></script>
+  <script src="<?php echo base_url('assets/js/custom.js') ?>"></script>
+
+
+
+
+  <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+  <script src="<?php echo base_url('assets/js/select2/select2.full.js') ?>"></script>
+ 
+  <script src="<?php echo base_url('assets/js/jarallax/jarallax.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/datetimepicker/moment.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/range-slider/ion.rangeSlider.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/slick/slick.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/datetimepicker/datetimepicker.min.js') ?>"></script>

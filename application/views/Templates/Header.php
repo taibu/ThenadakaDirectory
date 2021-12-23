@@ -4,22 +4,12 @@ header -->
     <nav class="navbar navbar-static-top navbar-expand-lg header-sticky">
         <div class="container-fluid">
           <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i class="fas fa-align-left"></i></button>
-          <a class="navbar-brand" href="index.html">
-            <img class="img-fluid" src="assets/images/logo.svg" alt="logo">
+          <a class="navbar-brand" href="<?php echo base_url() ?>">
+            <img class="img-fluid" src="<?php echo base_url('assets/images/logo.svg') ?>" alt="logo">
           </a>
           <div class="navbar-collapse collapse justify-content-start">
             <ul class="nav navbar-nav">
-              <li class="nav-item dropdown active">
-                <a class="nav-link" href="index.html#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li class="active"><a class="dropdown-item" href="index.html">Home Default</a></li>
-                  <li><a class="dropdown-item" href="index-02.html">Home 02</a></li>
-                  <li><a class="dropdown-item" href="index-03.html">Home 03</a></li>
-                  <li><a class="dropdown-item" href="index-04.html">index Map</a></li>
-                  <li><a class="dropdown-item" href="index-05.html">Index Half Map</a></li>
-                  <li><a class="dropdown-item" href="index-06.html">Index Splash</a></li>
-                </ul>
-              </li>
+              
               <li class="dropdown nav-item">
                 <a href="" class="nav-link" data-bs-toggle="dropdown">Listings  Categories<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                 <ul class="dropdown-menu megamenu dropdown-menu-lg">
@@ -162,7 +152,7 @@ header -->
         <a class="text-white" data-bs-toggle="modal" data-bs-target="#loginModal" href="index.html#">Hello sign in<i class="fa fa-user ps-2 text-primary"></i></a>
       </div>
       <div class="add-listing d-none d-sm-block">
-        <a class="btn btn-primary btn-md" href="dashboard-add-listing.html"> <i class="fa fa-plus-circle"></i>Add listing </a>
+        <a class="btn btn-primary btn-md" href="<?php echo base_url('login') ?>"> <i class="fa fa-plus-circle"></i>Add listing </a>
       </div>
     </div>
     </div>
