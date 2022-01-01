@@ -25,7 +25,10 @@
 
 
     <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/select2/select2.css') ?>" />
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/dropzone/dropzone.css') ?>" />
+
 
     <link rel="stylesheet" href="<?php echo base_url('assets/css/slick/slick-theme.css') ?>" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/datetimepicker/datetimepicker.min.css') ?>" />

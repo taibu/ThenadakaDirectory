@@ -84,7 +84,7 @@
 Back To Top-->
 
 <div id="back-to-top" class="back-to-top">
-  <a href="index.html#"> <i class="fas fa-angle-up"></i></a>
+  <a href="index.html#"> <i class="fa fa-chevron-up" aria-hidden="true"></i></a>
  </div>
 
 <!--=================================
@@ -110,6 +110,7 @@ Javascript -->
 
   <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
   <script src="<?php echo base_url('assets/js/select2/select2.full.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/dropzone/dropzone.js') ?>"></script>
  
   <script src="<?php echo base_url('assets/js/jarallax/jarallax.min.js') ?>"></script>
   <script src="<?php echo base_url('assets/js/datetimepicker/moment.min.js') ?>"></script>

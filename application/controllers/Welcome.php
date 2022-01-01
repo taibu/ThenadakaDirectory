@@ -20,7 +20,8 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('Pages/welcome_message');
+		$data["allcategories"]=$this->Admin_Model->fetch_categories($id);
+		$this->load->view('Pages/welcome_message',$data);
 	}
 
 	public function login()
