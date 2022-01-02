@@ -44,7 +44,7 @@
             <li><a href="index.html#">Hotels</a></li>
             <li><a href="index.html#">Cafe</a></li>
             <li><a href="index.html#">Club & Bars</a></li>
-            <li><a href="index.html#">Museum</a></li>
+           
           </ul>
         </div>
       </div>
@@ -57,7 +57,7 @@
             <li><a href="index.html#">Contact us</a></li>
             <li><a href="index.html#">Pricing and plans</a></li>
             <li><a href="index.html#">Cookies policy</a></li>
-            <li><a href="index.html#">Privacy policy</a></li>
+           
           </ul>
         </div>
       </div>
@@ -65,16 +65,14 @@
      <div class="row align-items-center mt-lg-5 mt-0 pt-lg-4 pt-0">
       <div class="col-md-7 mt-4 mt-sm-0 text-md-start text-center">
         <ul class="list-unstyled mb-0 social-icon">
-          <li><a href="index.html#"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="index.html#"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></li>
-          <li><a href="index.html#"><i class="fab fa-github"></i></a></li>
-          <li><a href="index.html#"><i class="fab fa-dribbble"></i></a></li>
-          <li><a href="index.html#"><i class="fab fa-behance"></i></a></li>
+          <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="index.html#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="index.html#"><i class="fa  fa-linkedin"></i></a></li>
+         
         </ul>
       </div>
       <div class="col-md-5 text-md-end text-center mt-4 mt-md-0">
-        <p class="mb-0">©Copyright 2021 <a href="index.html">Directro</a> All Rights Reserved</p>
+        <p class="mb-0">©Copyright 2021 <a href="<?php echo base_url() ?>">Thenadaka</a> All Rights Reserved</p>
       </div>
     </div>
   </div>

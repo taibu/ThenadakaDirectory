@@ -8,7 +8,7 @@ header -->
             <a class="navbar-brand" href="<?php echo base_url() ?>">
                 <img class="img-fluid" src="<?php echo base_url('assets/images/logo.svg') ?>" alt="logo">
             </a>
-            <div class="navbar-collapse collapse justify-content-start">
+            <!-- <div class="navbar-collapse collapse justify-content-start">
                 <ul class="nav navbar-nav">
 
                     <li class="dropdown nav-item">
@@ -157,7 +157,7 @@ header -->
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <div class="d-block d-md-flex align-items-center">
                 <div class="call me-4 d-inline-block">
                     <a class="text-white" href="tel:1-800-555-1234"><i

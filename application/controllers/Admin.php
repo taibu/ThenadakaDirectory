@@ -49,6 +49,16 @@ class Admin extends CI_Controller {
                 }
                 redirect( base_url('addListing'), 'refresh');  
         }
+        public function SubmitRating(){
+                $ratingadded = $this->Admin_Model->Add_Rating();
+                if($ratingadded=='true'){
+                  $this->session->set_flashdata('success', "Rating saved Successfully");
+                }else{
+                  $this->session->set_flashdata('error', "Operation failed please try again");
+                }
+                //redirect( base_url('addListing'), 'refresh');  
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
+        }
 
 
 }

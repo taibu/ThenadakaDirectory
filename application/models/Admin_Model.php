@@ -15,6 +15,32 @@ class Admin_Model extends CI_Model
         return $q;
     }
 
+    function fetch_mostratedlisting($cat=null){
+        $this->load->database();
+        $this->db;
+        if($cat==null){
+            $q = $this->db->query("SELECT * FROM Listing l inner join users u on l.addedBy=u.UserId  
+            inner join ListingCategories lc on l.Category=lc.CategoryId
+            order by ListingId desc;");
+            return $q;
+        }else{
+            $q = $this->db->query("SELECT * FROM Listing l inner join users u on l.addedBy=u.UserId  
+            inner join ListingCategories lc on l.Category=lc.CategoryId
+            where ListingId='".$this->db->escape_str($cat)."'   order by ListingId desc;");
+            return $q->row_array();
+        }
+        
+        
+    }
+    function fetch_ratings($cat){
+        $this->load->database();
+        $this->db;
+       
+            $q = $this->db->query("SELECT * FROM ratings where ListingId='".$this->db->escape_str($cat)."'   order by RatingId desc;");
+            return $q;
+       
+        
+    }
     function Add_Category(){
         $this->load->database();
         $this->db;
@@ -116,6 +142,23 @@ class Admin_Model extends CI_Model
         return FALSE;
     }
    }
+   function Add_Rating(){
+    $rating=$this->input->get_post('ratings'); 
+    $name=$this->input->get_post('name'); 
+    $Id=$this->input->get_post('Id'); 
+    $message=$this->input->get_post('message'); 
+   
+    $date=date("d/m/Y/-h:i:sa");
+    
+   
+    $insertRating=array(
+        'Rating'=>$rating,'User'=>$name,'Description'=>$message,'ListingId'=>$Id,
+        'RecordDate'=> $date);
+
+      return  $this->insertData($insertRating,"ratings");
+   }
+
+  
 }
 
 ?>

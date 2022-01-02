@@ -52,46 +52,27 @@ banner -->
 <!--=================================
 Category -->
 <section class="py-4 border-bottom" style="background:lavender;">
-  <div class="container">
+  <div class="containe" style="width:98%;margin:auto">
     <div class="row">
       <div class="col-lg-2 mb-lg-0 mb-2">
         <div class="d-flex align-items-center">
-          <h6>Or browse the highlights</h6>
+          <h6>Or Browse by category</h6>
           <i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i>
         </div>
       </div>
       <div class="col-lg-10">
         <div class="owl-carousel" data-nav-dots="false" data-nav-arrow="false" data-items="6" data-md-items="5" data-sm-items="4" data-xs-items="2" data-xx-items="1" data-space="20" data-autoheight="false">
-          <div class="item">
-            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/01.jpg);" href="index.html#">
-              <span class="mb-0 text-white position-relative">Restaurant</span>
-            </a>
-          </div>
-          <div class="item">
-            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/02.jpg);" href="index.html#">
-              <span class="mb-0 text-white position-relative">Night life</span>
-            </a>
-          </div>
-          <div class="item">
-            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/03.jpg);" href="index.html#">
-              <span class="mb-0 text-white position-relative">Hotels</span>
-            </a>
-          </div>
-          <div class="item">
-            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/04.jpg);" href="index.html#">
-              <span class="mb-0 text-white position-relative">Cafe</span>
-            </a>
-          </div>
-          <div class="item">
-            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/05.jpg);" href="index.html#">
-              <span class="mb-0 text-white position-relative">Club & Bars</span>
-            </a>
-          </div>
-          <div class="item">
-            <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background-image: url(assets/images/category/06.jpg);" href="index.html#">
-              <span class="mb-0 text-white position-relative">Museum</span>
-            </a>
-          </div>
+        <?php if($allcategories->num_rows()>0){
+            $i=1;
+          foreach($allcategories->result() as $row){ ?>
+            <div class="item">
+              <a class="category-item bg-holder bg-overlay-black-50 text-center" style="background: cadetblue;" href="">
+                <span class="mb-0 text-white position-relative" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><?php echo $row->Category ?></span>
+              </a>
+          </div>           
+        <?php } } ?>
+          
+                   
         </div>
       </div>
     </div>
@@ -115,134 +96,43 @@ Places -->
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-3 col-sm-6 mb-4">
-        <div class="listing-item">
-          <div class="listing-image bg-overlay-half-bottom">
-            <img class="img-fluid" src="assets/images/listing/grid/01.jpg" alt="">
-            <div class="listing-quick-box">
-                <a class="category" href="index.html#"> <i class="flaticon-coffee-cup"></i> Cafe</a>
-                <a class="popup popup-single" href="assets/images/listing/grid/01.jpg" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
-                <a class="like" href="index.html#" data-bs-toggle="tooltip" data-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
+     <?php if($mostratedads->num_rows()>0){
+            $i=1;
+          foreach($mostratedads->result() as $row){ 
+            $imageone=base_url()."/assets/images/listing/".$row->photo; 
+        ?>
+       <div class="col-lg-3 col-sm-6 mb-4">
+       <a href="<?php echo base_url('listing/'.$row->ListingId) ?>" >
+          <div class="listing-item">
+            <div class="listing-image bg-overlay-half-bottom">
+              <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
+              <div class="listing-quick-box">
+                  <a class="category" href="<?php echo base_url('listing/1') ?>"> <i class="fa fa-edit"></i> <?php echo $row->Category ?></a>
+                  <a class="popup popup-single" href="<?php echo $imageone ?>" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fa fa-search-plus"></i> </a>
+              </div>
+            </div>
+            <div class="listing-details">
+              <div class="listing-details-inner">
+                <div class="listing-title">
+                  <h6 style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;"><a href="<?php echo base_url('listing/'.$row->ListingId) ?>" ><?php echo $row->adName ?></a></h6>
+                </div>
+                <div class="listing-rating-call">
+                  <a class="listing-rating" href="index.html#"><span>4.6</span> 10 Rating</a>
+                  <a class="listing-call" href="index.html#"><i class="fas fa-phone-volume"></i> +444 656 326</a>
+                </div>
+                <div class="listing-info">
+                  <!-- <img class="img-fluid" src="assets/images/listing-brand/02.png" alt=""> -->
+                  <p class="mb-0" style="text-align:justify;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;"><?php echo $row->Description ?></p>
+                </div>
+              </div>
+            
             </div>
           </div>
-          <div class="listing-details">
-            <div class="listing-details-inner">
-              <div class="listing-title">
-                 <h6><a href="index.html#">Espresso macchiato</a></h6>
-                  <span class="listing-price">$$$</span>
-              </div>
-              <div class="listing-rating-call">
-                <a class="listing-rating" href="index.html#"><span>4.2</span> 12 Rating</a>
-                <a class="listing-call" href="index.html#"><i class="fas fa-phone-volume"></i> +666 658 447</a>
-              </div>
-              <div class="listing-info">
-                <img class="img-fluid" src="assets/images/listing-brand/01.png" alt="">
-                <p class="mb-0">For those of you who are serious about having more.</p>
-              </div>
-            </div>
-            <div class="listing-bottom">
-              <a class="listing-loaction" href="index.html#"> <i class="fas fa-map-marker-alt"></i> Piper Drive Zion</a>
-              <span class="listing-open">Open</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6 mb-4">
-        <div class="listing-item">
-          <div class="listing-image bg-overlay-half-bottom">
-            <img class="img-fluid" src="assets/images/listing/grid/02.jpg" alt="">
-            <div class="listing-quick-box">
-                <a class="category" href="<?php echo base_url('listing/1') ?>"> <i class="flaticon-megaphone"></i> Nightlife</a>
-                <a class="popup popup-single" href="assets/images/listing/grid/02.jpg" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
-                <a class="like" href="index.html#" data-bs-toggle="tooltip" data-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
-            </div>
-          </div>
-          <div class="listing-details">
-            <div class="listing-details-inner">
-              <div class="listing-title">
-                 <h6><a href="<?php echo base_url('listing/1') ?>">Fantastic Fridaze</a></h6>
-                  <span class="listing-price">$$$</span>
-              </div>
-              <div class="listing-rating-call">
-                <a class="listing-rating" href="index.html#"><span>4.6</span> 10 Rating</a>
-                <a class="listing-call" href="index.html#"><i class="fas fa-phone-volume"></i> +444 656 326</a>
-              </div>
-              <div class="listing-info">
-                <img class="img-fluid" src="assets/images/listing-brand/02.png" alt="">
-                <p class="mb-0">Let success motivate you. Find a pictu success to you.</p>
-              </div>
-            </div>
-            <div class="listing-bottom">
-              <a class="listing-loaction" href="index.html#"> <i class="fas fa-map-marker-alt"></i> 472 Carpenter Rd</a>
-              <span class="listing-open">Open</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6 mb-4">
-        <div class="listing-item">
-          <div class="listing-image bg-overlay-half-bottom">
-            <img class="img-fluid" src="assets/images/listing/grid/03.jpg" alt="">
-            <div class="listing-quick-box">
-                <a class="category" href="index.html#"> <i class="flaticon-guitar"></i> Sound & music</a>
-                <a class="popup popup-single" href="assets/images/listing/grid/03.jpg" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
-                <a class="like" href="index.html#" data-bs-toggle="tooltip" data-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
-            </div>
-          </div>
-          <div class="listing-details">
-            <div class="listing-details-inner">
-              <div class="listing-title">
-                 <h6><a href="index.html#">Bike Tours Hollywood</a></h6>
-                  <span class="listing-price">$$$</span>
-              </div>
-              <div class="listing-rating-call">
-                <a class="listing-rating" href="index.html#"><span>4.1</span> 06 Rating</a>
-                <a class="listing-call" href="index.html#"><i class="fas fa-phone-volume"></i> +888 235 956</a>
-              </div>
-              <div class="listing-info">
-                <img class="img-fluid" src="assets/images/listing-brand/03.png" alt="">
-                <p class="mb-0">There are basically six key areas to higher achievement.</p>
-              </div>
-            </div>
-            <div class="listing-bottom">
-              <a class="listing-loaction" href="index.html#"> <i class="fas fa-map-marker-alt"></i> Lincolnton, NC 28092</a>
-              <span class="listing-close">Closed</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6 mb-md-0 mb-4">
-        <div class="listing-item">
-          <div class="listing-image bg-overlay-half-bottom">
-            <img class="img-fluid" src="assets/images/listing/grid/04.jpg" alt="">
-            <div class="listing-quick-box">
-                <a class="category" href="index.html#"> <i class="flaticon-customer"></i> Art & Museums</a>
-                <a class="popup popup-single" href="assets/images/listing/grid/04.jpg" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
-                <a class="like" href="index.html#" data-bs-toggle="tooltip" data-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
-            </div>
-          </div>
-          <div class="listing-details">
-            <div class="listing-details-inner">
-              <div class="listing-title">
-                 <h6><a href="index.html#">The Vatican Museums</a></h6>
-                  <span class="listing-price">$$$</span>
-              </div>
-              <div class="listing-rating-call">
-                <a class="listing-rating" href="index.html#"><span>4.9</span> 03 Rating</a>
-                <a class="listing-call" href="index.html#"><i class="fas fa-phone-volume"></i> +222 356 457</a>
-              </div>
-              <div class="listing-info">
-                <img class="img-fluid" src="assets/images/listing-brand/04.png" alt="">
-                <p class="mb-0">If success is a process with a number of defined steps.</p>
-              </div>
-            </div>
-            <div class="listing-bottom">
-              <a class="listing-loaction" href="index.html#"> <i class="fas fa-map-marker-alt"></i> West Division Street</a>
-              <span class="listing-close">Closed</span>
-            </div>
-          </div>
-        </div>
-      </div>
+          </a>
+      </div>           
+        <?php } } ?>
+      
+      
       
     </div>
   </div>
@@ -333,7 +223,7 @@ Places -->
 </section>
 
 
-<section class="space-pb popup-gallery overflowx-h">
+<!-- <section class="space-pb popup-gallery overflowx-h">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -728,7 +618,7 @@ Places -->
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="space-ptb bg-holder bg-overlay-black-50" style="background: url(images/bg/04.jpg);">
   <div class="container">
