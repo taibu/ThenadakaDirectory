@@ -29,6 +29,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('Pages/details',$data);
 	}
 
+	//Searching Listing
 	public function SearchListing()
 	{
 		$data["addetails"]=$this->Admin_Model->Search_Listing();
