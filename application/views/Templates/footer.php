@@ -6,13 +6,12 @@
            <a href="index.html"><img class="img-fluid footer-logo" src="<?php echo base_url('assets/images/logo-dark.svg') ?>" alt="logo"></a>
           <div class="contact-address mt-5 me-5 pe-5">
             <div class="contact-item">
-              <p class="fw-normal">6580 Allison Turnpike Creminfort, AL 32808</p>
-            </div>
-            <div class="contact-item">
-              <h4 class="mb-0"><a href="index.html#">+(704) 279-1249</a></h4>
-            </div>
-            <div class="contact-item mt-4">
-              <a class="text-dark" href="index.html#">letstalk@directro.com</a>
+              <p class="fw-normal">We provide a platform for marketing and advertisement of businesses 
+                of all categories as well as supporting businesses right from business registration to 
+                developing a fully fledged business information technology infrastructure Get maximum 
+                online exposure for your business by submitting a listing on our directory. Submit a 
+                listing and benefit from thousands of visitors our directory receives daily. Our directory can help 
+                you reach out to more people which means more interest in whatever you are promoting</p>
             </div>
           </div>
         </div>
@@ -36,7 +35,7 @@
         </div>
       </div>
       <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0">
-        <h5 class="text-primary mb-2 mb-sm-4">Categories</h5>
+        <h5 class="text-primary mb-2 mb-sm-4">Most popular Categories</h5>
         <div class="footer-link">
           <ul class="list-unstyled mb-0">
             <li><a href="index.html#">Restaurant</a></li>
@@ -49,14 +48,13 @@
         </div>
       </div>
       <div class="col-sm-6 col-lg-2 mb-4 mb-sm-0">
-        <h5 class="text-primary mb-2 mb-sm-4">Quick Links</h5>
+        <h5 class="text-primary mb-2 mb-sm-4">User Account</h5>
         <div class="footer-link">
           <ul class="list-unstyled mb-0">
-            <li><a href="index.html#">Forum Support</a></li>
-            <li><a href="index.html#">Help fAQs</a></li>
+            <li><a href="index.html#">Sign in</a></li>
+            <li><a href="index.html#">Ad Lisitng</a></li>
             <li><a href="index.html#">Contact us</a></li>
-            <li><a href="index.html#">Pricing and plans</a></li>
-            <li><a href="index.html#">Cookies policy</a></li>
+           
            
           </ul>
         </div>
@@ -82,7 +80,7 @@
 Back To Top-->
 
 <div id="back-to-top" class="back-to-top">
-  <a href="index.html#"> <i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+  <a href=""> <i class="fa fa-chevron-up" aria-hidden="true"></i></a>
  </div>
 
 <!--=================================

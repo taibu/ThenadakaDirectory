@@ -28,4 +28,15 @@ class Welcome extends CI_Controller {
 		$data["ratings"]=$this->Admin_Model->fetch_ratings($id);
 		$this->load->view('Pages/details',$data);
 	}
+
+	public function SearchListing()
+	{
+		$data["addetails"]=$this->Admin_Model->Search_Listing();
+		$this->load->view('Pages/searchListing',$data);
+	}
+	public function ViewByCategory($id)
+	{
+		$data["addetails"]=$this->Admin_Model->ViewBy_Category($id);
+		$this->load->view('Pages/ViewByCategory',$data);
+	}
 }

@@ -56,7 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 //LISTING 
 $route['listing/(:any)'] = 'welcome/listing/$1';
-
+$route['ViewCategory/(:any)'] = 'welcome/ViewByCategory/$1';
 
 //ADMIN
 $route['login'] = 'welcome/login';
@@ -65,7 +65,8 @@ $route['AdminHome'] = 'Signin/Home';
 $route['addListing'] = 'Admin/AddListing';
 $route['listingcategories'] = 'Admin/ListingCategories';
 $route['addlistingcategories'] = 'Admin/AddListingCategories';
-$route['Editlistingcategories/(:any)'] = 'Admin/EditListingCategories/$1';
+$route['PendingListing/(:any)'] = 'Admin/PendingListing/$1';
+$route['ApprovePendingListing/(:any)'] = 'Admin/ApprovePendingListing/$1';
 
 
 $route['register'] = 'Signin/register';

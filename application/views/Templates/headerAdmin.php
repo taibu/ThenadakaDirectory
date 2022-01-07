@@ -41,12 +41,12 @@ header -->
 <!--=================================
 Page title -->
 <section class="page-title page-title-bottom bg-holder bg-overlay-black-50"
-    style="background: url(assets/images/bg/01.jpg);background-attachment:fixed;">
+    style="background: url(<?php echo base_url('assets/images/bg/01.jpg') ?>);background-attachment:fixed;">
     <div class="container">
         <div class="row align-items-center position-relative">
             <div class="col-lg-6">
                 <div class="d-flex align-items-center">
-                    <img class="img-fluid rounded-circle avatar avatar-xll" src="assets/images/avatar/01.png" alt="">
+                    <img class="img-fluid rounded-circle avatar avatar-xll" src="<?php echo base_url('assets/images/avatar/01.png') ?>" alt="">
                     <div class="ms-4">
                         <h3 class="text-white mb-2"> <?php echo $getdata['name']; ?></h3>
                         <div class="d-flex">

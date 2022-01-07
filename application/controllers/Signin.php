@@ -6,7 +6,8 @@ class Signin extends CI_Controller {
 	public function __construct()
     {
             parent::__construct();
-             $this->load->model('Signin_Model');
+            $this->load->model('Signin_Model');
+            $this->load->model('Admin_Model');
     }
 
 	public function index()
@@ -25,6 +26,7 @@ class Signin extends CI_Controller {
     
         if($data){
             $this->session->set_userdata('loggedinUser', $data);
+           
             header('location:'.base_url('/AdminHome'));
         }
         else{
@@ -32,7 +34,9 @@ class Signin extends CI_Controller {
         } 
     }
  function Home(){
-    $this->load->view('Pages/adminHome');
+    $data["homestats"]=$this->Admin_Model->fetch_homestats();
+    $data["pendingads"]=$this->Admin_Model->fetch_Pendinglisting();
+    $this->load->view('Pages/adminHome',$data);
  }
  //FORGOT MY PASSWORD
  function forgot(){

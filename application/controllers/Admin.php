@@ -59,6 +59,19 @@ class Admin extends CI_Controller {
                 //redirect( base_url('addListing'), 'refresh');  
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
         }
-
+      public function PendingListing($id){
+       
+        $data["ad"]=$this->Admin_Model->fetch_Pendinglisting($id);
+        $this->load->view('Pages/pendingListing',$data); 
+      }
+      public function ApprovePendingListing($id){
+        $ratingadded = $this->Admin_Model->Approve_Listing($id);
+                if($ratingadded=='true'){
+                  $this->session->set_flashdata('success', "Listing Approved Successfully");
+                }else{
+                  $this->session->set_flashdata('error', "Operation failed please try again");
+                }
+                redirect( base_url('AdminHome'), 'refresh'); 
+      }
 
 }

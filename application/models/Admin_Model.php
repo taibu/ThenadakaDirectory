@@ -32,6 +32,33 @@ class Admin_Model extends CI_Model
         
         
     }
+    function fetch_Pendinglisting($cat=null){
+        $this->load->database();
+        $this->db;
+        if($cat==null){
+            $userrole=$this->session->userdata('loggedinUser')['RoleCode'];
+            if($userrole=="03"){
+                $userid=$this->session->userdata('loggedinUser')['UserId'];
+                $q = $this->db->query("SELECT * FROM Listing l inner join users u on l.addedBy=u.UserId  
+                inner join ListingCategories lc on l.Category=lc.CategoryId where Approved='PENDING'  and addedBy='$userid'
+                order by ListingId desc;");
+            }else{
+                $q = $this->db->query("SELECT * FROM Listing l inner join users u on l.addedBy=u.UserId  
+                inner join ListingCategories lc on l.Category=lc.CategoryId where Approved='PENDING'
+                order by ListingId desc;");
+            }
+          
+            return $q;
+        }else{
+            $q = $this->db->query("SELECT * FROM Listing l inner join users u on l.addedBy=u.UserId  
+            inner join ListingCategories lc on l.Category=lc.CategoryId where Approved='PENDING' and ListingId='".$this->db->escape_str($cat)."'
+            order by ListingId desc;");
+            return $q->row_array();
+        }
+            
+        
+        
+    }
     function fetch_ratings($cat){
         $this->load->database();
         $this->db;
@@ -40,6 +67,51 @@ class Admin_Model extends CI_Model
             return $q;
        
         
+    }
+    function Search_Listing(){
+        $this->load->database();
+        $this->db;
+        $keyword=$this->input->get_post('keyword');
+            $q = $this->db->query("SELECT * FROM listing where adName like '%".$this->db->escape_str($keyword)."%'   order by ListingId desc;");
+            return $q;
+       
+    }   
+    function ViewBy_Category($id){
+        $this->load->database();
+        $this->db;
+        $q = $this->db->query("SELECT * FROM Listing l  
+            inner join ListingCategories lc on l.Category=lc.CategoryId where lc.Category='".$this->db->escape_str($id)."' 
+            order by ListingId desc;");
+        return $q;
+       
+    }  
+    function fetch_homestats(){
+        $this->load->database();
+        $this->db;
+        $userrole=$this->session->userdata('loggedinUser')['RoleCode'];
+          if($userrole=="03"){
+            $userid=$this->session->userdata('loggedinUser')['UserId'];
+            $q = $this->db->query("SELECT (Select count(*) from listing where Approved='APPROVED' and addedBy='$userid') as Approved,
+                                  (Select count(*) from listing where Approved='PENDING' and addedBy='$userid') as Pending,
+                                  (Select count(*) from listing where Approved='REJECTED' and addedBy='$userid') as Rejected
+                                  ");
+          }else{
+            $q = $this->db->query("SELECT (Select count(*) from listing where Approved='APPROVED') as Approved,
+            (Select count(*) from listing where Approved='PENDING') as Pending,
+            (Select count(*) from listing where Approved='REJECTED') as Rejected
+            ");
+          }
+            
+            return $q->row_array();
+       
+        
+    }
+    function Approve_Listing($id){
+        $this->load->database();
+        $this->db;
+        $userid=$this->session->userdata('loggedinUser')['UserId'];
+        $q = $this->db->query("Update listing set Approved='APPROVED',Reason='APPROVED',ApprovedBy='$userid' where ListingId='".$this->db->escape_str($id)."';");
+        return $q;
     }
     function Add_Category(){
         $this->load->database();
