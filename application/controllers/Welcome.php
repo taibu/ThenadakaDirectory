@@ -32,6 +32,10 @@ class Welcome extends CI_Controller {
 	public function aboutus(){
 		$this->load->view('Pages/aboutus');
 	}
+
+	public function contactus(){
+		$this->load->view('Pages/contactus');
+	}
 	//Searching Listing
 	public function SearchListing()
 	{

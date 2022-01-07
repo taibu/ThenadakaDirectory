@@ -19,7 +19,15 @@ class Admin_Model extends CI_Model
         $this->load->database();
         $this->db;
         if($cat==null){
-            $q = $this->db->query("SELECT * FROM Listing l inner join users u on l.addedBy=u.UserId  
+            $q = $this->db->query("SELECT `ListingId`, `adName`, lc.`Category`,
+             `Description`, `keywords`, `Adress`, `MonworkHours`, `TueworkHours`, 
+             `WedworkHours`, `ThursworkHours`, `FriworkHours`, `SatworkHours`, 
+             `SunworkHours`, `photo`, `photo2`, `photo3`, `photo4`, `photo5`, 
+             `facebooklink`, `twitterlink`, `instalink`, `Approved`, 
+             `ApprovedBy`, `Reason`, `addedBy`, l.`RecordDate`,
+             ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
+             (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount
+             FROM Listing l inner join users u on l.addedBy=u.UserId  
             inner join ListingCategories lc on l.Category=lc.CategoryId
             order by ListingId desc;");
             return $q;
@@ -72,14 +80,31 @@ class Admin_Model extends CI_Model
         $this->load->database();
         $this->db;
         $keyword=$this->input->get_post('keyword');
-            $q = $this->db->query("SELECT * FROM listing where adName like '%".$this->db->escape_str($keyword)."%'   order by ListingId desc;");
+            $q = $this->db->query("SELECT `ListingId`, `adName`, lc.`Category`,
+            `Description`, `keywords`, `Adress`, `MonworkHours`, `TueworkHours`, 
+            `WedworkHours`, `ThursworkHours`, `FriworkHours`, `SatworkHours`, 
+            `SunworkHours`, `photo`, `photo2`, `photo3`, `photo4`, `photo5`, 
+            `facebooklink`, `twitterlink`, `instalink`, `Approved`, 
+            `ApprovedBy`, `Reason`, `addedBy`, l.`RecordDate`,
+            ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
+            (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount 
+            FROM Listing l  
+            inner join ListingCategories lc on l.Category=lc.CategoryId where adName like '%".$this->db->escape_str($keyword)."%'   order by ListingId desc;");
             return $q;
        
     }   
     function ViewBy_Category($id){
         $this->load->database();
         $this->db;
-        $q = $this->db->query("SELECT * FROM Listing l  
+        $q = $this->db->query("SELECT SELECT `ListingId`, `adName`, lc.`Category`,
+        `Description`, `keywords`, `Adress`, `MonworkHours`, `TueworkHours`, 
+        `WedworkHours`, `ThursworkHours`, `FriworkHours`, `SatworkHours`, 
+        `SunworkHours`, `photo`, `photo2`, `photo3`, `photo4`, `photo5`, 
+        `facebooklink`, `twitterlink`, `instalink`, `Approved`, 
+        `ApprovedBy`, `Reason`, `addedBy`, l.`RecordDate`,
+        ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
+        (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount 
+        FROM Listing l  
             inner join ListingCategories lc on l.Category=lc.CategoryId where lc.Category='".$this->db->escape_str($id)."' 
             order by ListingId desc;");
         return $q;
