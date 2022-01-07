@@ -69,6 +69,7 @@ $route['PendingListing/(:any)'] = 'Admin/PendingListing/$1';
 $route['ApprovePendingListing/(:any)'] = 'Admin/ApprovePendingListing/$1';
 
 
+$route['aboutus'] = 'welcome/aboutus';
 $route['register'] = 'Signin/register';
 $route['SubmitRegisterform'] = 'Signin/Add_User';
 $route['Admin/logout'] = 'Signin/logout';

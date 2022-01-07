@@ -26,9 +26,12 @@ class Welcome extends CI_Controller {
 	{
 		$data["addetails"]=$this->Admin_Model->fetch_mostratedlisting($id);
 		$data["ratings"]=$this->Admin_Model->fetch_ratings($id);
-		$this->load->view('Pages/details',$data);
+		$this->load->view('Pages/listing_details',$data);
 	}
 
+	public function aboutus(){
+		$this->load->view('Pages/aboutus');
+	}
 	//Searching Listing
 	public function SearchListing()
 	{

@@ -160,12 +160,14 @@ header -->
             </div> -->
             <div class="d-block d-md-flex align-items-center">
                 <div class="call me-4 d-inline-block">
-                    <a class="text-white" href="tel:1-800-555-1234"><i
-                            class="fa fa-phone me-2 fa fa-flip-horizontal"></i>1-800-555-1234 </a>
+                    <a class="text-white" href="<?php echo base_url('aboutus') ?>">About Us </a>
+                </div>
+                <div class="call me-4 d-inline-block">
+                    <a class="text-white" href="<?php echo base_url('contactus') ?>">Contact Us </a>
                 </div>
                 <div class="login d-inline-block me-4">
-                    <a class="text-white" data-bs-toggle="modal" data-bs-target="#loginModal" href="index.html#">Hello
-                        sign in<i class="fa fa-user ps-2 text-primary"></i></a>
+                    <a class="text-white" data-bs-toggle="modal" data-bs-target="#loginModal" href="index.html#">
+                        Signin/Register</a>
                 </div>
                 <div class="add-listing d-none d-sm-block">
                     <a class="btn btn-primary btn-md" href="<?php echo base_url('login') ?>"> <i
