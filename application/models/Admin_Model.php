@@ -96,7 +96,8 @@ class Admin_Model extends CI_Model
     function ViewBy_Category($id){
         $this->load->database();
         $this->db;
-        $q = $this->db->query("SELECT SELECT `ListingId`, `adName`, lc.`Category`,
+        
+        $q = $this->db->query("SELECT `ListingId`, `adName`, lc.`Category`,
         `Description`, `keywords`, `Adress`, `MonworkHours`, `TueworkHours`, 
         `WedworkHours`, `ThursworkHours`, `FriworkHours`, `SatworkHours`, 
         `SunworkHours`, `photo`, `photo2`, `photo3`, `photo4`, `photo5`, 

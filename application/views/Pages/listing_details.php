@@ -333,7 +333,7 @@ footer-->
 Back To Top-->
 
     <div id="back-to-top" class="back-to-top">
-        <a href="listing-single-01.html#"> <i class="fas fa-angle-up"></i></a>
+        <a href=""> <i class="fas fa-angle-up"></i></a>
     </div>
 
     <!--=================================

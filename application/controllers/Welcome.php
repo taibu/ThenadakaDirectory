@@ -16,7 +16,9 @@ class Welcome extends CI_Controller {
 		
 		$this->load->view('Pages/welcome_message',$data);
 	}
-
+    public function load_allcategories(){
+		$data["allcategories"]=$this->Admin_Model->fetch_categories();
+	}
 	public function login()
 	{
 		$this->load->view('Pages/login');
@@ -44,7 +46,9 @@ class Welcome extends CI_Controller {
 	}
 	public function ViewByCategory($id)
 	{
-		$data["addetails"]=$this->Admin_Model->ViewBy_Category($id);
+		$key = str_replace(array("%20"), ' ', $id); //preg_replace('/[0-9\@\.\;\%""]+/', '', $id);
+		//echo $key;
+		$data["addetails"]=$this->Admin_Model->ViewBy_Category($key);
 		$this->load->view('Pages/ViewByCategory',$data);
 	}
 }

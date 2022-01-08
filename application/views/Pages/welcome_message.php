@@ -100,7 +100,7 @@ Places -->
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Most Common places near you <a class="btn btn-primary btnsm pull-right"
+                        <h2>Most Common  near you <a class="btn btn-primary btnsm pull-right"
                                 href="<?php echo base_url('') ?>" style="border-radius:0px;"> VIEW ALL </a></h2>
                         <div class="sub-title text-end"> <span> Make a list of your achievements toward your long-term
                                 goal</span></div>
