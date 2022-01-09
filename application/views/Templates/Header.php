@@ -206,8 +206,8 @@ header -->
                             </div>
                             <div class="col-sm-12">
                                 <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3" style="padding-top:30px;padding-bottom:50px;">
-                                    <li class="me-1"><a class="text-dark" href="<?php echo base_url("register") ?>"><b>Not Registered User?
-                                                Click here to register</b></a></li>
+                                    <li class="me-1"><b>Not Registered User? </b><a class="" href="<?php echo base_url("register") ?>">
+                                                Click here.</a></li>
                                 </ul>
                             </div>
                         </form>

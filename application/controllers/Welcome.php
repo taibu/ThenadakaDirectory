@@ -13,6 +13,7 @@ class Welcome extends CI_Controller {
 	{
 		$data["allcategories"]=$this->Admin_Model->fetch_categories();
 		$data["mostratedads"]=$this->Admin_Model->fetch_mostratedlisting();
+		$data["mostrecenttedads"]=$this->Admin_Model->fetch_mostrecentlisting();
 		
 		$this->load->view('Pages/welcome_message',$data);
 	}

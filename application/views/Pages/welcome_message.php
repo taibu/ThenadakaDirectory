@@ -269,9 +269,9 @@ Places -->
                 </div>
             </div>
             <div class="row">
-                <?php if($mostratedads->num_rows()>0){
+                <?php if($mostrecenttedads->num_rows()>0){
             $i=1;
-          foreach($mostratedads->result() as $row){ 
+          foreach($mostrecenttedads->result() as $row){ 
             $imageone=base_url()."/assets/images/listing/".$row->photo; 
         ?>
                  <div class="col-lg-3 col-sm-6 mb-4">

@@ -29,7 +29,7 @@ class Admin_Model extends CI_Model
              (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount
              FROM Listing l inner join users u on l.addedBy=u.UserId  
             inner join ListingCategories lc on l.Category=lc.CategoryId
-            order by ListingId desc;");
+            order by rating  desc limit 4;");
             return $q;
         }else{
             $q = $this->db->query("SELECT * FROM Listing l inner join users u on l.addedBy=u.UserId  
@@ -38,6 +38,24 @@ class Admin_Model extends CI_Model
             return $q->row_array();
         }
         
+        
+    }
+    function fetch_mostrecentlisting(){
+        $this->load->database();
+        $this->db;
+
+            $q = $this->db->query("SELECT `ListingId`, `adName`, lc.`Category`,
+             `Description`, `keywords`, `Adress`, `MonworkHours`, `TueworkHours`, 
+             `WedworkHours`, `ThursworkHours`, `FriworkHours`, `SatworkHours`, 
+             `SunworkHours`, `photo`, `photo2`, `photo3`, `photo4`, `photo5`, 
+             `facebooklink`, `twitterlink`, `instalink`, `Approved`, 
+             `ApprovedBy`, `Reason`, `addedBy`, l.`RecordDate`,
+             ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
+             (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount
+             FROM Listing l inner join users u on l.addedBy=u.UserId  
+            inner join ListingCategories lc on l.Category=lc.CategoryId
+            order by ListingId  desc limit 8;");
+            return $q;
         
     }
     function fetch_Pendinglisting($cat=null){
