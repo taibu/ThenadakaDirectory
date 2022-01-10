@@ -100,7 +100,7 @@ Places -->
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Most Common  near you <a class="btn btn-primary btnsm pull-right"
+                        <h2>Most Common near you <a class="btn btn-primary btnsm pull-right"
                                 href="<?php echo base_url('') ?>" style="border-radius:0px;"> VIEW ALL </a></h2>
                         <div class="sub-title text-end"> <span> Make a list of your achievements toward your long-term
                                 goal</span></div>
@@ -171,9 +171,9 @@ Places -->
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-light">
-                        <h2>Why choose us</h2>
-                        <div class="sub-title text-end bg-transparent"> <span> Do it today. Remind yourself of someone
-                                you know who died.</span></div>
+                        <h2>Why list your business us</h2>
+                        <div class="sub-title text-end bg-transparent"> 
+                            <span> Variuos reasons to list your business with us.</span></div>
                     </div>
                 </div>
             </div>
@@ -185,8 +185,7 @@ Places -->
                         </div>
                         <div class="feature-content">
                             <h5 class="feature-title">Excellent reputation</h5>
-                            <p>Let success motivate you. Find a picture of what epitomizes success to you and then pull
-                                it out when.</p>
+                            <p>Thenadaka enterprises limited has been providing sales, marketing and Ict services for more than 5 years.</p>
                         </div>
                     </div>
                 </div>
@@ -196,9 +195,8 @@ Places -->
                             <span>02</span>
                         </div>
                         <div class="feature-content">
-                            <h5 class="feature-title">Best local agents</h5>
-                            <p>Reflect and experiment until you find the right combination of motivators for your
-                                personality goals..</p>
+                            <h5 class="feature-title">Global presence</h5>
+                            <p>We do not only help you reach local consumers but the global market</p>
                         </div>
                     </div>
                 </div>
@@ -208,9 +206,8 @@ Places -->
                             <span>03</span>
                         </div>
                         <div class="feature-content">
-                            <h5 class="feature-title">Peace of mind</h5>
-                            <p>Success isn’t really that difficult. There is a significant portion of the population
-                                here in North America.</p>
+                            <h5 class="feature-title">Easy to use</h5>
+                            <p>Our systems are easy to use and your listing will be up instantly.</p>
                         </div>
                     </div>
                 </div>
@@ -220,9 +217,8 @@ Places -->
                             <span>04</span>
                         </div>
                         <div class="feature-content">
-                            <h5 class="feature-title">Tons of options</h5>
-                            <p class="mb-lg-0">For those of you who are serious about having more, doing more, giving
-                                more and being more.</p>
+                            <h5 class="feature-title">Free Listing services</h5>
+                            <p class="mb-lg-0">It is completely free to list you business and services on thenadaka.com</p>
                         </div>
                     </div>
                 </div>
@@ -232,9 +228,8 @@ Places -->
                             <span>05</span>
                         </div>
                         <div class="feature-content">
-                            <h5 class="feature-title">Explore best places</h5>
-                            <p class="mb-lg-0">Success is achievable with some understanding of what to do, some
-                                discipline around planning.</p>
+                            <h5 class="feature-title">27 /7 Support</h5>
+                            <p class="mb-lg-0">Our team is readily available to serve our customers and partners at any time.</p>
                         </div>
                     </div>
                 </div>
@@ -274,35 +269,48 @@ Places -->
           foreach($mostrecenttedads->result() as $row){ 
             $imageone=base_url()."/assets/images/listing/".$row->photo; 
         ?>
-                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <a href="<?php echo base_url('listing/'.$row->ListingId) ?>" >
+                <div class="col-lg-3 col-sm-6 mb-4">
+                    <a href="<?php echo base_url('listing/'.$row->ListingId) ?>">
                         <div class="listing-item">
-                          <div class="listing-image bg-overlay-half-bottom">
-                            <img class="img-fluid" style="height:200px;width:100%;" src="<?php echo $imageone ?>" alt="">
-                            <div class="listing-quick-box">
-                                <a class="category" href="<?php echo base_url('listing/1') ?>"> <i class="fa fa-edit"></i> <?php echo $row->Category ?></a>
-                                <a class="popup popup-single" href="<?php echo $imageone ?>" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fa fa-search-plus"></i> </a>
+                            <div class="listing-image bg-overlay-half-bottom">
+                                <img class="img-fluid" style="height:200px;width:100%;" src="<?php echo $imageone ?>"
+                                    alt="">
+                                <div class="listing-quick-box">
+                                    <a class="category" href="<?php echo base_url('listing/1') ?>"> <i
+                                            class="fa fa-edit"></i> <?php echo $row->Category ?></a>
+                                    <a class="popup popup-single" href="<?php echo $imageone ?>"
+                                        data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i
+                                            class="fa fa-search-plus"></i> </a>
+                                </div>
                             </div>
-                          </div>
-                          <div class="listing-details">
-                            <div class="listing-details-inner">
-                              <div class="listing-title">
-                                <h6 style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;"><a href="<?php echo base_url('listing/'.$row->ListingId) ?>" ><?php echo $row->adName ?></a></h6>
-                              </div>
-                              <div class="listing-rating-call">
-                                <a class="listing-rating" href="index.html#"><span><?php echo (empty($row->rating)?'0.0':$row->rating); ?></span> <?php echo $row->ratingcount ?> Ratings</a>
-                                <a class="listing-call" href=""><i class="fa fa-list-alt" aria-hidden="true"></i> <?php echo $row->Category ?></a>
-                              </div>
-                              <div class="listing-info">
-                                <!-- <img class="img-fluid" src="assets/images/listing-brand/02.png" alt=""> -->
-                                <p class="mb-0" style="text-align:justify;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;"><?php echo $row->Description ?></p>
-                              </div>
+                            <div class="listing-details">
+                                <div class="listing-details-inner">
+                                    <div class="listing-title">
+                                        <h6
+                                            style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;">
+                                            <a
+                                                href="<?php echo base_url('listing/'.$row->ListingId) ?>"><?php echo $row->adName ?></a>
+                                        </h6>
+                                    </div>
+                                    <div class="listing-rating-call">
+                                        <a class="listing-rating"
+                                            href="index.html#"><span><?php echo (empty($row->rating)?'0.0':$row->rating); ?></span>
+                                            <?php echo $row->ratingcount ?> Ratings</a>
+                                        <a class="listing-call" href=""><i class="fa fa-list-alt"
+                                                aria-hidden="true"></i> <?php echo $row->Category ?></a>
+                                    </div>
+                                    <div class="listing-info">
+                                        <!-- <img class="img-fluid" src="assets/images/listing-brand/02.png" alt=""> -->
+                                        <p class="mb-0"
+                                            style="text-align:justify;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;">
+                                            <?php echo $row->Description ?></p>
+                                    </div>
+                                </div>
+
                             </div>
-                          
-                          </div>
                         </div>
-                        </a>
-                    </div> 
+                    </a>
+                </div>
                 <?php } } ?>
 
 
