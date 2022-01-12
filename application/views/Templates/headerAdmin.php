@@ -18,16 +18,9 @@ header -->
             </a>
           
             <div class="call d-block d-md-flex align-items-center">
-                <div class="me-4 d-inline-block">
-                    <a class="text-white" href="tel:1-800-555-1234"><i
-                            class="fa fa-phone me-2 fa fa-flip-horizontal"></i>1-800-555-1234 </a>
-                </div>
-                <div class="login d-inline-block me-4">
-                    <a class="text-white" data-bs-toggle="modal" data-bs-target="#loginModal"
-                        href="dashboard-add-listing.html#">Hello sign in<i class="fa fa-user ps-2 text-primary"></i></a>
-                </div>
+               
                 <div class="add-listing d-none d-sm-block">
-                    <a class="btn btn-primary btn-md" href="dashboard-add-listing.html"> <i
+                    <a class="btn btn-primary btn-md" href="<?php echo base_url('addListing') ?>"> <i
                             class="fa fa-plus-circle"></i>Add listing </a>
                 </div>
             </div>

@@ -32,7 +32,7 @@
                         <h4 class="mb-4 text-primary">Let’s Get In Touch!</h4>
                         <form class="pt-3">
                             <div class="row">
-                                <div class="mb-3 col-md-6">
+                                <div class="mb-3 col-md-12">
                                     <label class="form-label">Your name</label>
                                     <input type="text" class="form-control" id="name" placeholder="Your name">
                                 </div>
@@ -44,24 +44,21 @@
                                     <label class="form-label">Your phone</label>
                                     <input type="text" class="form-control" id="phone" placeholder="Your phone">
                                 </div>
-                                <div class="mb-3 col-md-6">
-                                    <label class="form-label">Subject</label>
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                </div>
+                               
                                 <div class="mb-3 col-md-12">
                                     <label class="form-label">Your message</label>
                                     <textarea class="form-control" rows="4" placeholder="Your message"></textarea>
                                 </div>
-                                <div class="mb-3 col-md-12">
+                                <!-- <div class="mb-3 col-md-12">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck1">
                                         <label class="custom-control-label pe-5" for="customCheck1">I consent to having
                                             this website store my submitted information so they can respond to my
                                             inquiry.</label>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-md-12">
-                                    <a class="btn btn-primary" href="contact-us.html#">Send message</a>
+                                    <button class="btn btn-primary" href="contact-us.html#">Send message</button>
                                 </div>
                             </div>
                         </form>
@@ -85,7 +82,7 @@
                             </div>
                             <div class="ms-3">
                                 <h6 class="text-white">Email</h6>
-                                <p class="text-white">support@directro.demo</p>
+                                <p class="text-white">support@thenadaka.demo</p>
                             </div>
                         </div>
                         <div class="d-flex mb-3">
@@ -94,7 +91,7 @@
                             </div>
                             <div class="ms-3">
                                 <h6 class="text-white">Phone Number</h6>
-                                <a class="text-white mb-2" href="tel:(123) 345-6789">(123) 345-6789</a>
+                                <a class="text-white mb-2" href="tel:(123) 345-6789">(256) 783-100703</a>
                             </div>
                         </div>
                         <div class="d-flex mb-3">
@@ -103,7 +100,7 @@
                             </div>
                             <div class="ms-3">
                                 <h6 class="text-white">Fax</h6>
-                                <a class="text-white mb-2" href="tel:(456) 478-2589">(456) 478-2589</a>
+                                <a class="text-white mb-2" href="tel:(456) 478-2589">(256) 783-100703</a>
                             </div>
                         </div>
                         <div class="social-icon-02 mt-4 mt-md-5">

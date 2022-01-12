@@ -193,6 +193,8 @@ class Admin_Model extends CI_Model
     $satday= $address=$this->input->get_post('saturdayopening').' - '.$address=$this->input->get_post('sartudayclosing'); 
     $sunday= $address=$this->input->get_post('sundayopenning').' - '.$address=$this->input->get_post('sundayclosing'); 
 
+    $phone=$this->input->get_post('phone'); 
+    $website=$this->input->get_post('website'); 
     $facebook=$this->input->get_post('facebook'); 
     $twitter=$this->input->get_post('twitter'); 
     $pintrest=$this->input->get_post('pintrest'); 
@@ -242,7 +244,7 @@ class Admin_Model extends CI_Model
         'Adress'=> $address, 'MonworkHours'=>$monday,
         'TueworkHours'=> $tueday,'WedworkHours'=> $wedday, 'ThursworkHours'=> $thurday,
         'FriworkHours'=>$friday, 'SatworkHours'=> $satday, 'SunworkHours'=> $sunday,
-        'photo'=>$imgone,
+        'photo'=>$imgone,'Phone'=>$phone,'Website'=>$website,
         'photo2'=> $imagetwo,'photo3'=> $imagethree, 'photo4'=>$imagefour, 'photo5'=>$imagefive, 'Approved'=>'PENDING',
         'facebooklink'=>$facebook, 'twitterlink'=>$twitter,'instalink'=> $instagram, 'addedBy'=>$userid,'RecordDate'=> $date);
 

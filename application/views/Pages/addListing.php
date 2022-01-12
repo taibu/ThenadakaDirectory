@@ -7,10 +7,10 @@
     <meta name="description" content="Directro - Directory and Listing Template" />
     <meta name="author" content="potenzaglobalsolutions.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Directro - Directory and Listing Template</title>
+    <title>Thenadaka</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo base_url('assets/images/logthena.jpg') ?>" />
 
     <!-- Google Font -->
     <link rel="stylesheet" href="../../fonts.googleapis.com/css2.css">
@@ -57,7 +57,7 @@ Add Listings -->
                             </div>
                             <div class="widget-content">
                                 <div class="row">
-                                    <div class="mb-3 col-lg-6">
+                                    <div class="mb-3 col-lg-12">
                                         <label class="form-label">Business name *</label>
                                         <input type="text" class="form-control" name="businessname" placeholder="Business name" required>
                                     </div>
@@ -139,36 +139,58 @@ Add Listings -->
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="monopenning">
                                             <option value="" selected="selected">Opening Time</option>
-                                            <option value="02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                            
                                         </select>
                                     </div>
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="monclosing">
                                             <option value="value 01" selected="selected">Closing Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                </div>
@@ -179,35 +201,57 @@ Add Listings -->
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="tuesopening">
                                             <option value="value 01" selected="selected">Opening Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="tuesclosing">
                                             <option value="value 01" selected="selected">Closing Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                </div>
@@ -218,35 +262,57 @@ Add Listings -->
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="wedopening">
                                             <option value="value 01" selected="selected">Opening Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="wedclosing">
                                             <option value="value 01" selected="selected">Closing Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                </div>
@@ -257,35 +323,57 @@ Add Listings -->
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="thursdayopening">
                                             <option value="value 01" selected="selected">Opening Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="thursdayclosing">
                                             <option value="value 01" selected="selected">Closing Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                </div>
@@ -296,35 +384,57 @@ Add Listings -->
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="fridayopenning">
                                             <option value="value 01" selected="selected">Opening Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="fridayclosing">
                                             <option value="value 01" selected="selected">Closing Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                </div>
@@ -335,35 +445,57 @@ Add Listings -->
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="saturdayopening">
                                             <option value="value 01" selected="selected">Opening Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="sartudayclosing">
                                             <option value="value 01" selected="selected">Closing Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                </div>
@@ -391,18 +523,29 @@ Add Listings -->
                                     <div class="mb-3 col-md-6 select-border">
                                         <select class="form-control basic-select" name="sundayclosing">
                                             <option value="value 01" selected="selected">Closing Time</option>
-                                            <option value="value 02">Closed</option>
-                                            <option value="03">01</option>
-                                            <option value="03">02</option>
-                                            <option value="04">04</option>
-                                            <option value="05">05</option>
-                                            <option value="06">06</option>
-                                            <option value="07">07</option>
-                                            <option value="08">08</option>
-                                            <option value="03">09</option>
-                                            <option value="03">10</option>
-                                            <option value="04">11</option>
-                                            <option value="05">12</option>
+                                            <option value="02:00">Closed</option>
+                                            <option value="03:00">01:00</option>
+                                            <option value="03:00">02:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="03:00">09:00</option>
+                                            <option value="03:00">10:00</option>
+                                            <option value="04:00">11:00</option>
+                                            <option value="05:00">12:00</option>
+                                            <option value="03:00">13:00</option>
+                                            <option value="03:00">14:00</option>
+                                            <option value="04:00">15:00</option>
+                                            <option value="05:00">16:00</option>
+                                            <option value="06:00">17:00</option>
+                                            <option value="07:00">19:00</option>
+                                            <option value="08:00">20:00</option>
+                                            <option value="03:00">21:00</option>
+                                            <option value="03:00">22:00</option>
+                                            <option value="04:00">23:00</option>
+                                            <option value="05:00">24:00</option>
                                         </select>
                                     </div>
                                </div>
@@ -489,6 +632,14 @@ Add Listings -->
                             </div>
                             <div class="widget-content">
                                 <div class="row align-items-end">
+                                <div class="mb-3 col-md-6">
+                                        <label class="form-label">Phone </label>
+                                        <input type="text" name="phone" class="form-control" placeholder="Phone">
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label class="form-label">Website </label>
+                                        <input type="text" name="website" class="form-control" placeholder="Website">
+                                    </div>
                                     <div class="mb-3 col-md-6">
                                         <label class="form-label">Facebook </label>
                                         <input type="text" name="facebook" class="form-control" placeholder="Facebook">
