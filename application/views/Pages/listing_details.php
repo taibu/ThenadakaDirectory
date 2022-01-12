@@ -7,10 +7,10 @@
     <meta name="description" content="Directro - Directory and Listing Template" />
     <meta name="author" content="potenzaglobalsolutions.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Directro - Directory and Listing Template</title>
+    <title>Thenandaka </title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo base_url('assets/images/logthena.jpg') ?>" />
 
     <!-- Google Font -->
     <link rel="stylesheet" href="../../fonts.googleapis.com/css2.css') ?>">

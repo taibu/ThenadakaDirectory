@@ -12,20 +12,32 @@
 
 
 
+<section class="page-title bg-holder bg-overlay-black-50"
+        style="background: url(<?php echo base_url('assets/images/bg/01.jpg') ?>);background-attachment:fixed;">
+        <div class="container">
+            <div class="row justify-content-center position-relative">
+                <div class="col-lg-6 text-center">
+                    <h1 class="text-white"><?php echo $category ?> </h1>
+                   
+                    </p>
 
+                </div>
+            </div>
+        </div>
+    </section>
 
 <!--=================================
 Places -->
 <section class="space-pb popup-gallery">
   <div class="containe" style="width:98%;margin:auto;padding-top:80px;">
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-12">
         <div class="section-title" style="text-align:center;margin-top:20px">
-          <h2>View By Category </h2>
-          
+          <h4><?php echo $category ?> </h4>
+         
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="row">
      <?php if($addetails->num_rows()>0){
             $i=1;
@@ -61,7 +73,9 @@ Places -->
                         </div>
                         </a>
                     </div>           
-        <?php } } ?>
+        <?php } }else{ ?>
+          <h5 style="text-align:center;margin-top:100px;margin-bottom:100px;">No items found in <?php echo $category ?> </h5>
+        <?php } ?>
       
       
       

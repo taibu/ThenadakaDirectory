@@ -24,15 +24,52 @@ banner -->
                 </div>
             </div>
             <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <form class="home-search-02" action="Welcome/SearchListing" method="post">
+                        <div class="row g-0 mt-2">
+                            <div class="col-sm-6 col-lg-5">
+                                <div class="form-group mb-3 mb-lg-0 form-location">
+                                    <input type="text" class="form-control" name="keyword" placeholder="What are you looking for...">
+                                    <a class="location-icon" href=""> <i
+                                            class="fa fa-camera-retro"></i> </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="form-group mb-3 mb-lg-0 form-location">
+                                    <input type="text" class="form-control" placeholder="Where..." name="location">
+                                    <a class="location-icon" href=""> <i class="fa fa-map-marker"></i> </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <div class="form-group mb-3 mb-sm-0 select-border">
+                                    <select class="form-control basic-select select2-hidden-accessible"
+                                        data-select2-id="1" tabindex="-1" aria-hidden="true" name="category">
+                                        <option data-select2-id="3" value="">All categories </option>
+                                        
+                                        <?php if($allcategories->num_rows()>0){
+                                      
+                                        foreach($allcategories->result() as $row){ ?>
+                                        <option value="<?php echo $row->CategoryId ?>"><?php echo $row->Category ?></option>
+                                        
+                                        <?php } } ?>
+                                    </select>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-2 d-grid">
+                            <button class="btn btn-secondary" type="submit" style="background:cadetblue;border:cadetblue;"> <i class="fa fa-search"></i> Search
+                                    Liating
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <form class="home-search" action="Welcome/SearchListing" method="post">
                         <div class="row mt-3 mt-lg-5">
-                            <!-- <div class="col-sm-6 col-lg-5 col-xl-5">
-              <div class="form-group mb-3 mb-lg-0">
-                <span>What?</span>
-                <input type="text" class="form-control" placeholder="Ex: restaurants, hotels, cares, bars">
-              </div>
-            </div> -->
+
                             <div class="col-sm-8 col-lg-8 col-xl-8">
                                 <div class="form-group mb-3 mb-lg-0 form-location">
                                     <span>What ?</span>
@@ -43,12 +80,13 @@ banner -->
                             </div>
                             <div class="col-lg-4 col-xl-4">
                                 <button class="btn btn-secondary" type="submit"> <i class="fa fa-search"></i> Search
+                                    Liating
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!--=================================
@@ -100,10 +138,10 @@ Places -->
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Most Common near you <a class="btn btn-primary btnsm pull-right"
+                        <h2>Most Rated Listings <a class="btn btn-primary btnsm pull-right"
                                 href="<?php echo base_url('') ?>" style="border-radius:0px;"> VIEW ALL </a></h2>
-                        <div class="sub-title text-end"> <span> Make a list of your achievements toward your long-term
-                                goal</span></div>
+                        <div class="sub-title text-end"> <span> Browse top rated businesses and service providers</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,8 +210,9 @@ Places -->
                 <div class="col-12">
                     <div class="section-title-light">
                         <h2>Why list your business us</h2>
-                        <div class="sub-title text-end bg-transparent"> 
-                            <span> Variuos reasons to list your business with us.</span></div>
+                        <div class="sub-title text-end bg-transparent">
+                            <span> Variuos reasons to list your business with us.</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -185,7 +224,8 @@ Places -->
                         </div>
                         <div class="feature-content">
                             <h5 class="feature-title">Excellent reputation</h5>
-                            <p>Thenadaka enterprises limited has been providing sales, marketing and Ict services for more than 5 years.</p>
+                            <p>Thenadaka enterprises limited has been providing sales, marketing and Ict services for
+                                more than 5 years.</p>
                         </div>
                     </div>
                 </div>
@@ -218,7 +258,8 @@ Places -->
                         </div>
                         <div class="feature-content">
                             <h5 class="feature-title">Free Listing services</h5>
-                            <p class="mb-lg-0">It is completely free to list you business and services on thenadaka.com</p>
+                            <p class="mb-lg-0">It is completely free to list you business and services on thenadaka.com
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -229,7 +270,8 @@ Places -->
                         </div>
                         <div class="feature-content">
                             <h5 class="feature-title">27 /7 Support</h5>
-                            <p class="mb-lg-0">Our team is readily available to serve our customers and partners at any time.</p>
+                            <p class="mb-lg-0">Our team is readily available to serve our customers and partners at any
+                                time.</p>
                         </div>
                     </div>
                 </div>

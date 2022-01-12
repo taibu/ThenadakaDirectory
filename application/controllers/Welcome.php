@@ -49,6 +49,7 @@ class Welcome extends CI_Controller {
 	{
 		$key = str_replace(array("%20"), ' ', $id); //preg_replace('/[0-9\@\.\;\%""]+/', '', $id);
 		//echo $key;
+		$data["category"]=$key;
 		$data["addetails"]=$this->Admin_Model->ViewBy_Category($key);
 		$this->load->view('Pages/ViewByCategory',$data);
 	}

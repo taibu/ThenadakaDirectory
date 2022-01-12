@@ -28,7 +28,7 @@ class Admin_Model extends CI_Model
              ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
              (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount
              FROM Listing l inner join users u on l.addedBy=u.UserId  
-            inner join ListingCategories lc on l.Category=lc.CategoryId
+            inner join ListingCategories lc on l.Category=lc.CategoryId where l.Approved='APPROVED'
             order by rating  desc limit 4;");
             return $q;
         }else{
@@ -53,7 +53,7 @@ class Admin_Model extends CI_Model
              ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
              (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount
              FROM Listing l inner join users u on l.addedBy=u.UserId  
-            inner join ListingCategories lc on l.Category=lc.CategoryId
+            inner join ListingCategories lc on l.Category=lc.CategoryId where l.Approved='APPROVED'
             order by ListingId  desc limit 8;");
             return $q;
         
@@ -98,6 +98,8 @@ class Admin_Model extends CI_Model
         $this->load->database();
         $this->db;
         $keyword=$this->input->get_post('keyword');
+        $location=$this->input->get_post('location');
+        $category=$this->input->get_post('category');
             $q = $this->db->query("SELECT `ListingId`, `adName`, lc.`Category`,
             `Description`, `keywords`, `Adress`, `MonworkHours`, `TueworkHours`, 
             `WedworkHours`, `ThursworkHours`, `FriworkHours`, `SatworkHours`, 
@@ -107,7 +109,8 @@ class Admin_Model extends CI_Model
             ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
             (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount 
             FROM Listing l  
-            inner join ListingCategories lc on l.Category=lc.CategoryId where adName like '%".$this->db->escape_str($keyword)."%'   order by ListingId desc;");
+            inner join ListingCategories lc on l.Category=lc.CategoryId 
+            where l.Approved='APPROVED' and adName like '%".$this->db->escape_str($keyword)."%' and l.Adress like '%".$this->db->escape_str($location)."%' and l.Category like '%".$this->db->escape_str($category)."%' order by ListingId desc;");
             return $q;
        
     }   
@@ -124,7 +127,8 @@ class Admin_Model extends CI_Model
         ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
         (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount 
         FROM Listing l  
-            inner join ListingCategories lc on l.Category=lc.CategoryId where lc.Category='".$this->db->escape_str($id)."' 
+            inner join ListingCategories lc on l.Category=lc.CategoryId 
+            where l.Approved='APPROVED' and lc.Category='".$this->db->escape_str($id)."' 
             order by ListingId desc;");
         return $q;
        

@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-5 mb-4 mb-lg-0">
         <div class="footer-contact-info">
-           <a href="index.html"><img class="img-fluid footer-logo" src="<?php echo base_url('assets/images/logo-dark.svg') ?>" alt="logo"></a>
+           <a href="index.html"><img class="img-fluid footer-logo" src="<?php echo base_url('assets/images/logothena2.jpg') ?>" alt="logo"></a>
           <div class="contact-address mt-0 me-5 pe-5">
             <div class="contact-item">
               <p class="fw-normal">We provide a platform for marketing and advertisement of businesses 
