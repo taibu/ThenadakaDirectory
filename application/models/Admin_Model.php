@@ -7,9 +7,9 @@ class Admin_Model extends CI_Model
         $this->load->database();
         $this->db;
         if($cat==null){
-            $q = $this->db->query("SELECT * FROM ListingCategories l inner join users u on l.CreatedBy=u.UserId  order by CategoryId desc;");
+            $q = $this->db->query("SELECT * FROM listingcategories l inner join users u on l.CreatedBy=u.UserId  order by CategoryId desc;");
         }else{
-            $q = $this->db->query("SELECT * FROM ListingCategories l inner join users u on l.CreatedBy=u.UserId  where CategoryId='".$this->db->escape_str($cat)."'   order by CategoryId desc;");
+            $q = $this->db->query("SELECT * FROM listingcategories l inner join users u on l.CreatedBy=u.UserId  where CategoryId='".$this->db->escape_str($cat)."'   order by CategoryId desc;");
         }
         
         return $q;
@@ -27,13 +27,13 @@ class Admin_Model extends CI_Model
              `ApprovedBy`, `Reason`, `addedBy`, l.`RecordDate`,
              ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
              (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount
-             FROM Listing l inner join users u on l.addedBy=u.UserId  
-            inner join ListingCategories lc on l.Category=lc.CategoryId where l.Approved='APPROVED'
+             FROM listing l inner join users u on l.addedBy=u.UserId  
+            inner join listingcategories lc on l.Category=lc.CategoryId where l.Approved='APPROVED'
             order by rating  desc limit 4;");
             return $q;
         }else{
-            $q = $this->db->query("SELECT * FROM Listing l inner join users u on l.addedBy=u.UserId  
-            inner join ListingCategories lc on l.Category=lc.CategoryId
+            $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
+            inner join listingcategories lc on l.Category=lc.CategoryId
             where ListingId='".$this->db->escape_str($cat)."'   order by ListingId desc;");
             return $q->row_array();
         }
@@ -52,8 +52,8 @@ class Admin_Model extends CI_Model
              `ApprovedBy`, `Reason`, `addedBy`, l.`RecordDate`,
              ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
              (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount
-             FROM Listing l inner join users u on l.addedBy=u.UserId  
-            inner join ListingCategories lc on l.Category=lc.CategoryId where l.Approved='APPROVED'
+             FROM listing l inner join users u on l.addedBy=u.UserId  
+            inner join listingcategories lc on l.Category=lc.CategoryId where l.Approved='APPROVED'
             order by ListingId  desc limit 8;");
             return $q;
         
@@ -65,19 +65,19 @@ class Admin_Model extends CI_Model
             $userrole=$this->session->userdata('loggedinUser')['RoleCode'];
             if($userrole=="03"){
                 $userid=$this->session->userdata('loggedinUser')['UserId'];
-                $q = $this->db->query("SELECT * FROM Listing l inner join users u on l.addedBy=u.UserId  
-                inner join ListingCategories lc on l.Category=lc.CategoryId where Approved='PENDING'  and addedBy='$userid'
+                $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
+                inner join listingcategories lc on l.Category=lc.CategoryId where Approved='PENDING'  and addedBy='$userid'
                 order by ListingId desc;");
             }else{
-                $q = $this->db->query("SELECT * FROM Listing l inner join users u on l.addedBy=u.UserId  
-                inner join ListingCategories lc on l.Category=lc.CategoryId where Approved='PENDING'
+                $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
+                inner join listingcategories lc on l.Category=lc.CategoryId where Approved='PENDING'
                 order by ListingId desc;");
             }
           
             return $q;
         }else{
-            $q = $this->db->query("SELECT * FROM Listing l inner join users u on l.addedBy=u.UserId  
-            inner join ListingCategories lc on l.Category=lc.CategoryId where Approved='PENDING' and ListingId='".$this->db->escape_str($cat)."'
+            $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
+            inner join istingcategories lc on l.Category=lc.CategoryId where Approved='PENDING' and ListingId='".$this->db->escape_str($cat)."'
             order by ListingId desc;");
             return $q->row_array();
         }
@@ -108,8 +108,8 @@ class Admin_Model extends CI_Model
             `ApprovedBy`, `Reason`, `addedBy`, l.`RecordDate`,
             ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
             (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount 
-            FROM Listing l  
-            inner join ListingCategories lc on l.Category=lc.CategoryId 
+            FROM listing l  
+            inner join listingcategories lc on l.Category=lc.CategoryId 
             where l.Approved='APPROVED' and adName like '%".$this->db->escape_str($keyword)."%' and l.Adress like '%".$this->db->escape_str($location)."%' and l.Category like '%".$this->db->escape_str($category)."%' order by ListingId desc;");
             return $q;
        
@@ -126,8 +126,8 @@ class Admin_Model extends CI_Model
         `ApprovedBy`, `Reason`, `addedBy`, l.`RecordDate`,
         ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
         (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount 
-        FROM Listing l  
-            inner join ListingCategories lc on l.Category=lc.CategoryId 
+        FROM listing l  
+            inner join listingcategories lc on l.Category=lc.CategoryId 
             where l.Approved='APPROVED' and lc.Category='".$this->db->escape_str($id)."' 
             order by ListingId desc;");
         return $q;
@@ -170,9 +170,9 @@ class Admin_Model extends CI_Model
         $today = date("d/m/Y H:i:s");
         if($this->input->get_post('catId')!=null){
             $id=$this->input->get_post('catId'); 
-            $q = $this->db->query("update ListingCategories set Category='$name' where CategoryId='$id'");
+            $q = $this->db->query("update listingcategories set Category='$name' where CategoryId='$id'");
         }else{
-            $q = $this->db->query("insert into ListingCategories(Category,Createdby,CreatedOn)
+            $q = $this->db->query("insert into listingcategories(Category,Createdby,CreatedOn)
             values('$name','$userid','$today')");
         }
        

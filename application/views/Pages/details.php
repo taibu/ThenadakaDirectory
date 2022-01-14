@@ -547,9 +547,10 @@
                                                 class="full form-label" for="star2" title="Kinda bad - 2 stars"></label>
                                             <input type="radio" id="star1half" name="ratings" value="1.5"><label
                                                 class="half form-label" for="star1half" title="Meh - 1.5 stars"></label>
-                                            <input type="radio" id="star1" name="ratings" value="1"><label
-                                                class="full form-label" for="star1"
-                                                title="Sucks big time - 1 star"></label>
+                                            <input type="radio" id="star1" name="ratings" value="1">
+                                            
+                                            <label class="full form-label" for="star1"
+                                                title="Sucks big time - 1 star"><i class="fa fa-edit"></i></label>
                                             <input type="radio" id="starhalf" name="ratings" value="0.5"><label
                                                 class="half form-label" for="starhalf"
                                                 title="Sucks big time - 0.5 stars"></label>

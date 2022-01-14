@@ -29,7 +29,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 text-center">
                     <div class="places-video">
-                        <img class="img-fluid" src="assets/images/about/04.png" alt="">
+                        <img class="img-fluid" src="assets/images/about/about.jpg" alt="" style="width:100%">
 
                     </div>
                 </div>

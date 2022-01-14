@@ -224,8 +224,8 @@ Places -->
                         </div>
                         <div class="feature-content">
                             <h5 class="feature-title">Excellent reputation</h5>
-                            <p>Thenadaka enterprises limited has been providing sales, marketing and Ict services for
-                                more than 5 years.</p>
+                            <p>Thenadaka enterprises limited has been providing excellent sales, marketing and Ict services for
+                                its local and international customers.</p>
                         </div>
                     </div>
                 </div>
@@ -281,9 +281,8 @@ Places -->
                             <span>06</span>
                         </div>
                         <div class="feature-content">
-                            <h5 class="feature-title">Make a listing</h5>
-                            <p class="mb-0">The first thing to remember about success is that it is a process – nothing
-                                more, nothing less..</p>
+                            <h5 class="feature-title">Over 4 years experience</h5>
+                            <p class="mb-0">we  have been in the field for more than  </p>
                         </div>
                     </div>
                 </div>
