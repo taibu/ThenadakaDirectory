@@ -51,6 +51,6 @@ class Welcome extends CI_Controller {
 		//echo $key;
 		$data["category"]=$key;
 		$data["addetails"]=$this->Admin_Model->ViewBy_Category($key);
-		$this->load->view('Pages/ViewByCategory',$data);
+		$this->load->view('Pages/viewByCategory',$data);
 	}
 }
