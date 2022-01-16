@@ -64,6 +64,41 @@ class Admin extends CI_Controller {
         $data["ad"]=$this->Admin_Model->fetch_Pendinglisting($id);
         $this->load->view('Pages/pendingListing',$data); 
       }
+
+
+      public function ViewpendingListing(){
+       
+        $data["adslist"]=$this->Admin_Model->fetch_Pendinglisting();
+        $data["type"]="list";
+        $this->load->view('Pages/viewListingByAdmin',$data); 
+      }
+      public function ViewApprovedListing(){
+       
+        $data["adslist"]=$this->Admin_Model->fetch_Approvedlisting();
+        $data["type"]="list";
+        $this->load->view('Pages/viewListingByAdmin',$data); 
+      }
+      public function ViewRejectedListing(){
+       
+        $data["adslist"]=$this->Admin_Model->fetch_Rejectedlisting();
+        $data["type"]="list";
+        $this->load->view('Pages/viewListingByAdmin',$data); 
+      }
+      public function ViewListingDetails($id){
+        $data["addetails"]=$this->Admin_Model->fetch_listingdetails($id);
+        $data["ratings"]=$this->Admin_Model->fetch_ratings($id);
+        $data["type"]="details";
+        $this->load->view('Pages/viewListingByAdmin',$data);
+      }
+
+      public function listing($id)
+      {
+        $data["addetails"]=$this->Admin_Model->fetch_listingdetails($id);
+        $data["ratings"]=$this->Admin_Model->fetch_ratings($id);
+        $data["type"]="details";
+        $this->load->view('Pages/viewListingByAdmin',$data);
+      }
+
       public function ApprovePendingListing($id){
         $ratingadded = $this->Admin_Model->Approve_Listing($id);
                 if($ratingadded=='true'){

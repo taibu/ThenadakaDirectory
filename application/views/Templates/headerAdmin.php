@@ -14,7 +14,7 @@ header -->
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i
                     class="fas fa-align-left"></i></button>
             <a class="navbar-brand" href="<?php echo base_url('AdminHome') ?>">
-                <img class="img-fluid" src="assets/images/logo.svg" alt="logo">
+                <img class="img-fluid" src="<?php echo base_url('assets/images/logthena.jpg') ?>" alt="logo">
             </a>
           
             <div class="call d-block d-md-flex align-items-center">

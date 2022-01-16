@@ -33,14 +33,29 @@ Back To Top-->
     <!--=================================
 Javascript -->
 
-    <!-- JS Global Compulsory (Do not remove)-->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/popper/popper.min.js"></script>
-    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
 
-    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-    <script src="assets/js/select2/select2.full.js"></script>
-    <script src="assets/js/dropzone/dropzone.js"></script>
 
-    <!-- Template Scripts (Do not remove)-->
-    <script src="assets/js/custom.js"></script>
+     <!-- JS Global Compulsory (Do not remove)-->
+  <script src="<?php echo base_url('assets/js/jquery-3.6.0.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/popper/popper.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/bootstrap/bootstrap.min.js') ?>"></script>
+
+  <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+  <script src="<?php echo base_url('assets/js/owl-carousel/owl.carousel.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/magnific-popup/jquery.magnific-popup.min.js') ?>"></script>
+
+  <!-- Template Scripts (Do not remove)-->
+  <script src="<?php echo base_url('assets/js/custom.js') ?>"></script>
+
+
+
+
+  <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+  <script src="<?php echo base_url('assets/js/select2/select2.full.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/dropzone/dropzone.js') ?>"></script>
+ 
+  <script src="<?php echo base_url('assets/js/jarallax/jarallax.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/datetimepicker/moment.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/range-slider/ion.rangeSlider.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/slick/slick.min.js') ?>"></script>
+  <script src="<?php echo base_url('assets/js/datetimepicker/datetimepicker.min.js') ?>"></script>

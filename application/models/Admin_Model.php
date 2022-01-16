@@ -80,11 +80,72 @@ class Admin_Model extends CI_Model
             inner join istingcategories lc on l.Category=lc.CategoryId where Approved='PENDING' and ListingId='".$this->db->escape_str($cat)."'
             order by ListingId desc;");
             return $q->row_array();
-        }
-            
-        
-        
+        } 
     }
+    function fetch_Rejectedlisting($cat=null){
+        $this->load->database();
+        $this->db;
+        if($cat==null){
+            $userrole=$this->session->userdata('loggedinUser')['RoleCode'];
+            if($userrole=="03"){
+                $userid=$this->session->userdata('loggedinUser')['UserId'];
+                $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
+                inner join listingcategories lc on l.Category=lc.CategoryId where Approved='REJECTED'  and addedBy='$userid'
+                order by ListingId desc;");
+            }else{
+                $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
+                inner join listingcategories lc on l.Category=lc.CategoryId where Approved='REJECTED'
+                order by ListingId desc;");
+            }
+          
+            return $q;
+        }else{
+            $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
+            inner join istingcategories lc on l.Category=lc.CategoryId where Approved='REJECTED' and ListingId='".$this->db->escape_str($cat)."'
+            order by ListingId desc;");
+            return $q->row_array();
+        } 
+    }
+    function fetch_Approvedlisting($cat=null){
+        $this->load->database();
+        $this->db;
+        if($cat==null){
+            $userrole=$this->session->userdata('loggedinUser')['RoleCode'];
+            if($userrole=="03"){
+                $userid=$this->session->userdata('loggedinUser')['UserId'];
+                $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
+                inner join listingcategories lc on l.Category=lc.CategoryId where Approved='APPROVED'  and addedBy='$userid'
+                order by ListingId desc;");
+            }else{
+                $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
+                inner join listingcategories lc on l.Category=lc.CategoryId where Approved='APPROVED'
+                order by ListingId desc;");
+            }
+          
+            return $q;
+        }else{
+            $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
+            inner join istingcategories lc on l.Category=lc.CategoryId where Approved='APPROVED' and ListingId='".$this->db->escape_str($cat)."'
+            order by ListingId desc;");
+            return $q->row_array();
+        } 
+    }
+
+    function fetch_listingdetails($cat){
+        $this->load->database();
+        $this->db;
+
+            $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
+            inner join listingcategories lc on l.Category=lc.CategoryId where Approved='APPROVED' and ListingId='".$this->db->escape_str($cat)."'
+            order by ListingId desc;");
+            return $q->row_array();
+       
+    }
+
+
+
+
+
     function fetch_ratings($cat){
         $this->load->database();
         $this->db;

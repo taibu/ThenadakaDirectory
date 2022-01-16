@@ -17,11 +17,11 @@
                             aria-hidden="true"></i> System Users</a></li>
                             <li class="active"><a href="<?php echo base_url('listingcategories') ?>"> <i class="fa fa-chevron-right"
                             aria-hidden="true"></i> Listing Categories</a></li>
-                            <li class="active"><a href="<?php echo base_url('AdminHome') ?>"> <i class="fa fa-chevron-right"
+                            <li class="active"><a href="<?php echo base_url('ViewpendingListing') ?>"> <i class="fa fa-chevron-right"
                             aria-hidden="true"></i> Pending Listing</a></li>
-                            <li class="active"><a href="<?php echo base_url('AdminHome') ?>"> <i class="fa fa-chevron-right"
+                            <li class="active"><a href="<?php echo base_url('ViewApprovedListing') ?>"> <i class="fa fa-chevron-right"
                             aria-hidden="true"></i> Approved listing</a></li>
-                            <li class="active"><a href="<?php echo base_url('AdminHome') ?>"> <i class="fa fa-chevron-right"
+                            <li class="active"><a href="<?php echo base_url('ViewRejectedListing') ?>"> <i class="fa fa-chevron-right"
                             aria-hidden="true"></i> Rejected listing</a></li>
 
                
@@ -49,11 +49,11 @@
                             aria-hidden="true"></i> Home</a></li>
                 <li class="active"><a href="<?php echo base_url('addListing') ?>"> <i class="fa fa-chevron-right"
                             aria-hidden="true"></i> Add Listing</a></li>
-                            <li class="active"><a href="<?php echo base_url('AdminHome') ?>"> <i class="fa fa-chevron-right"
+                            <li class="active"><a href="<?php echo base_url('ViewpendingListing') ?>"> <i class="fa fa-chevron-right"
                             aria-hidden="true"></i> Pending Listing</a></li>
-                            <li class="active"><a href="<?php echo base_url('AdminHome') ?>"> <i class="fa fa-chevron-right"
+                            <li class="active"><a href="<?php echo base_url('ViewApprovedListing') ?>"> <i class="fa fa-chevron-right"
                             aria-hidden="true"></i> Approved listing</a></li>
-                            <li class="active"><a href="<?php echo base_url('AdminHome') ?>"> <i class="fa fa-chevron-right"
+                            <li class="active"><a href="<?php echo base_url('ViewRejectedListing') ?>"> <i class="fa fa-chevron-right"
                             aria-hidden="true"></i> Rejected listing</a></li>
             </ul>
             

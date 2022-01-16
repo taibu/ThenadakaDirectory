@@ -63,6 +63,12 @@ $route['login'] = 'welcome/login';
 $route['SubmitLoginform'] = 'Signin/verify_user';
 $route['AdminHome'] = 'Signin/Home';
 $route['addListing'] = 'Admin/AddListing';
+
+$route['ViewpendingListing'] = 'Admin/ViewpendingListing';
+$route['ViewApprovedListing'] = 'Admin/ViewApprovedListing';
+$route['ViewRejectedListing'] = 'Admin/ViewRejectedListing';
+$route['ViewListingDetails/(:any)'] = 'Admin/ViewListingDetails/$1';
+
 $route['listingcategories'] = 'Admin/ListingCategories';
 $route['addlistingcategories'] = 'Admin/AddListingCategories';
 $route['PendingListing/(:any)'] = 'Admin/PendingListing/$1';
