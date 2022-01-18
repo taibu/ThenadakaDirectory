@@ -246,13 +246,13 @@ class Admin_Model extends CI_Model
     $Description=$this->input->get_post('description'); 
     $address=$this->input->get_post('address'); 
 
-    $monday= $address=$this->input->get_post('monopenning').' - '.$address=$this->input->get_post('monclosing'); 
-    $tueday= $address=$this->input->get_post('tuesopening').' - '.$address=$this->input->get_post('tuesclosing'); 
-    $wedday= $address=$this->input->get_post('wedopening').' - '.$address=$this->input->get_post('wedclosing'); 
-    $thurday= $address=$this->input->get_post('thursdayopening').' - '.$address=$this->input->get_post('thursdayclosing'); 
-    $friday= $address=$this->input->get_post('fridayopenning').' - '.$address=$this->input->get_post('fridayclosing'); 
-    $satday= $address=$this->input->get_post('saturdayopening').' - '.$address=$this->input->get_post('sartudayclosing'); 
-    $sunday= $address=$this->input->get_post('sundayopenning').' - '.$address=$this->input->get_post('sundayclosing'); 
+    $monday= $this->input->get_post('monopenning').' - '.$address=$this->input->get_post('monclosing'); 
+    $tueday= $this->input->get_post('tuesopening').' - '.$address=$this->input->get_post('tuesclosing'); 
+    $wedday= $this->input->get_post('wedopening').' - '.$address=$this->input->get_post('wedclosing'); 
+    $thurday= $this->input->get_post('thursdayopening').' - '.$address=$this->input->get_post('thursdayclosing'); 
+    $friday= $this->input->get_post('fridayopenning').' - '.$address=$this->input->get_post('fridayclosing'); 
+    $satday= $this->input->get_post('saturdayopening').' - '.$address=$this->input->get_post('sartudayclosing'); 
+    $sunday= $this->input->get_post('sundayopenning').' - '.$address=$this->input->get_post('sundayclosing'); 
 
     $phone=$this->input->get_post('phone'); 
     $website=$this->input->get_post('website'); 

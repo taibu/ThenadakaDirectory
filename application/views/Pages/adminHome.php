@@ -52,6 +52,7 @@
                             <div class="bg-white p-4 shadow-sm border-radius">
                                 <h5 class="mb-4">Recent Listings</h5>
                                 <div class=" table-responsive ">
+                                <?php if($pendingads->num_rows()>0){ ?>
                                 <table class="table ">
                                         <thead>
                                             <tr>
@@ -64,7 +65,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php if($pendingads->num_rows()>0){
+                                        <?php 
                                                 $i=1;
                                             foreach($pendingads->result() as $row){ 
                                                 $imageone=base_url()."/assets/images/listing/".$row->photo; 
@@ -89,9 +90,12 @@
                                                 </td>
                                                
                                             </tr>
-                                          <?php $i++;}  }  ?>
+                                          <?php $i++;}   ?>
                                         </tbody>
                                     </table>
+                                    <?php }else{  ?>
+                                        <h5 style="margin:3em;"><i>There are no Listings pending approval.</i></h5>
+                                    <?php }  ?>
                                 </div>
                                 </div>
                             </div>
@@ -132,6 +136,7 @@
                             <div class="bg-white p-4 shadow-sm border-radius">
                                 <h5 class="mb-4">Recent Listings</h5>
                                 <div class=" table-responsive ">
+                                   <?php if($pendingads->num_rows()>0){ ?>
                                     <table class="table ">
                                         <thead>
                                             <tr>
@@ -144,7 +149,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php if($pendingads->num_rows()>0){
+                                        <?php
                                                 $i=1;
                                             foreach($pendingads->result() as $row){ 
                                                 $imageone=base_url()."/assets/images/listing/".$row->photo; 
@@ -170,9 +175,12 @@
                                                 <td> <a class="badge mb-0 bg-success" href="<?php echo base_url('PendingListing/'.$row->ListingId) ?>">VIEW DETAILS</a>
                                                 </td>
                                             </tr>
-                                          <?php $i++;}  }  ?>
+                                          <?php $i++;}    ?>
                                         </tbody>
                                     </table>
+                                    <?php }else{  ?>
+                                        <h5 style="margin:3em;"><i>There are no Listings pending approval.</i></h5>
+                                    <?php }  ?>
                                 </div>
                             </div>
                         </div>
@@ -213,6 +221,7 @@
                             <div class="bg-white p-4 shadow-sm border-radius">
                                 <h5 class="mb-4">Recent Listings</h5>
                                 <div class=" table-responsive ">
+                                <?php if($pendingads->num_rows()>0){ ?>
                                 <table class="table ">
                                         <thead>
                                             <tr>
@@ -225,7 +234,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php if($pendingads->num_rows()>0){
+                                        <?php 
                                                 $i=1;
                                             foreach($pendingads->result() as $row){ 
                                                 $imageone=base_url()."/assets/images/listing/".$row->photo; 
@@ -251,9 +260,12 @@
                                                 <td> <a class="badge mb-0 bg-success" href="<?php echo base_url('PendingListing/'.$row->ListingId) ?>">EDIT DETAILS</a>
                                                 </td>
                                             </tr>
-                                          <?php $i++;}  }  ?>
+                                          <?php $i++;}    ?>
                                         </tbody>
                                     </table>
+                                    <?php }else{  ?>
+                                         <h5 style="margin:3em;"><i>There are no Listings pending approval.</i></h5>
+                                    <?php }  ?>
                                 </div>
                             </div>
                         </div>

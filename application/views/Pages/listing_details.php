@@ -91,7 +91,7 @@ Listing single -->
     <section class="space-ptb bg-light">
         <div class="container">
             <div class="row mb-4">
-            <div class="col-md-9">
+                <div class="col-md-9">
                     <h2><?php echo $addetails['adName']; ?> <i class="fa fa-check-circle text-success ps-3"></i></h2>
                     <a class="listing-loaction text-dark mb-3 d-block"
                         href="listing-single-01.html#"><?php echo $addetails['Category']; ?></a>
@@ -147,17 +147,20 @@ Listing single -->
                         <?php if(isset($ratings) && ($ratings->num_rows()>0)){ ?>
                         <div class="listing-detail-box mb-3">
                             <div class="detail-title">
-                                <h5>Listing 5 Recent Reviews <span style="padding:4px;border-radius:5px;" class="bg-success text-white me-2 pull-right"><?php echo $average ?>  Rating</span> </h5>
+                                <h5>Listing 5 Recent Reviews <span style="padding:4px;border-radius:5px;"
+                                        class="bg-success text-white me-2 pull-right"><?php echo $average ?>
+                                        Rating</span> </h5>
                             </div>
                             <?php if($ratings->num_rows()>0){
                                 $i=1;
                             foreach($ratings->result() as $row){ 
                                 //$imageone=base_url()."/assets/images/listing/".$row->photo; 
                             ?>
-                              <div class="row border-bottom pb-4 mb-4">
+                            <div class="row border-bottom pb-4 mb-4">
                                 <div class="col-md-1">
                                     <div class="avatar avatar-lg">
-                                        <img src="<?php echo base_url('assets/images/avatar/01.png') ?>" class="img-fluid rounded-circle" alt="...">
+                                        <img src="<?php echo base_url('assets/images/avatar/01.png') ?>"
+                                            class="img-fluid rounded-circle" alt="...">
                                     </div>
                                 </div>
                                 <div class="col-md-11">
@@ -172,7 +175,7 @@ Listing single -->
                                                     <li><i class="fa fa-star text-warning"></i></li>
                                                     <?php } ?>
                                                     <?php for($i=0;$i<(5-floor($row->Rating));$i++){ ?>
-                                                        <li><i class="fa fa-star text-light"></i></li>
+                                                    <li><i class="fa fa-star text-light"></i></li>
                                                     <?php } ?>
                                                     <!-- <li><i class="fa fa-star text-warning"></i></li>
                                                     <li><i class="fa fa-star text-warning"></i></li>
@@ -197,7 +200,7 @@ Listing single -->
                                 </div>
                             </div>
                             <?php } } ?>
-                           
+
 
                         </div>
                         <?php } ?>
@@ -205,31 +208,29 @@ Listing single -->
                             <div class="detail-title">
                                 <h5>Add Your review / Rating</h5>
                             </div>
-                            <form action="<?php echo base_url('Admin/Submitrating') ?>" method="post"> 
+                            <form action="<?php echo base_url('Admin/Submitrating') ?>" method="post">
                                 <div class="row">
                                     <div class="form-group mb-3 col-md-12">
                                         <div class="ratings">
                                             <input type="radio" id="star5" name="ratings" value="5"><label
                                                 class="full form-label" for="star5" title="Awesome - 5 stars"></label>
-                                            <input type="radio" id="star4half" name="ratings"
-                                                value="4.5"><label class="half form-label" for="star4half"
+                                            <input type="radio" id="star4half" name="ratings" value="4.5"><label
+                                                class="half form-label" for="star4half"
                                                 title="Pretty good - 4.5 stars"></label>
                                             <input type="radio" id="star4" name="ratings" value="4"><label
                                                 class="full form-label" for="star4"
                                                 title="Pretty good - 4 stars"></label>
-                                            <input type="radio" id="star3half" name="ratings"
-                                                value="3.5"><label class="half form-label" for="star3half"
-                                                title="Meh - 3.5 stars"></label>
+                                            <input type="radio" id="star3half" name="ratings" value="3.5"><label
+                                                class="half form-label" for="star3half" title="Meh - 3.5 stars"></label>
                                             <input type="radio" id="star3" name="ratings" value="3"><label
                                                 class="full form-label" for="star3" title="Meh - 3 stars"></label>
-                                            <input type="radio" id="star2half" name="ratings"
-                                                value="2.5"><label class="half form-label" for="star2half"
+                                            <input type="radio" id="star2half" name="ratings" value="2.5"><label
+                                                class="half form-label" for="star2half"
                                                 title="Kinda bad - 2.5 stars"></label>
                                             <input type="radio" id="star2" name="ratings" value="2"><label
                                                 class="full form-label" for="star2" title="Kinda bad - 2 stars"></label>
-                                            <input type="radio" id="star1half" name="ratings"
-                                                value="1.5"><label class="half form-label" for="star1half"
-                                                title="Meh - 1.5 stars"></label>
+                                            <input type="radio" id="star1half" name="ratings" value="1.5"><label
+                                                class="half form-label" for="star1half" title="Meh - 1.5 stars"></label>
                                             <input type="radio" id="star1" name="ratings" value="1"><label
                                                 class="full form-label" for="star1"
                                                 title="Sucks big time - 1 star"></label>
@@ -239,32 +240,33 @@ Listing single -->
                                         </div>
                                     </div>
                                     <div class="form-group mb-12 col-md-12">
-                                        <input type="hidden"  name="Id" value="<?php echo $addetails['ListingId'] ?>">   
+                                        <input type="hidden" name="Id" value="<?php echo $addetails['ListingId'] ?>">
                                         <label class="form-label">Your name</label>
                                         <input type="text" class="form-control" name="name" placeholder="Your name">
                                     </div>
-                                    
+
                                     <div class="form-group mb-3 col-md-12">
                                         <label class="form-label">Your message</label>
-                                        <textarea class="form-control" name="message" rows="4" placeholder="Your message"></textarea>
+                                        <textarea class="form-control" name="message" rows="4"
+                                            placeholder="Your message"></textarea>
                                     </div>
-                                   
+
                                     <div class="col-md-12">
                                         <button class="btn btn-primary" type="submit">Submit Review</button>
                                     </div>
                                 </div>
                             </form>
                             <div class="row">
-                           <div class="mt-3 col-sm-12">
-                              <?php require_once(APPPATH . 'views/Templates/error.php'); ?>
-                           </div>
-                        </div>
+                                <div class="mt-3 col-sm-12">
+                                    <?php require_once(APPPATH . 'views/Templates/error.php'); ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="sidebar mb-0">
-                        
+
                         <div class="widget">
                             <div class="widget-title bg-primary">
                                 <h6 class="text-white mb-0"> <i class="fa fa-clock"></i> Opening hours </h6>
@@ -300,21 +302,29 @@ Listing single -->
                                 <h6 class="text-white mb-0"> <i class="fas fa-map-marker-alt"></i> Location </h6>
                             </div>
                             <div class="widget-content">
-                               
+
                                 <ul class="list-unstyled mb-3 mt-4 d-block">
-                                    <li class="mb-2"><strong class="text-dark d-inline-block me-2">Address:</strong><?php echo $addetails['Adress']; ?></li>
-                                    
+                                    <li class="mb-2"><strong
+                                            class="text-dark d-inline-block me-2">Address:</strong><?php echo $addetails['Adress']; ?>
+                                    </li>
+
                                     <li class="mb-2"><strong class="text-dark d-inline-block me-2">Phone:</strong>(123)
                                         345-6789</li>
-                                    <li class="mb-2"><strong class="text-dark d-inline-block me-2">Facebook:</strong><?php echo $addetails['facebooklink']; ?></li>
-                                    <li class="mb-2"><strong class="text-dark d-inline-block me-2">Instagram:</strong><?php echo $addetails['instalink']; ?></li>
-                                    <li class="mb-2"><strong class="text-dark d-inline-block me-2">Twitter:</strong><?php echo $addetails['twitterlink']; ?></li>
+                                    <li class="mb-2"><strong
+                                            class="text-dark d-inline-block me-2">Facebook:</strong><?php echo $addetails['facebooklink']; ?>
+                                    </li>
+                                    <li class="mb-2"><strong
+                                            class="text-dark d-inline-block me-2">Instagram:</strong><?php echo $addetails['instalink']; ?>
+                                    </li>
+                                    <li class="mb-2"><strong
+                                            class="text-dark d-inline-block me-2">Twitter:</strong><?php echo $addetails['twitterlink']; ?>
+                                    </li>
                                 </ul>
-                                
+
                             </div>
                         </div>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -325,7 +335,7 @@ Listing single -->
 
     <!--=================================
 footer-->
-  <?php $this->load->view("Templates/footer") ?>
+    <?php $this->load->view("Templates/footer") ?>
     <!--=================================
 footer-->
 
