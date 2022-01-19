@@ -76,13 +76,13 @@ Page title -->
 
                          ?>
 
-    <?php
-                    $imageone=base_url()."/assets/images/listing/".$addetails['photo'];
-                    $imagetwo=base_url()."/assets/images/listing/".((empty($addetails['photo2']))?$addetails['photo']:$addetails['photo2']);
-                    $imagethree=base_url()."/assets/images/listing/".((empty($addetails['photo3']))?$addetails['photo']:$addetails['photo3']);
-                    $imagefour=base_url()."/assets/images/listing/".((empty($addetails['photo4']))?$addetails['photo']:$addetails['photo4']);
-                    $imagefive=base_url()."/assets/images/listing/".((empty($addetails['photo5']))?$addetails['photo']:$addetails['photo5']);
-            ?>
+                         <?php
+                                $imageone=base_url()."/assets/images/listing/".$addetails['photo'];
+                                $imagetwo=base_url()."/assets/images/listing/".((empty($addetails['photo2']))?"placeholder2.jpg":$addetails['photo2']);
+                                $imagethree=base_url()."/assets/images/listing/".((empty($addetails['photo3']))?"placeholder2.jpg":$addetails['photo3']);
+                                $imagefour=base_url()."/assets/images/listing/".((empty($addetails['photo4']))?"placeholder2.jpg":$addetails['photo4']);
+                                $imagefive=base_url()."/assets/images/listing/".((empty($addetails['photo5']))?"placeholder2.jpg":$addetails['photo5']);
+                        ?>
     <!--=================================
 Page title -->
 
@@ -123,8 +123,8 @@ Listing single -->
                                     <img class="img-fluid" src="<?php echo $imagefour ?>" alt="">
                                     <img class="img-fluid" src="<?php echo $imagefive ?>" alt="">
                                     <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
+                                    <img class="img-fluid" src="<?php echo $imagetwo ?>" alt="">
+                                    <img class="img-fluid" src="<?php echo $imagethree ?>" alt="">
                                 </div>
                                 <div class="slider slider-nav d-none d-sm-block">
                                     <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
@@ -133,8 +133,8 @@ Listing single -->
                                     <img class="img-fluid" src="<?php echo $imagefour ?>" alt="">
                                     <img class="img-fluid" src="<?php echo $imagefive ?>" alt="">
                                     <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
+                                    <img class="img-fluid" src="<?php echo $imagetwo ?>" alt="">
+                                    <img class="img-fluid" src="<?php echo $imagethree ?>" alt="">
                                 </div>
                             </div>
                             <div class="mt-sm-4 mt-0">

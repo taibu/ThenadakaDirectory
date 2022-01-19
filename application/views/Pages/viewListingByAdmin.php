@@ -188,7 +188,7 @@
                                                 <?php echo $row->Approved ?>
                                             </td>
                                             <td> <a class="badge mb-0 bg-success"
-                                                    href="<?php echo base_url('ViewListingDetails/'.$row->ListingId) ?>">EDIT
+                                                    href="<?php echo base_url('ViewListingDetails/'.$row->ListingId) ?>">VIEW
                                                     DETAILS</a>
                                             </td>
                                         </tr>
@@ -225,12 +225,12 @@
             
                                     ?>
 
-                <?php
+                         <?php
                                 $imageone=base_url()."/assets/images/listing/".$addetails['photo'];
-                                $imagetwo=base_url()."/assets/images/listing/".((empty($addetails['photo2']))?$addetails['photo']:$addetails['photo2']);
-                                $imagethree=base_url()."/assets/images/listing/".((empty($addetails['photo3']))?$addetails['photo']:$addetails['photo3']);
-                                $imagefour=base_url()."/assets/images/listing/".((empty($addetails['photo4']))?$addetails['photo']:$addetails['photo4']);
-                                $imagefive=base_url()."/assets/images/listing/".((empty($addetails['photo5']))?$addetails['photo']:$addetails['photo5']);
+                                $imagetwo=base_url()."/assets/images/listing/".((empty($addetails['photo2']))?"placeholder2.jpg":$addetails['photo2']);
+                                $imagethree=base_url()."/assets/images/listing/".((empty($addetails['photo3']))?"placeholder2.jpg":$addetails['photo3']);
+                                $imagefour=base_url()."/assets/images/listing/".((empty($addetails['photo4']))?"placeholder2.jpg":$addetails['photo4']);
+                                $imagefive=base_url()."/assets/images/listing/".((empty($addetails['photo5']))?"placeholder2.jpg":$addetails['photo5']);
                         ?>
                 <!--=================================
             Page title -->
@@ -244,29 +244,29 @@
                             <div class="col-lg-12">
                                 <ul class="list-unstyled listing-detail-meta mb-4">
                                     <li><a href="#" onclick="hideShowTab('overviewTab')"><i
-                                                class="fas fa-phone-volume"></i> OVERVIEW</a></li>
-                                    <li><a href="#" onclick="hideShowTab('editTab')"><i class="far fa-heart"></i>
-                                            EDITs</a></li>
+                                                class="fa fa-eye"></i> OVERVIEW</a></li>
+                                    <li><a href="#" onclick="hideShowTab('editTab')"><i class="fa fa-edit"></i>
+                                            EDIT</a></li>
                                     <li><a href="#" onclick="hideShowTab('deactivateTab')"><i
-                                                class="far fa-bookmark"></i>
+                                                class="fa fa-remove"></i>
                                             DEACTIVATE</a>
                                     </li>
-                                    <li><a href="#" onclick="hideShowTab('RatingsTab')"><i class="far fa-star"></i>
+                                    <li><a href="#" onclick="hideShowTab('RatingsTab')"><i class="fa fa-star"></i>
                                             RATINGS</a></li>
 
-                                    <li><a href="#" onclick="hideShowTab('addproductTab')"><i class="far fa-star"></i>
+                                    <li><a href="#" onclick="hideShowTab('addproductTab')"><i class="fa fa-cogs"></i>
                                             ADD PRODUCTS</a></li>
 
                                 </ul>
                                 <div id="overviewTab">
                                     <div class="row mb-4">
                                         <div class="col-md-9">
-                                            <h5><?php echo $addetails['adName']; ?> <br> <span style="font-size:25px;">(
+                                            <h5><?php echo $addetails['adName']; ?>  <span style="font-size:25px;">(
                                                     <?php echo $addetails['Adress']; ?> ) </span> </h5>
                                             <a class="listing-loaction text-dark mb-3 d-block"
                                                 href=""><?php echo $addetails['Category']; ?></a>
 
-                                           
+
 
                                         </div>
 
@@ -386,8 +386,8 @@
                                 </div>
                                 <div id="editTab">
                                     <div class="col-lg-12 col-md-12">
-                                        <form action="Admin/SubmitListing" enctype="multipart/form-data" method="post">
-                                            <h4 class="mb-4">Add Listing</h4>
+                                        <form action="<?php echo base_url('Admin/SubmitListing') ?>" enctype="multipart/form-data" method="post">
+                                            <h4 class="mb-4">Edit Listing</h4>
                                             <div class="sidebar mb-0">
                                                 <div class="row">
                                                     <div class="mt-3 col-sm-12">
@@ -405,29 +405,45 @@
                                                         <div class="row">
                                                             <div class="mb-3 col-lg-12">
                                                                 <label class="form-label">Business name *</label>
+                                                                <input type="hidden" name="listingId" value="<?php echo $addetails['ListingId']; ?>"
+                                                                    required>
                                                                 <input type="text" class="form-control"
-                                                                    name="businessname" placeholder="Business name"
+                                                                    name="businessname"
+                                                                    value="<?php echo $addetails['adName']; ?>"
                                                                     required>
                                                             </div>
                                                             <div class="mb-3 col-lg-6 select-border">
                                                                 <label class="form-label">Category *</label>
                                                                 <select class="form-control basic-select"
                                                                     name="category" required>
-                                                                    <option value="" selected="selected">Select Category
+                                                                    <option
+                                                                        value="<?php echo $addetails['CategoryId']; ?>"
+                                                                        selected="selected">
+                                                                        <?php echo $addetails['Category']; ?>
                                                                     </option>
-
+                                                                    <?php if($allcategories->num_rows()>0){
+                                                                    $i=1;
+                                                                    foreach($allcategories->result() as $row){
+                                                                
+                                                                    ?>
+                                                                    <tr>
+                                                                        <option value="<?php echo $row->CategoryId ?>">
+                                                                            <?php echo $row->Category ?></option>
+                                                                    </tr>
+                                                                    <?php } } ?>
                                                                 </select>
                                                             </div>
                                                             <div class="mb-3 col-lg-6">
                                                                 <label class="form-label">Search keywords</label>
                                                                 <input type="text" class="form-control" name="keywords"
-                                                                    placeholder="keywords">
+                                                                    value="<?php echo $addetails['keywords']; ?>">
                                                             </div>
 
                                                             <div class="col-12 mb-0">
                                                                 <label class="form-label">Description</label>
                                                                 <textarea class="form-control" name="description"
-                                                                    rows="4" placeholder="Description"></textarea>
+                                                                    rows="4"
+                                                                    placeholder="Description"><?php echo $addetails['Description']; ?></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -443,7 +459,8 @@
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Business Maps Address </label>
                                                                 <input type="text" name="address" class="form-control"
-                                                                    placeholder="" id="autocomplete">
+                                                                    value="<?php echo $addetails['Adress']; ?>"
+                                                                    id="autocomplete">
                                                             </div>
 
                                                         </div>
@@ -460,65 +477,12 @@
                                                                 <h6 class="font-md">Monday: </h6>
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="monopenning">
-                                                                    <option value="" selected="selected">Opening Time
-                                                                    </option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-
-                                                                </select>
+                                                                <input type="time" name="monopenning" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['MonworkHours'])[0]; ?>">
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="monclosing">
-                                                                    <option value="value 01" selected="selected">Closing
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="monclosing" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['MonworkHours'])[1]; ?>">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-2">
@@ -526,64 +490,14 @@
                                                                 <h6 class="font-md">Tuesday: </h6>
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="tuesopening">
-                                                                    <option value="value 01" selected="selected">Opening
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="tuesopening" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['TueworkHours'])[0]; ?>">
+
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="tuesclosing">
-                                                                    <option value="value 01" selected="selected">Closing
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="tuesclosing" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['TueworkHours'])[1]; ?>">
+
                                                             </div>
                                                         </div>
                                                         <div class="row mt-2">
@@ -591,64 +505,13 @@
                                                                 <h6 class="font-md">Wednesday: </h6>
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="wedopening">
-                                                                    <option value="value 01" selected="selected">Opening
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="wedopening" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['WedworkHours'])[0]; ?>">
+
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="wedclosing">
-                                                                    <option value="value 01" selected="selected">Closing
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="wedclosing" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['WedworkHours'])[1]; ?>">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-2">
@@ -656,64 +519,14 @@
                                                                 <h6 class="font-md">Thursday: </h6>
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="thursdayopening">
-                                                                    <option value="value 01" selected="selected">Opening
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="thursdayopening" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['ThursworkHours'])[0]; ?>">
+
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="thursdayclosing">
-                                                                    <option value="value 01" selected="selected">Closing
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="thursdayclosing" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['ThursworkHours'])[1]; ?>">
+
                                                             </div>
                                                         </div>
                                                         <div class="row mt-2">
@@ -721,64 +534,14 @@
                                                                 <h6 class="font-md">Friday: </h6>
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="fridayopenning">
-                                                                    <option value="value 01" selected="selected">Opening
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="fridayopenning" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['FriworkHours'])[0]; ?>">
+
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="fridayclosing">
-                                                                    <option value="value 01" selected="selected">Closing
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="fridayclosing" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['FriworkHours'])[1]; ?>">
+
                                                             </div>
                                                         </div>
                                                         <div class="row mt-2">
@@ -786,64 +549,14 @@
                                                                 <h6 class="font-md">Saturday: </h6>
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="saturdayopening">
-                                                                    <option value="value 01" selected="selected">Opening
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="saturdayopening" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['SatworkHours'])[0]; ?>">
+
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="sartudayclosing">
-                                                                    <option value="value 01" selected="selected">Closing
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="sartudayclosing" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['SatworkHours'])[1]; ?>">
+
                                                             </div>
                                                         </div>
                                                         <div class="row mt-2">
@@ -851,53 +564,14 @@
                                                                 <h6 class="font-md">Sunday: </h6>
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="sundayopenning">
-                                                                    <option value="value 01" selected="selected">Opening
-                                                                        Time</option>
-                                                                    <option value="value 02">Closed</option>
-                                                                    <option value="03">01</option>
-                                                                    <option value="03">02</option>
-                                                                    <option value="04">04</option>
-                                                                    <option value="05">05</option>
-                                                                    <option value="06">06</option>
-                                                                    <option value="07">07</option>
-                                                                    <option value="08">08</option>
-                                                                    <option value="03">09</option>
-                                                                    <option value="03">10</option>
-                                                                    <option value="04">11</option>
-                                                                    <option value="05">12</option>
-                                                                </select>
+                                                                <input type="time" name="sundayopenning" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['SunworkHours'])[0]; ?>">
+
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
-                                                                <select class="form-control basic-select"
-                                                                    name="sundayclosing">
-                                                                    <option value="value 01" selected="selected">Closing
-                                                                        Time</option>
-                                                                    <option value="02:00">Closed</option>
-                                                                    <option value="03:00">01:00</option>
-                                                                    <option value="03:00">02:00</option>
-                                                                    <option value="04:00">04:00</option>
-                                                                    <option value="05:00">05:00</option>
-                                                                    <option value="06:00">06:00</option>
-                                                                    <option value="07:00">07:00</option>
-                                                                    <option value="08:00">08:00</option>
-                                                                    <option value="03:00">09:00</option>
-                                                                    <option value="03:00">10:00</option>
-                                                                    <option value="04:00">11:00</option>
-                                                                    <option value="05:00">12:00</option>
-                                                                    <option value="03:00">13:00</option>
-                                                                    <option value="03:00">14:00</option>
-                                                                    <option value="04:00">15:00</option>
-                                                                    <option value="05:00">16:00</option>
-                                                                    <option value="06:00">17:00</option>
-                                                                    <option value="07:00">19:00</option>
-                                                                    <option value="08:00">20:00</option>
-                                                                    <option value="03:00">21:00</option>
-                                                                    <option value="03:00">22:00</option>
-                                                                    <option value="04:00">23:00</option>
-                                                                    <option value="05:00">24:00</option>
-                                                                </select>
+                                                                <input type="time" name="sundayclosing" id=""
+                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['SunworkHours'])[1]; ?>">
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -917,9 +591,11 @@
                                                                     </h6>
                                                                     <img alt="osahan logo" id="output"
                                                                         style="width:100%;"
-                                                                        src="<?php echo base_url('assets/images/placeholder2.jpg')?>">
-                                                                    <input type="file" name="imageone" required=""
+                                                                        src="<?php echo  ($imageone)!=""?$imageone:base_url('assets/images/placeholder2.jpg');?>" >
+                                                                    <input type="file" name="imageone" required="false" 
                                                                         class="form-control" onchange="loadFile(event)">
+                                                                        <?php //echo (strpos($imageone,'placeholder2')?'true':'false') ?>
+                                                                        
                                                                     <script>
                                                                     var loadFile = function(event) {
                                                                         var image = document.getElementById(
@@ -937,7 +613,7 @@
                                                                     <div class="col-md-6 ">
                                                                         <img alt="osahan logo" id="output2"
                                                                             style="width:100%;"
-                                                                            src="<?php echo base_url('assets/images/placeholder2.jpg')?>">
+                                                                            src="<?php echo  ($imagetwo)!=""?$imagetwo:base_url('assets/images/placeholder2.jpg');?>">
                                                                         <input type="file" name="image2"
                                                                             class="form-control"
                                                                             onchange="loadFile2(event)">
@@ -953,7 +629,7 @@
                                                                     <div class="col-md-6">
                                                                         <img alt="osahan logo" id="output3"
                                                                             style="width:100%;"
-                                                                            src="<?php echo base_url('assets/images/placeholder2.jpg')?>">
+                                                                            src="<?php echo  ($imagethree)!=""?$imagethree:base_url('assets/images/placeholder2.jpg');?>">
                                                                         <input type="file" name="image3"
                                                                             class="form-control"
                                                                             onchange="loadFile3(event)">
@@ -969,7 +645,7 @@
                                                                     <div class="col-md-6 ">
                                                                         <img alt="osahan logo" id="output4"
                                                                             style="width:100%;"
-                                                                            src="<?php echo base_url('assets/images/placeholder2.jpg')?>">
+                                                                            src="<?php echo  ($imagethree)!=""?$imagefour:base_url('assets/images/placeholder2.jpg');?>">
                                                                         <input type="file" name="image4"
                                                                             class="form-control"
                                                                             onchange="loadFile4(event)">
@@ -985,9 +661,9 @@
                                                                     <div class="col-md-6 ">
                                                                         <img alt="osahan logo" id="output5"
                                                                             style="width:100%;"
-                                                                            src="<?php echo base_url('assets/images/placeholder2.jpg')?>">
+                                                                            src="<?php echo  $imagefive ?>">
                                                                         <input type="file" name="image5"
-                                                                            class="form-control"
+                                                                            class="form-control" value="<?php echo  $imagefive ?>"
                                                                             onchange="loadFile5(event)">
                                                                     </div>
                                                                     <script>
@@ -1016,36 +692,35 @@
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Phone </label>
                                                                 <input type="text" name="phone" class="form-control"
-                                                                    placeholder="Phone">
+                                                                    value="<?php echo $addetails['Phone']; ?>">
                                                             </div>
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Website </label>
                                                                 <input type="text" name="website" class="form-control"
-                                                                    placeholder="Website">
+                                                                value="<?php echo $addetails['Website']; ?>">
                                                             </div>
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Facebook </label>
                                                                 <input type="text" name="facebook" class="form-control"
-                                                                    placeholder="Facebook">
+                                                                value="<?php echo $addetails['facebooklink']; ?>">
                                                             </div>
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Twitter </label>
                                                                 <input type="text" name="twitter" class="form-control"
-                                                                    placeholder="Twitter">
+                                                                value="<?php echo $addetails['twitterlink']; ?>">
                                                             </div>
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Pinterest </label>
                                                                 <input type="text" name="pintrest" class="form-control"
-                                                                    placeholder="Pinterest ">
+                                                                value="<?php echo $addetails['instalink']; ?>">
                                                             </div>
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Instagram </label>
                                                                 <input type="text" name="instagram" class="form-control"
-                                                                    placeholder="Instagram">
+                                                                value="<?php echo $addetails['instalink']; ?>">
                                                             </div>
                                                             <div class="mb-3 col-12 form-group">
-                                                                <button class="btn btn-secondary" type="submit">Save &
-                                                                    Preview</button>
+                                                                <button class="btn btn-secondary" type="submit">Save Details</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1121,7 +796,7 @@
                                 </div>
                                 <div id="addproductTab">
                                     <div class="col-lg-12 col-md-12">
-                                        <form action="Admin/SubmitListing" enctype="multipart/form-data" method="post">
+                                        <form action="<?php echo base_url('Admin/SubmitListingProduct') ?>" enctype="multipart/form-data" method="post">
                                             <h4 class="mb-4">Add Listing</h4>
                                             <div class="sidebar mb-0">
                                                 <div class="row">
@@ -1132,16 +807,18 @@
                                                 <div class="widget">
                                                     <div class="widget-title bg-primary">
                                                         <h6 class="text-white mb-0"> <i class="far fa-address-book"></i>
-                                                            General
+                                                            Product /service
                                                             Information:
                                                         </h6>
                                                     </div>
                                                     <div class="widget-content">
                                                         <div class="row">
                                                             <div class="mb-3 col-lg-12">
-                                                                <label class="form-label">Business name *</label>
+                                                                <label class="form-label">Product /Service name *</label>
+                                                                <input type="hidden" name="listingId" value="<?php echo $addetails['ListingId']; ?>"
+                                                                    required>
                                                                 <input type="text" class="form-control"
-                                                                    name="businessname" placeholder="Business name"
+                                                                    name="businessname" placeholder="product / service name"
                                                                     required>
                                                             </div>
 
@@ -1158,7 +835,7 @@
 
                                                 <div class="widget">
                                                     <div class="widget-title bg-primary">
-                                                        <h6 class="text-white mb-0"> <i class="fas fa-th"></i> Gallery:
+                                                        <h6 class="text-white mb-0"> <i class="fas fa-th"></i> Product Image:
                                                         </h6>
                                                     </div>
                                                     <div class="widget-content">
@@ -1169,95 +846,26 @@
                                                                 <div class="controls">
                                                                     <h6>Main Image <span class="text-danger">*</span>
                                                                     </h6>
-                                                                    <img alt="osahan logo" id="output"
-                                                                        style="width:100%;"
+                                                                    <img alt="osahan logo" id="outputps"
+                                                                        style="width:200px;"
                                                                         src="<?php echo base_url('assets/images/placeholder2.jpg')?>">
                                                                     <input type="file" name="imageone" required=""
                                                                         class="form-control" onchange="loadFile(event)">
                                                                     <script>
                                                                     var loadFile = function(event) {
                                                                         var image = document.getElementById(
-                                                                            'output');
+                                                                            'outputps');
                                                                         image.src = URL.createObjectURL(event.target
                                                                             .files[0]);
                                                                     };
                                                                     </script>
                                                                 </div>
                                                             </div>
-                                                            <div class="control-group form-group col-lg-6 col-md-6">
-                                                                <h6>Additional Images <span class="text-danger">*</span>
-                                                                </h6>
-                                                                <div class="row product_images">
-                                                                    <div class="col-md-6 ">
-                                                                        <img alt="osahan logo" id="output2"
-                                                                            style="width:100%;"
-                                                                            src="<?php echo base_url('assets/images/placeholder2.jpg')?>">
-                                                                        <input type="file" name="image2"
-                                                                            class="form-control"
-                                                                            onchange="loadFile2(event)">
-                                                                    </div>
-                                                                    <script>
-                                                                    var loadFile2 = function(event) {
-                                                                        var image = document.getElementById(
-                                                                            'output2');
-                                                                        image.src = URL.createObjectURL(event.target
-                                                                            .files[0]);
-                                                                    };
-                                                                    </script>
-                                                                    <div class="col-md-6">
-                                                                        <img alt="osahan logo" id="output3"
-                                                                            style="width:100%;"
-                                                                            src="<?php echo base_url('assets/images/placeholder2.jpg')?>">
-                                                                        <input type="file" name="image3"
-                                                                            class="form-control"
-                                                                            onchange="loadFile3(event)">
-                                                                    </div>
-                                                                    <script>
-                                                                    var loadFile3 = function(event) {
-                                                                        var image = document.getElementById(
-                                                                            'output3');
-                                                                        image.src = URL.createObjectURL(event.target
-                                                                            .files[0]);
-                                                                    };
-                                                                    </script>
-                                                                    <div class="col-md-6 ">
-                                                                        <img alt="osahan logo" id="output4"
-                                                                            style="width:100%;"
-                                                                            src="<?php echo base_url('assets/images/placeholder2.jpg')?>">
-                                                                        <input type="file" name="image4"
-                                                                            class="form-control"
-                                                                            onchange="loadFile4(event)">
-                                                                    </div>
-                                                                    <script>
-                                                                    var loadFile4 = function(event) {
-                                                                        var image = document.getElementById(
-                                                                            'output4');
-                                                                        image.src = URL.createObjectURL(event.target
-                                                                            .files[0]);
-                                                                    };
-                                                                    </script>
-                                                                    <div class="col-md-6 ">
-                                                                        <img alt="osahan logo" id="output5"
-                                                                            style="width:100%;"
-                                                                            src="<?php echo base_url('assets/images/placeholder2.jpg')?>">
-                                                                        <input type="file" name="image5"
-                                                                            class="form-control"
-                                                                            onchange="loadFile5(event)">
-                                                                    </div>
-                                                                    <script>
-                                                                    var loadFile5 = function(event) {
-                                                                        var image = document.getElementById(
-                                                                            'output5');
-                                                                        image.src = URL.createObjectURL(event.target
-                                                                            .files[0]);
-                                                                    };
-                                                                    </script>
-
-
-                                                                </div>
-
-                                                            </div>
+                                                         
                                                         </div>
+                                                        <div class="mb-3 col-12 form-group"> <br><br>
+                                            <button class="btn btn-secondary" type="submit">Save Product/Service</button>
+                                        </div>
                                                     </div>
                                                 </div>
 

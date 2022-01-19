@@ -49,6 +49,15 @@ class Admin extends CI_Controller {
                 }
                 redirect( base_url('addListing'), 'refresh');  
         }
+        public function SubmitListingProduct(){
+          $listingadded = $this->Admin_Model->Add_ListingProduct();
+          if($listingadded=='true'){
+            $this->session->set_flashdata('success', "Listing product / service created Successfully");
+          }else{
+            $this->session->set_flashdata('error', "Operation  failed please try again");
+          }
+          redirect( base_url('addListing'), 'refresh');  
+        }
         public function SubmitRating(){
                 $ratingadded = $this->Admin_Model->Add_Rating();
                 if($ratingadded=='true'){
@@ -59,6 +68,7 @@ class Admin extends CI_Controller {
                 //redirect( base_url('addListing'), 'refresh');  
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
         }
+        
       public function PendingListing($id){
        
         $data["ad"]=$this->Admin_Model->fetch_Pendinglisting($id);
@@ -69,6 +79,7 @@ class Admin extends CI_Controller {
       public function ViewpendingListing(){
        
         $data["adslist"]=$this->Admin_Model->fetch_Pendinglisting();
+       
         $data["type"]="list";
         $this->load->view('Pages/viewListingByAdmin',$data); 
       }
@@ -87,6 +98,7 @@ class Admin extends CI_Controller {
       public function ViewListingDetails($id){
         $data["addetails"]=$this->Admin_Model->fetch_listingdetails($id);
         $data["ratings"]=$this->Admin_Model->fetch_ratings($id);
+        $data["allcategories"]=$this->Admin_Model->fetch_categories();
         $data["type"]="details";
         $this->load->view('Pages/viewListingByAdmin',$data);
       }

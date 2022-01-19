@@ -77,7 +77,7 @@ class Admin_Model extends CI_Model
             return $q;
         }else{
             $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
-            inner join istingcategories lc on l.Category=lc.CategoryId where Approved='PENDING' and ListingId='".$this->db->escape_str($cat)."'
+            inner join listingcategories lc on l.Category=lc.CategoryId where Approved='PENDING' and ListingId='".$this->db->escape_str($cat)."'
             order by ListingId desc;");
             return $q->row_array();
         } 
@@ -101,7 +101,7 @@ class Admin_Model extends CI_Model
             return $q;
         }else{
             $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
-            inner join istingcategories lc on l.Category=lc.CategoryId where Approved='REJECTED' and ListingId='".$this->db->escape_str($cat)."'
+            inner join listingcategories lc on l.Category=lc.CategoryId where Approved='REJECTED' and ListingId='".$this->db->escape_str($cat)."'
             order by ListingId desc;");
             return $q->row_array();
         } 
@@ -125,7 +125,7 @@ class Admin_Model extends CI_Model
             return $q;
         }else{
             $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
-            inner join istingcategories lc on l.Category=lc.CategoryId where Approved='APPROVED' and ListingId='".$this->db->escape_str($cat)."'
+            inner join listingcategories lc on l.Category=lc.CategoryId where Approved='APPROVED' and ListingId='".$this->db->escape_str($cat)."'
             order by ListingId desc;");
             return $q->row_array();
         } 
@@ -240,19 +240,20 @@ class Admin_Model extends CI_Model
         return $q;
     }
    function Add_Listing(){
+    $listingId=$this->input->get_post('listingId'); 
     $businessname=$this->input->get_post('businessname'); 
     $category=$this->input->get_post('category'); 
     $keywords=$this->input->get_post('keywords'); 
     $Description=$this->input->get_post('description'); 
     $address=$this->input->get_post('address'); 
 
-    $monday= $this->input->get_post('monopenning').' - '.$address=$this->input->get_post('monclosing'); 
-    $tueday= $this->input->get_post('tuesopening').' - '.$address=$this->input->get_post('tuesclosing'); 
-    $wedday= $this->input->get_post('wedopening').' - '.$address=$this->input->get_post('wedclosing'); 
-    $thurday= $this->input->get_post('thursdayopening').' - '.$address=$this->input->get_post('thursdayclosing'); 
-    $friday= $this->input->get_post('fridayopenning').' - '.$address=$this->input->get_post('fridayclosing'); 
-    $satday= $this->input->get_post('saturdayopening').' - '.$address=$this->input->get_post('sartudayclosing'); 
-    $sunday= $this->input->get_post('sundayopenning').' - '.$address=$this->input->get_post('sundayclosing'); 
+    $monday= $this->input->get_post('monopenning').' - '.$this->input->get_post('monclosing'); 
+    $tueday= $this->input->get_post('tuesopening').' - '.$this->input->get_post('tuesclosing'); 
+    $wedday= $this->input->get_post('wedopening').' - '.$this->input->get_post('wedclosing'); 
+    $thurday= $this->input->get_post('thursdayopening').' - '.$this->input->get_post('thursdayclosing'); 
+    $friday= $this->input->get_post('fridayopenning').' - '.$this->input->get_post('fridayclosing'); 
+    $satday= $this->input->get_post('saturdayopening').' - '.$this->input->get_post('sartudayclosing'); 
+    $sunday= $this->input->get_post('sundayopenning').' - '.$this->input->get_post('sundayclosing'); 
 
     $phone=$this->input->get_post('phone'); 
     $website=$this->input->get_post('website'); 
@@ -309,8 +310,65 @@ class Admin_Model extends CI_Model
         'photo2'=> $imagetwo,'photo3'=> $imagethree, 'photo4'=>$imagefour, 'photo5'=>$imagefive, 'Approved'=>'PENDING',
         'facebooklink'=>$facebook, 'twitterlink'=>$twitter,'instalink'=> $instagram, 'addedBy'=>$userid,'RecordDate'=> $date);
 
-      return  $this->insertData($insertlisting,"listing");
+        $updatelisting=array(
+            'adName'=>$businessname,'Category'=>$category,'Description'=>$Description,'keywords'=>$keywords,
+            'Adress'=> $address, 'MonworkHours'=>$monday,
+            'TueworkHours'=> $tueday,'WedworkHours'=> $wedday, 'ThursworkHours'=> $thurday,
+            'FriworkHours'=>$friday, 'SatworkHours'=> $satday, 'SunworkHours'=> $sunday,
+            'photo'=>$imgone,'Phone'=>$phone,'Website'=>$website,
+            'photo2'=> $imagetwo,'photo3'=> $imagethree, 'photo4'=>$imagefour, 'photo5'=>$imagefive,
+            'facebooklink'=>$facebook, 'twitterlink'=>$twitter,'instalink'=> $instagram);
+
+       if(empty($listingId)){
+        return  $this->insertData($insertlisting,"listing");
+       }else{
+        return  $this->updateData($updatelisting,"listing",$listingId);
+       }
+     
    }
+
+
+
+   function Add_ListingProduct(){
+    $listingId=$this->input->get_post('listingId'); 
+    $businessname=$this->input->get_post('businessname'); 
+    $Description=$this->input->get_post('description'); 
+    $address=$this->input->get_post('address'); 
+
+    
+
+    $date=date("d/m/Y/-h:i:sa");
+    $userid=$this->session->userdata('loggedinUser')['UserId'];
+
+    $imgone=(isset($_FILES['imageone']['name'])) ? $_FILES['imageone']['name']: NULL;
+
+       if($imgone!=NULL){
+        $imageonearray=explode('.',$imgone);
+        $imgext=explode('.',$imgone);
+        $imgext=end($imgext);
+       $imgone=$imageonearray[0].date("Ymdhisa").'2.'.$imgext;
+        }
+      
+       //MOVE ULOADE FILES
+
+    isset($_FILES['imageone']['name']) ? move_uploaded_file($_FILES['imageone']['tmp_name'],"../ThenadakaDirectory/assets/images/listing/products/$imageone"):false;
+
+    $insertlisting=array(
+        'ProductName'=>$businessname,'ProductDescription'=>$Description,
+        'photo'=>$imgone,'AddedBy'=>$userid,'RecordDate'=> $date,'ListingId'=>$listingId);
+
+       
+
+      // if(empty($listingId)){
+        return  $this->insertData($insertlisting,"productsandservices");
+    //    }else{
+    //     return  $this->updateData($updatelisting,"listing",$listingId);
+    //    }
+     
+   }
+
+
+
 
    function  insertData($FormDataToInsert,$tablename){
     $this->load->database();
@@ -325,6 +383,22 @@ class Admin_Model extends CI_Model
         return FALSE;
     }
    }
+   public   function  updateData($FormDataToUpdate,$tablename, $id){
+            $this->load->database();
+            $this->db;
+            $this->db->where('ListingId',$id);
+            $this->db->update($tablename,$FormDataToUpdate);  
+            if ($this->db->affected_rows() ==1)
+            {
+                        //exit('true');
+                return TRUE;
+            }
+            else
+            {
+                return FALSE;
+            }
+     }
+
    function Add_Rating(){
     $rating=$this->input->get_post('ratings'); 
     $name=$this->input->get_post('name'); 

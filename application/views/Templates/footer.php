@@ -95,7 +95,7 @@
 Back To Top-->
 
 <div id="back-to-top" class="back-to-top">
-  <a href=""> <i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+<a href=""> <i class="fa fa-chevron-up"></i></a>
  </div>
 
 <!--=================================

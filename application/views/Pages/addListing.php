@@ -134,429 +134,115 @@ Add Listings -->
                             </div>
 
                             <div class="widget">
-                                <div class="widget-title bg-primary">
-                                    <h6 class="text-white mb-0"> <i class="far fa-clock"></i> Opening Hours: </h6>
-                                </div>
-                                <div class="widget-content">
-                                    <div class="row mt-4">
-                                        <div class="col-12">
-                                            <h6 class="font-md">Monday: </h6>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="monopenning">
-                                                <option value="" selected="selected">Opening Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
+                                                    <div class="widget-title bg-primary">
+                                                        <h6 class="text-white mb-0"> <i class="far fa-clock"></i>
+                                                            Opening Hours: </h6>
+                                                    </div>
+                                                    <div class="widget-content">
+                                                        <div class="row mt-4">
+                                                            <div class="col-12">
+                                                                <h6 class="font-md">Monday: </h6>
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="monopenning" id=""
+                                                                    class="form-control" >
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="monclosing" id=""
+                                                                    class="form-control" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <h6 class="font-md">Tuesday: </h6>
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="tuesopening" id=""
+                                                                    class="form-control">
 
-                                            </select>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="monclosing">
-                                                <option value="value 01" selected="selected">Closing Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-12">
-                                            <h6 class="font-md">Tuesday: </h6>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="tuesopening">
-                                                <option value="value 01" selected="selected">Opening Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="tuesclosing">
-                                                <option value="value 01" selected="selected">Closing Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-12">
-                                            <h6 class="font-md">Wednesday: </h6>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="wedopening">
-                                                <option value="value 01" selected="selected">Opening Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="wedclosing">
-                                                <option value="value 01" selected="selected">Closing Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-12">
-                                            <h6 class="font-md">Thursday: </h6>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="thursdayopening">
-                                                <option value="value 01" selected="selected">Opening Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="thursdayclosing">
-                                                <option value="value 01" selected="selected">Closing Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-12">
-                                            <h6 class="font-md">Friday: </h6>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="fridayopenning">
-                                                <option value="value 01" selected="selected">Opening Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="fridayclosing">
-                                                <option value="value 01" selected="selected">Closing Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-12">
-                                            <h6 class="font-md">Saturday: </h6>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="saturdayopening">
-                                                <option value="value 01" selected="selected">Opening Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="sartudayclosing">
-                                                <option value="value 01" selected="selected">Closing Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-12">
-                                            <h6 class="font-md">Sunday: </h6>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="sundayopenning">
-                                                <option value="value 01" selected="selected">Opening Time</option>
-                                                <option value="value 02">Closed</option>
-                                                <option value="03">01</option>
-                                                <option value="03">02</option>
-                                                <option value="04">04</option>
-                                                <option value="05">05</option>
-                                                <option value="06">06</option>
-                                                <option value="07">07</option>
-                                                <option value="08">08</option>
-                                                <option value="03">09</option>
-                                                <option value="03">10</option>
-                                                <option value="04">11</option>
-                                                <option value="05">12</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3 col-md-6 select-border">
-                                            <select class="form-control basic-select" name="sundayclosing">
-                                                <option value="value 01" selected="selected">Closing Time</option>
-                                                <option value="02:00">Closed</option>
-                                                <option value="03:00">01:00</option>
-                                                <option value="03:00">02:00</option>
-                                                <option value="04:00">04:00</option>
-                                                <option value="05:00">05:00</option>
-                                                <option value="06:00">06:00</option>
-                                                <option value="07:00">07:00</option>
-                                                <option value="08:00">08:00</option>
-                                                <option value="03:00">09:00</option>
-                                                <option value="03:00">10:00</option>
-                                                <option value="04:00">11:00</option>
-                                                <option value="05:00">12:00</option>
-                                                <option value="03:00">13:00</option>
-                                                <option value="03:00">14:00</option>
-                                                <option value="04:00">15:00</option>
-                                                <option value="05:00">16:00</option>
-                                                <option value="06:00">17:00</option>
-                                                <option value="07:00">19:00</option>
-                                                <option value="08:00">20:00</option>
-                                                <option value="03:00">21:00</option>
-                                                <option value="03:00">22:00</option>
-                                                <option value="04:00">23:00</option>
-                                                <option value="05:00">24:00</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="tuesclosing" id=""
+                                                                    class="form-control" >
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <h6 class="font-md">Wednesday: </h6>
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="wedopening" id=""
+                                                                    class="form-control" >
+
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="wedclosing" id=""
+                                                                    class="form-control" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <h6 class="font-md">Thursday: </h6>
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="thursdayopening" id=""
+                                                                    class="form-control" >
+
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="thursdayclosing" id=""
+                                                                    class="form-control" >
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <h6 class="font-md">Friday: </h6>
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="fridayopenning" id=""
+                                                                    class="form-control" >
+
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="fridayclosing" id=""
+                                                                    class="form-control" >
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <h6 class="font-md">Saturday: </h6>
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="saturdayopening" id=""
+                                                                    class="form-control" >
+
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="sartudayclosing" id=""
+                                                                    class="form-control" >
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <h6 class="font-md">Sunday: </h6>
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="sundayopenning" id=""
+                                                                    class="form-control" >
+
+                                                            </div>
+                                                            <div class="mb-3 col-md-6 select-border">
+                                                                <input type="time" name="sundayclosing" id=""
+                                                                    class="form-control" >
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                             <div class="widget">
                                 <div class="widget-title bg-primary">
                                     <h6 class="text-white mb-0"> <i class="fas fa-th"></i> Gallery: </h6>
