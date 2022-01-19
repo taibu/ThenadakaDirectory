@@ -98,6 +98,7 @@ class Admin extends CI_Controller {
       public function ViewListingDetails($id){
         $data["addetails"]=$this->Admin_Model->fetch_listingdetails($id);
         $data["ratings"]=$this->Admin_Model->fetch_ratings($id);
+        $data["services"]=$this->Admin_Model->fetch_listingproducts($id);
         $data["allcategories"]=$this->Admin_Model->fetch_categories();
         $data["type"]="details";
         $this->load->view('Pages/viewListingByAdmin',$data);
@@ -106,6 +107,7 @@ class Admin extends CI_Controller {
       public function listing($id)
       {
         $data["addetails"]=$this->Admin_Model->fetch_listingdetails($id);
+        $data["services"]=$this->Admin_Model->fetch_listingproducts($id);
         $data["ratings"]=$this->Admin_Model->fetch_ratings($id);
         $data["type"]="details";
         $this->load->view('Pages/viewListingByAdmin',$data);

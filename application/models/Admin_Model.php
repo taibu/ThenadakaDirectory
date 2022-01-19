@@ -142,6 +142,17 @@ class Admin_Model extends CI_Model
        
     }
 
+    function fetch_listingproducts($cat){
+        $this->load->database();
+        $this->db;
+
+            $q = $this->db->query("SELECT * FROM productsandservices l inner join listing u on l.ListingId=u.ListingId  
+            where l.ListingId='".$this->db->escape_str($cat)."'
+            order by l.RecordDate desc;");
+            return $q;
+       
+    }
+
 
 
 

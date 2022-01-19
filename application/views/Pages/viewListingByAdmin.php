@@ -225,7 +225,7 @@
             
                                     ?>
 
-                         <?php
+                <?php
                                 $imageone=base_url()."/assets/images/listing/".$addetails['photo'];
                                 $imagetwo=base_url()."/assets/images/listing/".((empty($addetails['photo2']))?"placeholder2.jpg":$addetails['photo2']);
                                 $imagethree=base_url()."/assets/images/listing/".((empty($addetails['photo3']))?"placeholder2.jpg":$addetails['photo3']);
@@ -243,13 +243,12 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <ul class="list-unstyled listing-detail-meta mb-4">
-                                    <li><a href="#" onclick="hideShowTab('overviewTab')"><i
-                                                class="fa fa-eye"></i> OVERVIEW</a></li>
+                                    <li><a href="#" onclick="hideShowTab('overviewTab')"><i class="fa fa-eye"></i>
+                                            OVERVIEW</a></li>
                                     <li><a href="#" onclick="hideShowTab('editTab')"><i class="fa fa-edit"></i>
                                             EDIT</a></li>
-                                    <li><a href="#" onclick="hideShowTab('deactivateTab')"><i
-                                                class="fa fa-remove"></i>
-                                            DEACTIVATE</a>
+                                    <li><a href="#" onclick="hideShowTab('deactivateTab')"><i class="fa fa-remove"></i>
+                                            SERVICES</a>
                                     </li>
                                     <li><a href="#" onclick="hideShowTab('RatingsTab')"><i class="fa fa-star"></i>
                                             RATINGS</a></li>
@@ -261,7 +260,7 @@
                                 <div id="overviewTab">
                                     <div class="row mb-4">
                                         <div class="col-md-9">
-                                            <h5><?php echo $addetails['adName']; ?>  <span style="font-size:25px;">(
+                                            <h5><?php echo $addetails['adName']; ?> <span style="font-size:25px;">(
                                                     <?php echo $addetails['Adress']; ?> ) </span> </h5>
                                             <a class="listing-loaction text-dark mb-3 d-block"
                                                 href=""><?php echo $addetails['Category']; ?></a>
@@ -386,7 +385,8 @@
                                 </div>
                                 <div id="editTab">
                                     <div class="col-lg-12 col-md-12">
-                                        <form action="<?php echo base_url('Admin/SubmitListing') ?>" enctype="multipart/form-data" method="post">
+                                        <form action="<?php echo base_url('Admin/SubmitListing') ?>"
+                                            enctype="multipart/form-data" method="post">
                                             <h4 class="mb-4">Edit Listing</h4>
                                             <div class="sidebar mb-0">
                                                 <div class="row">
@@ -405,7 +405,8 @@
                                                         <div class="row">
                                                             <div class="mb-3 col-lg-12">
                                                                 <label class="form-label">Business name *</label>
-                                                                <input type="hidden" name="listingId" value="<?php echo $addetails['ListingId']; ?>"
+                                                                <input type="hidden" name="listingId"
+                                                                    value="<?php echo $addetails['ListingId']; ?>"
                                                                     required>
                                                                 <input type="text" class="form-control"
                                                                     name="businessname"
@@ -478,11 +479,13 @@
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="monopenning" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['MonworkHours'])[0]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['MonworkHours'])[0]; ?>">
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="monclosing" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['MonworkHours'])[1]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['MonworkHours'])[1]; ?>">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-2">
@@ -491,12 +494,14 @@
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="tuesopening" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['TueworkHours'])[0]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['TueworkHours'])[0]; ?>">
 
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="tuesclosing" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['TueworkHours'])[1]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['TueworkHours'])[1]; ?>">
 
                                                             </div>
                                                         </div>
@@ -506,12 +511,14 @@
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="wedopening" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['WedworkHours'])[0]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['WedworkHours'])[0]; ?>">
 
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="wedclosing" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['WedworkHours'])[1]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['WedworkHours'])[1]; ?>">
                                                             </div>
                                                         </div>
                                                         <div class="row mt-2">
@@ -520,12 +527,14 @@
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="thursdayopening" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['ThursworkHours'])[0]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['ThursworkHours'])[0]; ?>">
 
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="thursdayclosing" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['ThursworkHours'])[1]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['ThursworkHours'])[1]; ?>">
 
                                                             </div>
                                                         </div>
@@ -535,12 +544,14 @@
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="fridayopenning" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['FriworkHours'])[0]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['FriworkHours'])[0]; ?>">
 
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="fridayclosing" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['FriworkHours'])[1]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['FriworkHours'])[1]; ?>">
 
                                                             </div>
                                                         </div>
@@ -550,12 +561,14 @@
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="saturdayopening" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['SatworkHours'])[0]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['SatworkHours'])[0]; ?>">
 
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="sartudayclosing" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['SatworkHours'])[1]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['SatworkHours'])[1]; ?>">
 
                                                             </div>
                                                         </div>
@@ -565,12 +578,14 @@
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="sundayopenning" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['SunworkHours'])[0]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['SunworkHours'])[0]; ?>">
 
                                                             </div>
                                                             <div class="mb-3 col-md-6 select-border">
                                                                 <input type="time" name="sundayclosing" id=""
-                                                                    class="form-control" value="<?php echo explode(" - " ,$addetails['SunworkHours'])[1]; ?>">
+                                                                    class="form-control"
+                                                                    value="<?php echo explode(" - " ,$addetails['SunworkHours'])[1]; ?>">
 
                                                             </div>
                                                         </div>
@@ -591,11 +606,11 @@
                                                                     </h6>
                                                                     <img alt="osahan logo" id="output"
                                                                         style="width:100%;"
-                                                                        src="<?php echo  ($imageone)!=""?$imageone:base_url('assets/images/placeholder2.jpg');?>" >
-                                                                    <input type="file" name="imageone" required="false" 
+                                                                        src="<?php echo  ($imageone)!=""?$imageone:base_url('assets/images/placeholder2.jpg');?>">
+                                                                    <input type="file" name="imageone" required="false"
                                                                         class="form-control" onchange="loadFile(event)">
-                                                                        <?php //echo (strpos($imageone,'placeholder2')?'true':'false') ?>
-                                                                        
+                                                                    <?php //echo (strpos($imageone,'placeholder2')?'true':'false') ?>
+
                                                                     <script>
                                                                     var loadFile = function(event) {
                                                                         var image = document.getElementById(
@@ -663,7 +678,8 @@
                                                                             style="width:100%;"
                                                                             src="<?php echo  $imagefive ?>">
                                                                         <input type="file" name="image5"
-                                                                            class="form-control" value="<?php echo  $imagefive ?>"
+                                                                            class="form-control"
+                                                                            value="<?php echo  $imagefive ?>"
                                                                             onchange="loadFile5(event)">
                                                                     </div>
                                                                     <script>
@@ -697,30 +713,31 @@
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Website </label>
                                                                 <input type="text" name="website" class="form-control"
-                                                                value="<?php echo $addetails['Website']; ?>">
+                                                                    value="<?php echo $addetails['Website']; ?>">
                                                             </div>
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Facebook </label>
                                                                 <input type="text" name="facebook" class="form-control"
-                                                                value="<?php echo $addetails['facebooklink']; ?>">
+                                                                    value="<?php echo $addetails['facebooklink']; ?>">
                                                             </div>
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Twitter </label>
                                                                 <input type="text" name="twitter" class="form-control"
-                                                                value="<?php echo $addetails['twitterlink']; ?>">
+                                                                    value="<?php echo $addetails['twitterlink']; ?>">
                                                             </div>
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Pinterest </label>
                                                                 <input type="text" name="pintrest" class="form-control"
-                                                                value="<?php echo $addetails['instalink']; ?>">
+                                                                    value="<?php echo $addetails['instalink']; ?>">
                                                             </div>
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Instagram </label>
                                                                 <input type="text" name="instagram" class="form-control"
-                                                                value="<?php echo $addetails['instalink']; ?>">
+                                                                    value="<?php echo $addetails['instalink']; ?>">
                                                             </div>
                                                             <div class="mb-3 col-12 form-group">
-                                                                <button class="btn btn-secondary" type="submit">Save Details</button>
+                                                                <button class="btn btn-secondary" type="submit">Save
+                                                                    Details</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -730,7 +747,24 @@
                                     </div>
                                 </div>
                                 <div id="deactivateTab">
-                                    <a href=""><i class="far fa-star"></i> edit</a>
+                                    <div class="widget" style="padding:20px;background:white;">
+                                     
+                                        <div class="widget-content">
+                                        <?php if($services->num_rows()>0){
+                                           foreach($services->result() as $row){
+                                          ?>
+                                          <div class="d-flex mb-3 align-items-top">
+                                                    <div class="avatar avatar-xl h-auto">
+                                                        <img class="img-fluid" src="<?php echo base_url('assets/images/listing/products/'.$row->photo) ?>" alt="">
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <h5 class="text-dark">  <?php echo $row->ProductName ?> </h5>
+                                                        <p class="d-flex font-sm text-dark" href="blog-single.html#"><?php echo $row->ProductDescription ?></p>
+                                                    </div>
+                                                </div>
+                                             <?php } } ?>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="RatingsTab">
                                     <?php if(isset($ratings) && ($ratings->num_rows()>0)){ ?>
@@ -792,11 +826,16 @@
 
 
                                     </div>
+                                    <?php }else{ ?>
+                                    <div style="padding:30px;background-color:white;">
+                                        <p>There are no ratings for this listing</p>
+                                    </div>
                                     <?php } ?>
                                 </div>
                                 <div id="addproductTab">
                                     <div class="col-lg-12 col-md-12">
-                                        <form action="<?php echo base_url('Admin/SubmitListingProduct') ?>" enctype="multipart/form-data" method="post">
+                                        <form action="<?php echo base_url('Admin/SubmitListingProduct') ?>"
+                                            enctype="multipart/form-data" method="post">
                                             <h4 class="mb-4">Add Listing</h4>
                                             <div class="sidebar mb-0">
                                                 <div class="row">
@@ -814,12 +853,14 @@
                                                     <div class="widget-content">
                                                         <div class="row">
                                                             <div class="mb-3 col-lg-12">
-                                                                <label class="form-label">Product /Service name *</label>
-                                                                <input type="hidden" name="listingId" value="<?php echo $addetails['ListingId']; ?>"
+                                                                <label class="form-label">Product /Service name
+                                                                    *</label>
+                                                                <input type="hidden" name="listingId"
+                                                                    value="<?php echo $addetails['ListingId']; ?>"
                                                                     required>
                                                                 <input type="text" class="form-control"
-                                                                    name="businessname" placeholder="product / service name"
-                                                                    required>
+                                                                    name="businessname"
+                                                                    placeholder="product / service name" required>
                                                             </div>
 
 
@@ -835,7 +876,8 @@
 
                                                 <div class="widget">
                                                     <div class="widget-title bg-primary">
-                                                        <h6 class="text-white mb-0"> <i class="fas fa-th"></i> Product Image:
+                                                        <h6 class="text-white mb-0"> <i class="fas fa-th"></i> Product
+                                                            Image:
                                                         </h6>
                                                     </div>
                                                     <div class="widget-content">
@@ -861,11 +903,12 @@
                                                                     </script>
                                                                 </div>
                                                             </div>
-                                                         
+
                                                         </div>
                                                         <div class="mb-3 col-12 form-group"> <br><br>
-                                            <button class="btn btn-secondary" type="submit">Save Product/Service</button>
-                                        </div>
+                                                            <button class="btn btn-secondary" type="submit">Save
+                                                                Product/Service</button>
+                                                        </div>
                                                     </div>
                                                 </div>
 
