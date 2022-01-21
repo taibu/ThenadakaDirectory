@@ -147,10 +147,10 @@ Places -->
             </div>
             <div class="row">
                 <?php if($mostratedads->num_rows()>0){
-            $i=1;
-          foreach($mostratedads->result() as $row){ 
-            $imageone=base_url()."/assets/images/listing/".$row->photo; 
-        ?>
+                    $i=1;
+                foreach($mostratedads->result() as $row){ 
+                    $imageone=base_url()."/assets/images/listing/".$row->photo; 
+                ?>
                 <div class="col-lg-3 col-sm-6 mb-4">
                     <a href="<?php echo base_url('listing/'.$row->ListingId) ?>">
                         <div class="listing-item">
