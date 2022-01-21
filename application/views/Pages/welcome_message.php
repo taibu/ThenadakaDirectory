@@ -134,7 +134,7 @@ Category -->
     <!--=================================
 Places -->
     <section class="space-pb popup-gallery">
-        <div class="containe" style="width:98%;margin:auto;padding-top:80px;">
+        <div class="container" style="width:98%;margin:auto;padding-top:80px;">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
@@ -294,7 +294,7 @@ Places -->
     <!--=================================
 Places -->
     <section class="space-pb popup-gallery">
-        <div class="containe" style="width:98%;margin:auto;padding-top:80px;">
+        <div class="container" style="width:98%;margin:auto;padding-top:80px;">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">

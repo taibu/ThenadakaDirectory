@@ -836,7 +836,7 @@
                                     <div class="col-lg-12 col-md-12">
                                         <form action="<?php echo base_url('Admin/SubmitListingProduct') ?>"
                                             enctype="multipart/form-data" method="post">
-                                            <h4 class="mb-4">Add Listing</h4>
+                                            <h4 class="mb-4">Add Product / Service to Listing</h4>
                                             <div class="sidebar mb-0">
                                                 <div class="row">
                                                     <div class="mt-3 col-sm-12">
