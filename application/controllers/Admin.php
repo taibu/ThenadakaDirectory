@@ -56,7 +56,7 @@ class Admin extends CI_Controller {
           }else{
             $this->session->set_flashdata('error', "Operation  failed please try again");
           }
-          redirect( base_url('addListing'), 'refresh');  
+          header('Location: ' . $_SERVER['HTTP_REFERER']);  
         }
         public function SubmitRating(){
                 $ratingadded = $this->Admin_Model->Add_Rating();

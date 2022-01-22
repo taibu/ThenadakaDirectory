@@ -26,10 +26,11 @@ class Signin extends CI_Controller {
     
         if($data){
             $this->session->set_userdata('loggedinUser', $data);
-           
+            $this->session->set_flashdata('success', "Rating saved Successfully");
             header('location:'.base_url('/AdminHome'));
         }
         else{
+            $this->session->set_flashdata('error', "Invalid User credentials");
             header('location:'.base_url('login'));
         } 
     }

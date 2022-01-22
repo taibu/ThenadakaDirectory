@@ -139,7 +139,7 @@ Places -->
                 <div class="col-12">
                     <div class="section-title">
                         <h2>Most Rated Listings <a class="btn btn-primary btnsm pull-right"
-                                href="<?php echo base_url('') ?>" style="border-radius:0px;"> VIEW ALL </a></h2>
+                         href="<?php echo base_url("MostRatedListing"); ?>" style="border-radius:0px;"> VIEW ALL </a></h2>
                         <div class="sub-title text-end"> <span> Browse top rated businesses and service providers</span>
                         </div>
                     </div>
@@ -158,7 +158,7 @@ Places -->
                                 <img class="img-fluid" style="height:200px;width:100%;" src="<?php echo $imageone ?>"
                                     alt="">
                                 <div class="listing-quick-box">
-                                    <a class="category" href="<?php echo base_url('listing/1') ?>"> <i
+                                    <a class="category" href="<?php echo base_url('listing/'.$row->ListingId) ?>"> <i
                                             class="fa fa-edit"></i> <?php echo $row->Category ?></a>
                                     <a class="popup popup-single" href="<?php echo $imageone ?>"
                                         data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i

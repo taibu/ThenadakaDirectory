@@ -26,10 +26,14 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-7">
-        
+          <div class="row">
+            <div class="mt-3 col-sm-12">
+                <?php require_once(APPPATH . 'views/Templates/error.php'); ?>
+            </div>
+          </div>
         <div class="tab-content border border-radius mt-4 p-sm-5 p-4" id="myTabContent">
           <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-            <form class="row t-sm-4 mt-2 align-items-center"  action="SubmitLoginform" method="post">
+            <form class="row t-sm-4 mt-2 align-items-center"  action="<?php echo base_url('SubmitLoginform') ?>" method="post">
               <div class="mb-3 col-sm-12">
                 <input type="text" class="form-control" placeholder="Username" name="mail">
               </div>

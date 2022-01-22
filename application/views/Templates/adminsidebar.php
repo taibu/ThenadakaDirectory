@@ -41,7 +41,7 @@
 <div class="sidebar">
     <div class="widget">
         <div class="widget-title bg-primary">
-            <h6 class="text-white mb-0"> <i class="fas fa-home"></i> Main </h6>
+            <h6 class="text-white mb-0"> Main </h6>
         </div>
         <div class="widget-content dashboard-nav">
             <ul class="list-unstyled">
@@ -70,7 +70,7 @@
 <div class="sidebar">
     <div class="widget">
         <div class="widget-title bg-primary">
-            <h6 class="text-white mb-0"> <i class="fas fa-home"></i> Main </h6>
+            <h6 class="text-white mb-0"> Main </h6>
         </div>
         <div class="widget-content dashboard-nav">
             <ul class="list-unstyled">

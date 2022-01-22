@@ -194,7 +194,7 @@ header -->
                 
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                        <form class="row mt-4 align-items-center" action="SubmitLoginform" method="post">
+                        <form class="row mt-4 align-items-center" action="<?php echo base_url('SubmitLoginform') ?>" method="post">
                             <div class="form-group mb-3 col-sm-12">
                                 <input type="email" class="form-control" placeholder="Email" name="mail">
                             </div>

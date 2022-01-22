@@ -17,7 +17,7 @@
 <!--=================================
 Places -->
 <section class="space-pb popup-gallery">
-  <div class="containe" style="width:98%;margin:auto;padding-top:80px;">
+  <div class="container" style="width:98%;margin:auto;padding-top:80px;">
     <div class="row">
       <div class="col-12">
         <div class="section-title" style="text-align:center;margin-top:20px">
@@ -38,7 +38,7 @@ Places -->
                           <div class="listing-image bg-overlay-half-bottom">
                             <img class="img-fluid" style="height:200px;width:100%;" src="<?php echo $imageone ?>" alt="">
                             <div class="listing-quick-box">
-                                <a class="category" href="<?php echo base_url('listing/1') ?>"> <i class="fa fa-edit"></i> <?php echo $row->Category ?></a>
+                                <a class="category" href="<?php echo base_url('listing/'.$row->ListingId) ?>"> <i class="fa fa-edit"></i> <?php echo $row->Category ?></a>
                                 <a class="popup popup-single" href="<?php echo $imageone ?>" data-bs-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fa fa-search-plus"></i> </a>
                             </div>
                           </div>

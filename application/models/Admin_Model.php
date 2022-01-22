@@ -40,7 +40,24 @@ class Admin_Model extends CI_Model
         
         
     }
-    function fetch_mostrecentlisting(){
+    function fetch_mostratedlistingwithLimit($limit){
+        $this->load->database();
+        $this->db;
+            $q = $this->db->query("SELECT `ListingId`, `adName`, lc.`Category`,
+             `Description`, `keywords`, `Adress`, `MonworkHours`, `TueworkHours`, 
+             `WedworkHours`, `ThursworkHours`, `FriworkHours`, `SatworkHours`, 
+             `SunworkHours`, `photo`, `photo2`, `photo3`, `photo4`, `photo5`, 
+             `facebooklink`, `twitterlink`, `instalink`, `Approved`, 
+             `ApprovedBy`, `Reason`, `addedBy`, l.`RecordDate`,
+             ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
+             (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount
+             FROM listing l inner join users u on l.addedBy=u.UserId  
+            inner join listingcategories lc on l.Category=lc.CategoryId where l.Approved='APPROVED'
+            order by rating  desc limit 4;");
+            return $q;
+       
+    }
+    function fetch_mostrecentlisting($id){
         $this->load->database();
         $this->db;
 
@@ -54,7 +71,7 @@ class Admin_Model extends CI_Model
              (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount
              FROM listing l inner join users u on l.addedBy=u.UserId  
             inner join listingcategories lc on l.Category=lc.CategoryId where l.Approved='APPROVED'
-            order by ListingId  desc limit 8;");
+            order by ListingId  desc limit $id;");
             return $q;
         
     }
@@ -136,7 +153,7 @@ class Admin_Model extends CI_Model
         $this->db;
 
             $q = $this->db->query("SELECT * FROM listing l inner join users u on l.addedBy=u.UserId  
-            inner join listingcategories lc on l.Category=lc.CategoryId where Approved='APPROVED' and ListingId='".$this->db->escape_str($cat)."'
+            inner join listingcategories lc on l.Category=lc.CategoryId where  ListingId='".$this->db->escape_str($cat)."'
             order by ListingId desc;");
             return $q->row_array();
        
@@ -205,6 +222,25 @@ class Admin_Model extends CI_Model
         return $q;
        
     }  
+    function ViewBy_CategoryAndLimit($category,$limit){
+        $this->load->database();
+        $this->db;
+        
+        $q = $this->db->query("SELECT `ListingId`, `adName`, lc.`Category`,
+        `Description`, `keywords`, `Adress`, `MonworkHours`, `TueworkHours`, 
+        `WedworkHours`, `ThursworkHours`, `FriworkHours`, `SatworkHours`, 
+        `SunworkHours`, `photo`, `photo2`, `photo3`, `photo4`, `photo5`, 
+        `facebooklink`, `twitterlink`, `instalink`, `Approved`, 
+        `ApprovedBy`, `Reason`, `addedBy`, l.`RecordDate`,
+        ((select sum(Rating) from ratings r where r.ListingId=l.ListingId)/(select count(Rating) from ratings r where r.ListingId=l.ListingId)) as rating,
+        (select count(Rating) from ratings r where r.ListingId=l.ListingId) as ratingcount 
+        FROM listing l  
+            inner join listingcategories lc on l.Category=lc.CategoryId 
+            where l.Approved='APPROVED' and lc.Category='".$this->db->escape_str($category)."' 
+            order by rating desc limit $limit;");
+        return $q;
+       
+    }
     function fetch_homestats(){
         $this->load->database();
         $this->db;
@@ -352,17 +388,15 @@ class Admin_Model extends CI_Model
     $userid=$this->session->userdata('loggedinUser')['UserId'];
 
     $imgone=(isset($_FILES['imageone']['name'])) ? $_FILES['imageone']['name']: NULL;
-
-       if($imgone!=NULL){
+    if($imgone!=NULL){
         $imageonearray=explode('.',$imgone);
         $imgext=explode('.',$imgone);
         $imgext=end($imgext);
-       $imgone=$imageonearray[0].date("Ymdhisa").'2.'.$imgext;
-        }
+       $imgone=$imageonearray[0].date("Ymdhisa").'1.'.$imgext;
+       }
       
        //MOVE ULOADE FILES
-
-    isset($_FILES['imageone']['name']) ? move_uploaded_file($_FILES['imageone']['tmp_name'],"../ThenadakaDirectory/assets/images/listing/products/$imageone"):false;
+       isset($_FILES['imageone']['name']) ? move_uploaded_file($_FILES['imageone']['tmp_name'],"../ThenadakaDirectory/assets/images/listing/$imgone"):false;
 
     $insertlisting=array(
         'ProductName'=>$businessname,'ProductDescription'=>$Description,

@@ -57,6 +57,8 @@ $route['translate_uri_dashes'] = FALSE;
 //LISTING 
 $route['listing/(:any)'] = 'welcome/listing/$1';
 $route['ViewCategory/(:any)'] = 'welcome/ViewByCategory/$1';
+$route['RecentListing'] = 'welcome/ViewMostRecentListings';
+$route['MostRatedListing'] = 'welcome/ViewMostRatedListings';
 
 //ADMIN
 $route['login'] = 'welcome/login';

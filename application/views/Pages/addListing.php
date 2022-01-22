@@ -364,8 +364,7 @@ Add Listings -->
                                                 placeholder="Instagram">
                                         </div>
                                         <div class="mb-3 col-12 form-group">
-                                            <button class="btn btn-secondary" type="submit">Save &
-                                                Preview</button>
+                                            <button class="btn btn-secondary" type="submit">Save Listing</button>
                                         </div>
                                     </div>
                                 </div>

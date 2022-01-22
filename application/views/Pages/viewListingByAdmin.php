@@ -257,6 +257,11 @@
                                             ADD PRODUCTS</a></li>
 
                                 </ul>
+                                <div class="row">
+                                    <div class="mt-3 col-sm-12">
+                                        <?php require_once(APPPATH . 'views/Templates/error.php'); ?>
+                                    </div>
+                                </div>
                                 <div id="overviewTab">
                                     <div class="row mb-4">
                                         <div class="col-md-9">
@@ -273,26 +278,42 @@
                                     <div class="listing-detail-page">
                                         <div class="listing-detail-box mb-3">
                                             <div class="slider-slick">
-                                                <div class="slider slider-for">
-                                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imagetwo ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imagethree ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imagefour ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imagefive ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                                </div>
-                                                <div class="slider slider-nav d-none d-sm-block">
-                                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imagetwo ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imagethree ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imagefour ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imagefive ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                                    <img class="img-fluid" src="<?php echo $imageone ?>" alt="">
-                                                </div>
+                                            <div class="slider slider-for">
+                                        <img class="img-fluid" src="<?php echo $imageone ?>" alt=""
+                                            style="max-height:400px;">
+                                        <img class="img-fluid" src="<?php echo $imagetwo ?>" alt=""
+                                            style="max-height:400px;">
+                                        <img class="img-fluid" src="<?php echo $imagethree ?>" alt=""
+                                            style="max-height:400px;">
+                                        <img class="img-fluid" src="<?php echo $imagefour ?>" alt=""
+                                            style="max-height:400px;">
+                                        <img class="img-fluid" src="<?php echo $imagefive ?>" alt=""
+                                            style="max-height:400px;">
+                                        <img class="img-fluid" src="<?php echo $imageone ?>" alt=""
+                                            style="max-height:400px;">
+                                        <img class="img-fluid" src="<?php echo $imageone ?>" alt=""
+                                            style="max-height:400px;">
+                                        <img class="img-fluid" src="<?php echo $imageone ?>" alt=""
+                                            style="max-height:400px;">
+                                    </div>
+                                    <div class="slider slider-nav d-none d-sm-block">
+                                        <img class="img-fluid" src="<?php echo $imageone ?>" alt=""
+                                            style="max-height:100px;">
+                                        <img class="img-fluid" src="<?php echo $imagetwo ?>" alt=""
+                                            style="max-height:100px;">
+                                        <img class="img-fluid" src="<?php echo $imagethree ?>" alt=""
+                                            style="max-height:100px;">
+                                        <img class="img-fluid" src="<?php echo $imagefour ?>" alt=""
+                                            style="max-height:100px;">
+                                        <img class="img-fluid" src="<?php echo $imagefive ?>" alt=""
+                                            style="max-height:100px;">
+                                        <img class="img-fluid" src="<?php echo $imageone ?>" alt=""
+                                            style="max-height:100px;">
+                                        <img class="img-fluid" src="<?php echo $imageone ?>" alt=""
+                                            style="max-height:100px;">
+                                        <img class="img-fluid" src="<?php echo $imageone ?>" alt=""
+                                            style="max-height:100px;">
+                                    </div>
                                             </div>
                                             <div class="mt-sm-4 mt-0">
                                                 <div class="detail-title">
@@ -353,7 +374,7 @@
                                             </div>
                                             <div class="col-md-6" style="padding:20px;">
                                                 <div class="widget-title ">
-                                                    <h4 class=" mb-0"> <b>Working hours</b></h4>
+                                                    <h4 class=" mb-0"> <b>Contacts & Social Links</b></h4>
                                                 </div>
                                                 <div class="widget-content">
 
@@ -755,14 +776,16 @@
                                           ?>
                                           <div class="d-flex mb-3 align-items-top">
                                                     <div class="avatar avatar-xl h-auto">
-                                                        <img class="img-fluid" src="<?php echo base_url('assets/images/listing/products/'.$row->photo) ?>" alt="">
+                                                        <img class="img-fluid" src="<?php echo base_url('assets/images/listing/'.$row->photo) ?>" alt="">
                                                     </div>
                                                     <div class="ms-3">
                                                         <h5 class="text-dark">  <?php echo $row->ProductName ?> </h5>
                                                         <p class="d-flex font-sm text-dark" href="blog-single.html#"><?php echo $row->ProductDescription ?></p>
                                                     </div>
                                                 </div>
-                                             <?php } } ?>
+                                                <?php } }else{ ?>
+                                                <h5 style="margin:3em;"><i>Content creater did not add products / services to this listing</i></h5>
+                                                <?php } ?>
                                         </div>
                                     </div>
                                 </div>

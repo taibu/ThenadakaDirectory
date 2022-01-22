@@ -26,6 +26,11 @@
     </section>
     <section class="space-pb mt-n5 position-relative z-index-1">
         <div class="container">
+                <div class="row">
+                  <div class="mt-3 col-sm-12">
+                     <?php require_once(APPPATH . 'views/Templates/error.php'); ?>
+                  </div>
+                </div>
             <div class="row g-0 bg-white shadow">
                 <div class="col-lg-7 bg-white">
                     <div class="contact-form p-md-5 p-4">

@@ -376,7 +376,7 @@ Listing single -->
                                 <div class="d-flex mb-3 align-items-top">
                                     <div class="avatar avatar-xl h-auto">
                                         <img class="img-fluid"
-                                            src="<?php echo base_url('assets/images/listing/products/'.$row->photo) ?>"
+                                            src="<?php echo base_url('assets/images/listing/'.$row->photo) ?>"
                                             alt="">
                                     </div>
                                     <div class="ms-3">
@@ -405,7 +405,7 @@ Listing single -->
                         <div class="widget" >
                             <div class="widget-title">
                                 <h4 class="text-dark mb-0"> Related listing
-                                <a class="btn btn-primary btn-sm pull-right" href="http://localhost/ThenadakaDirectory/" style="border-radius:0px;"> VIEW ALL </a>
+                                <a class="btn btn-primary btn-sm pull-right" href="<?php echo base_url("ViewCategory/".$addetails['Category']); ?>" style="border-radius:0px;"> VIEW ALL </a>
                                 </h4>
                             </div>
                             <div class="widget-content">
@@ -432,13 +432,13 @@ Listing single -->
                         <div class="widget" >
                             <div class="widget-title">
                                 <h4 class="text-dark mb-0"> Recent listing 
-                                <a class="btn btn-primary btn-sm pull-right" href="http://localhost/ThenadakaDirectory/" style="border-radius:0px;"> VIEW ALL </a>
+                                <a class="btn btn-primary btn-sm pull-right" href="<?php echo base_url("RecentListing"); ?>" style="border-radius:0px;"> VIEW ALL </a>
                                 </h4>
                             </div>
                             <div class="widget-content">
-                            <?php if($mostratedads->num_rows()>0){
+                            <?php if($mostrecenttedads->num_rows()>0){
                                     $i=1;
-                                foreach($mostratedads->result() as $row){ 
+                                foreach($mostrecenttedads->result() as $row){ 
                                     $imageone=base_url()."/assets/images/listing/".$row->photo; 
                                 ?>
                                  <div class="recent-list-item d-flex mb-3" style="padding-bottom:40px;">

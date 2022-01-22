@@ -13,7 +13,7 @@ class Welcome extends CI_Controller {
 	{
 		$data["allcategories"]=$this->Admin_Model->fetch_categories();
 		$data["mostratedads"]=$this->Admin_Model->fetch_mostratedlisting();
-		$data["mostrecenttedads"]=$this->Admin_Model->fetch_mostrecentlisting();
+		$data["mostrecenttedads"]=$this->Admin_Model->fetch_mostrecentlisting(8);
 		
 		$this->load->view('Pages/welcome_message',$data);
 	}
@@ -30,7 +30,9 @@ class Welcome extends CI_Controller {
 		$data["addetails"]=$this->Admin_Model->fetch_mostratedlisting($id);
 		$data["ratings"]=$this->Admin_Model->fetch_ratings($id);
 		$data["services"]=$this->Admin_Model->fetch_listingproducts($id);
-		$data["mostratedads"]=$this->Admin_Model->fetch_mostratedlisting();
+		$category=$data["addetails"]["Category"];
+		$data["mostratedads"]=$this->Admin_Model->ViewBy_CategoryAndLimit($category,4);
+		$data["mostrecenttedads"]=$this->Admin_Model->fetch_mostrecentlisting(4);
 		$this->load->view('Pages/listing_details',$data);
 	}
 
@@ -53,6 +55,18 @@ class Welcome extends CI_Controller {
 		//echo $key;
 		$data["category"]=$key;
 		$data["addetails"]=$this->Admin_Model->ViewBy_Category($key);
+		$this->load->view('Pages/viewByCategory',$data);
+	}
+	public function ViewMostRatedListings()
+	{
+		$data["category"]="Most Recent Lisitngs";
+		$data["addetails"]=$this->Admin_Model->fetch_mostratedlistingwithLimit(16);
+		$this->load->view('Pages/viewByCategory',$data);
+	}
+	public function ViewMostRecentListings()
+	{
+		$data["category"]="Most Rated Listings";
+		$data["addetails"]=$this->Admin_Model->fetch_mostrecentlisting(16);
 		$this->load->view('Pages/viewByCategory',$data);
 	}
 }
