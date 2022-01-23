@@ -81,18 +81,21 @@ class Admin extends CI_Controller {
         $data["adslist"]=$this->Admin_Model->fetch_Pendinglisting();
        
         $data["type"]="list";
+        $data["Title"]="PENDING LISTINGS";
         $this->load->view('Pages/viewListingByAdmin',$data); 
       }
       public function ViewApprovedListing(){
        
         $data["adslist"]=$this->Admin_Model->fetch_Approvedlisting();
         $data["type"]="list";
+        $data["Title"]="APPROVED LISTINGS";
         $this->load->view('Pages/viewListingByAdmin',$data); 
       }
       public function ViewRejectedListing(){
        
         $data["adslist"]=$this->Admin_Model->fetch_Rejectedlisting();
         $data["type"]="list";
+        $data["Title"]="REJECTED LISTINGS";
         $this->load->view('Pages/viewListingByAdmin',$data); 
       }
       public function ViewListingDetails($id){
