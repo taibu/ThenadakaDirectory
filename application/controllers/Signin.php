@@ -150,7 +150,7 @@ public function Add_User()
  
 	if($userexist==0){
     //	echo $userexist;
-    $code=random_string('alnum', 20);
+    $code=random_string('alnum', 60);
     $useradded = $this->Signin_Model->Add_User($code);
     if($useradded=='true'){
        
@@ -159,9 +159,9 @@ public function Add_User()
         $html_content=
         '<div >
         <p >Hello, Your account was succefully created, use the link below to verify your account<br><br></p>
-        <br>
-   
-        <h2 style="text-align:center;margin:5%;font-size:15px;">'.$code.'</h2>
+        <br>'
+        
+        '<hp style="text-align:left;margin:5%;font-size:15px;">test4.techlab.click/verify_useremail/'.$code.'</hp>
          <br>
          <hr>
          <br>
@@ -186,7 +186,15 @@ public function Add_User()
    }
  }
 
-
+ function generateRandomString($length) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
 
  public function  sendMail($htmlmsgbody,$msgreceiver)
  {
