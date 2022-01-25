@@ -159,9 +159,10 @@ public function Add_User()
         $html_content=
         '<div >
         <p >Hello, Your account was succefully created, use the link below to verify your account<br><br></p>
-        <br>'
+        <br> Please click the link below to very you email address. 
+        You will not be able to access your account until you verify your email.'
         
-        '<hp style="text-align:left;margin:5%;font-size:15px;">test4.techlab.click/verify_useremail/'.$code.'</hp>
+        '<p style="text-align:left;margin:5%;font-size:15px;">test4.techlab.click/verify_useremail/'.$code.'</p>
          <br>
          <hr>
          <br>
