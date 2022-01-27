@@ -386,7 +386,7 @@ Listing single -->
                                     </div>
                                 </div>
                                 <?php } }else{ ?>
-                                <h5 style="margin:3em;"><i>Content creater did not add products to this listing</i></h5>
+                                <h5 style="margin:3em;"><i>Content creater did not add products/services to this listing</i></h5>
                                 <?php } ?>
                             </div>
                         </div>
