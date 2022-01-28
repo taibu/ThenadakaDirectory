@@ -299,8 +299,7 @@ Places -->
                 <div class="col-12">
                     <div class="section-title">
                         <h2>Recently added Listings</h2>
-                        <div class="sub-title text-end"> <span> Make a list of your achievements toward your long-term
-                                goal</span></div>
+                        <div class="sub-title text-end"> <span> </span></div>
                     </div>
                 </div>
             </div>
