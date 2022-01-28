@@ -19,9 +19,6 @@ class Signin extends CI_Controller {
 	public function verify_User()
     {
 
-
-       
-
         $data = $this->Signin_Model->find_user();
     
         if($data){
@@ -33,6 +30,7 @@ class Signin extends CI_Controller {
             $this->session->set_flashdata('error', "Invalid User credentials");
             header('location:'.base_url('login'));
         } 
+        header('location:'.base_url('/AdminHome'));
     }
  function Home(){
     $data["homestats"]=$this->Admin_Model->fetch_homestats();
