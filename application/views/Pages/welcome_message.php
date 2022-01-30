@@ -140,7 +140,7 @@ Places -->
                     <div class="section-title">
                         <h2>Most Rated Listings <a class="btn btn-primary btnsm pull-right"
                          href="<?php echo base_url("MostRatedListing"); ?>" style="border-radius:0px;"> VIEW ALL </a></h2>
-                        <div class="sub-title text-end"> <span> Browse top rated businesses and service providers</span>
+                        <div class="sub-title text-end"> <span> Browse top rated businesses and services</span>
                         </div>
                     </div>
                 </div>
