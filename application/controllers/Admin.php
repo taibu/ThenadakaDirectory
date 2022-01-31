@@ -126,4 +126,8 @@ class Admin extends CI_Controller {
                 redirect( base_url('AdminHome'), 'refresh'); 
       }
 
+      public function AddApprover(){
+        $data["type"]="add";
+        $this->load->view('Pages/users',$data);
+      }
 }
