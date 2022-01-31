@@ -86,7 +86,7 @@
                     <div class="sidebar mb-0">
                         <div class="widget">
                             <div class="widget-title bg-primary">
-                                <h6 class="text-white mb-0"> <i class="far fa-address-book"></i> Add New Category
+                                <h6 class="text-white mb-0"> <i class="far fa-address-book"></i> Add New Approver
                                 </h6>
                             </div>
                             <div class="mb-3 col-sm-12">
