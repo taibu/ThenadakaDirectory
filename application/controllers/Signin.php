@@ -19,18 +19,26 @@ class Signin extends CI_Controller {
 	public function verify_User()
     {
 
+
+       
+
         $data = $this->Signin_Model->find_user();
     
         if($data){
-            $this->session->set_userdata('loggedinUser', $data);
-            $this->session->set_flashdata('success', "Rating saved Successfully");
-            header('location:'.base_url('/AdminHome'));
+            if($data['verified']=='TRUE'){
+                $this->session->set_userdata('loggedinUser', $data);
+                $this->session->set_flashdata('success', "Loggedin Successfully");
+                header('location:'.base_url('/AdminHome'));
+            }else{
+             $this->session->set_flashdata('error', "You account has not been approved. Please check your email for verification link.");
+             header('location:'.base_url('/login'));
+            }
+            
         }
         else{
             $this->session->set_flashdata('error', "Invalid User credentials");
             header('location:'.base_url('login'));
         } 
-        header('location:'.base_url('/AdminHome'));
     }
  function Home(){
     $data["homestats"]=$this->Admin_Model->fetch_homestats();
@@ -158,15 +166,15 @@ public function Add_User()
         '<div >
         <p >Hello, Your account was succefully created, use the link below to verify your account<br><br></p>
         <br> Please click the link below to very you email address. 
-        You will not be able to access your account until you verify your email.'
+        You will not be able to access your account until you verify your email.'.
         
-        '<p style="text-align:left;margin:5%;font-size:15px;">test4.techlab.click/verify_useremail/'.$code.'</p>
-         <br>
+        '<p style="text-align:left;margin:5%;font-size:15px;">https://test4.techlab.click/verify_useremail/'.$code.'</p>
+
          <hr>
          <br>
          </div>';
         if($this->sendMail($html_content,$email)){
-            $message="Account created,Please check your email for account verification link";
+            $message="Your account was created successfully. Check your email for a verification link";
             $this->session->set_flashdata('success', $message);
             redirect(base_url('register'));
         }else{
@@ -185,42 +193,35 @@ public function Add_User()
    }
  }
 
- function generateRandomString($length) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-';
-    $charactersLength = strlen($characters);
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-    }
-    return $randomString;
+public function verify_useremail($code){
+     $userapproved = $this->Signin_Model->Approve_User($code);
+     if($userapproved){
+         $message= "Your account has been approved. Please login from here";
+            $this->session->set_flashdata('success', $message);
+         $this->load->view('Pages/login');
+     }else{
+          $message= "Your account details were not found. please register from here";
+            $this->session->set_flashdata('error', $message);
+         $this->load->view('Pages/register');
+     }
 }
 
- public function  sendMail($htmlmsgbody,$msgreceiver)
+ public function  sendMail($htmlmsgbody,$email)
  {
-     //$this->unsetflashdatainfo();
-     $this->load->library('email');
-
-     $config['protocol'] = 'smtp';
-     $config['smtp_host'] = 'ssl://smtp.gmail.com';
-     $config['smtp_port'] = '465';
-     $config['smtp_user'] = 'amtaibu@gmail.com';  //change it
-     $config['smtp_pass'] = '1c7wimearepo.'; //change it
-     $config['charset'] = 'utf-8';
-     $config['newline'] = "\r\n";
-     $config['mailtype'] = 'html';
-     $config['wordwrap'] = TRUE;
-     $this->email->initialize($config);
-
-     $this->email->from('antheamarthy@gmail.com','WIMEA-ICT');   //change it
-     $this->email->to($msgreceiver);       //change it
-     $this->email->subject("THENADANA EMAIL VERIFICATION");
-     $this->email->message($htmlmsgbody);
-
-     if($this->email->send()) {
-         return true;
-     } else {
-         return false;
-    }
+      $headers = "Content-Type: text/html; charset=UTF-8\r\n";
+            $to = $email;
+           $subject = 'EMAIL VERIFICATION CODE';
+           $message = $htmlmsgbody;
+           $headers .= "Reply-to: info@samimotors.co.ug";
+           $headers .= "From: info@techlab.click";
+          if(mail($to, $subject,$message,$headers)){
+            // $_SESSION['emailtoverify']=$to;
+            $this->session->set_userdata('emailtoverify', $to);
+            $this->session->set_flashdata('newmail', $to);    
+           return true;
+          }else{
+            return false;
+          }
    
 
  }
