@@ -84,6 +84,7 @@ $route['aboutus'] = 'welcome/aboutus';
 $route['contactus'] = 'welcome/contactus';
 $route['register'] = 'Signin/register';
 $route['SubmitRegisterform'] = 'Signin/Add_User';
+$route['SubmitRegisterform2'] = 'Signin/Add_ApproverUser';
 $route['verify_useremail/(:any)'] = 'Signin/verify_useremail';
 $route['Admin/logout'] = 'Signin/logout';
 

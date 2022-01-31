@@ -89,37 +89,30 @@
                                 <h6 class="text-white mb-0"> <i class="far fa-address-book"></i> Add New Category
                                 </h6>
                             </div>
+                            <div class="mb-3 col-sm-12">
+                                <?php require_once(APPPATH . 'views/Templates/error.php'); ?>
+                            </div>
                             <div class="widget-content">
-                                <form class="row">
+                                <form class="row" action="SubmitRegisterform2" method="post">
+                                    <div class="mb-3 col-lg-6">
+                                        <input type="hidden" name="user_role" value="02">
+                                        <label class="form-label">Last name</label>
+                                        <input type="lastname" class="form-control" placeholder="Last name">
+                                    </div>
                                     <div class="mb-3 col-lg-6">
                                         <label class="form-label">First name</label>
-                                        <input type="email" class="form-control" placeholder="First name">
-                                    </div>
-                                    <div class="mb-3 col-lg-6 select-border">
-                                        <label class="form-label">Category*</label>
-                                        <select class="form-control basic-select select2-hidden-accessible"
-                                            data-select2-id="1" tabindex="-1" aria-hidden="true">
-                                            <option value="value 01" selected="selected" data-select2-id="3">Select
-                                                Category</option>
-                                            <option value="value 02">Restaurant</option>
-                                            <option value="value 02">Night life </option>
-                                            <option value="value 03">Museum</option>
-                                            <option value="value 04">Hotels</option>
-                                            <option value="value 05">Cafe</option>
-                                            <option value="value 06">Club &amp; Bars</option>
-                                        </select>
+                                        <input type="firstname" class="form-control" placeholder="First name">
                                     </div>
                                     <div class="mb-3 col-lg-6">
-                                        <label class="form-label">keywords</label>
-                                        <input type="email" class="form-control" placeholder="keywords">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" name="email" class="form-control" placeholder="Email">
                                     </div>
                                     <div class="mb-3 col-lg-6">
-                                        <label class="form-label">Listing tag</label>
-                                        <input type="email" class="form-control" placeholder="Listing tag">
+                                        <label class="form-label">Phone</label>
+                                        <input type="phone" name="phone" class="form-control" placeholder="Phone">
                                     </div>
                                     <div class="col-12 mb-0">
-                                        <label class="form-label">Description</label>
-                                        <textarea class="form-control" rows="4" placeholder="Description"></textarea>
+                                       <button type="submit" class="btn btn-secondary" >Save User Details</button>
                                     </div>
                                 </form>
                             </div>

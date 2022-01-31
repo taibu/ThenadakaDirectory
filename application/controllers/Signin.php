@@ -143,10 +143,9 @@ public function register()
 
 public function Add_User()
 {
-
+   
     $passone=$this->input->get_post('password');
     $password2=$this->input->get_post('password2');
-
     if (strcmp($passone, $password2) !== 0) {
         $message="Password fields must match";
         $this->session->set_flashdata('error', $message);
@@ -192,6 +191,57 @@ public function Add_User()
     } 
    }
  }
+
+ public function Add_ApproverUser()
+ {
+    
+     
+     $userexist = $this->Signin_Model->find_mail();
+  
+     if($userexist==0){
+     //	echo $userexist;
+     $code=random_string('alnum', 60);
+     $password=random_string('alnum', 8);
+     $useradded = $this->Signin_Model->Add_ApproverUser($code,$password);
+     if($useradded=='true'){
+        
+         $email=$this->input->get_post('email');	
+        
+         $html_content=
+         '<div >
+         <p >Hello, Your have been assigned a role of Approver on the Thenadaka Listing Platform, use the link below to verify your account anf the credentilas provided to logon<br><br></p>
+         <br> '.
+         
+         '<p style="text-align:left;margin:5%;font-size:15px;">https://test4.techlab.click/verify_useremail/'.$code.'</p>
+           <br><p>Username: '.$email.'</p>
+           <br><p>Password: '.$password.'</p>
+          <hr>
+          <br>
+          </div>';
+         if($this->sendMail($html_content,$email)){
+             $message="User account was created successfully. And credentials sent to user's email";
+             $this->session->set_flashdata('success', $message);
+             redirect(base_url('AddApprover'));
+         }else{
+             $message= "Account created but failed to send mail";
+             $this->session->set_flashdata('error', $message);
+             redirect(base_url('AddApprover'));
+         }
+     }else{
+        
+        $message= 'User creation failed. Please try again';
+        $this->session->set_flashdata('error', $message);
+        redirect(base_url('AddApprover'));
+     }
+    }else{
+     $email=$this->input->get_post('email');	
+     $message= $email.' is already registered';
+     $this->session->set_flashdata('error', $message);
+     redirect(base_url('AddApprover'));
+     } 
+
+  }
+
 
 public function verify_useremail($code){
      $userapproved = $this->Signin_Model->Approve_User($code);

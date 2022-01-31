@@ -11,6 +11,13 @@ function find_user(){
     $q = $this->db->query("SELECT * FROM users u inner join roles r on u.role=r.RoleCode where email = '".$this->db->escape_str($user_mail)."' AND password= '".$this->db->escape_str($user_pass)."'");
     return $q->row_array();
 }
+function find_duplicateuser(){
+	$this->load->database();
+	$this->db;
+    $user_mail=$this->input->get_post('mail');
+    $q = $this->db->query("SELECT * FROM users u inner join roles r on u.role=r.RoleCode where email = '".$this->db->escape_str($user_mail)."'");
+    return $q->row_array();
+}
 function find_mail(){
     $this->load->database();
 	$this->db;
@@ -34,7 +41,7 @@ function change_password(){
 
 function Add_User($code){
     $email=$this->input->get_post('email');
-    $name=$this->input->get_post('name');  
+    $name=$this->input->get_post('lastname')." ".$this->input->get_post('firstname');  
     $phone=$this->input->get_post('phone');
     $passone=base64_encode($this->input->get_post('password'));
     $password2=$this->input->get_post('password2');
@@ -44,6 +51,19 @@ function Add_User($code){
     $today = date("Y-m-d H:i:s");
     $q = $this->db->query("insert into users(name,email,password,verification_code,phone,role,VerifiedBy,RecordDate) 
                                        values('$name','$email','$passone','$code','$phone','03','1','$today')");
+    return $q;
+}
+function Add_ApproverUser($code,$password){
+    $email=$this->input->get_post('email');
+    $name=$this->input->get_post('name');  
+    $phone=$this->input->get_post('phone');
+    $password=base64_encode($password);
+    $date=date("d/m/Y/-h:i:sa");
+    //$code=random_string('alnum', 6);
+    $code=$code;
+    $today = date("Y-m-d H:i:s");
+    $q = $this->db->query("insert into users(name,email,password,verification_code,phone,role,VerifiedBy,RecordDate) 
+                                       values('$name','$email','$password','$code','$phone','02','1','$today')");
     return $q;
 }
 }
