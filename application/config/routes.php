@@ -66,6 +66,9 @@ $route['SubmitLoginform'] = 'Signin/verify_user';
 $route['AdminHome'] = 'Signin/Home';
 $route['addListing'] = 'Admin/AddListing';
 
+$route['AddApprover'] = 'Admin/AddApprover';
+$route['ViewSystemUsers'] = 'Admin/AddApprover';
+
 $route['ViewpendingListing'] = 'Admin/ViewpendingListing';
 $route['ViewApprovedListing'] = 'Admin/ViewApprovedListing';
 $route['ViewRejectedListing'] = 'Admin/ViewRejectedListing';
