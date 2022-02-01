@@ -4,7 +4,26 @@
   $getdata= $this->session->userdata('loggedinUser');
    
 ?>
-
+<style>
+    table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}
+</style>
+<script>
+    $(document).ready(function () {
+$('#dtBasicExample').DataTable();
+$('.dataTables_length').addClass('bs-select');
+});
+</script>
 <head>
 
     <?php $this->load->view("Templates/head") ?>
@@ -28,39 +47,37 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="bg-white p-4 shadow-sm border-radius">
-                                <h5 class="mb-4"> Listings Categories <a
-                                        href="<?php echo base_url('addlistingcategories') ?>"
-                                        class="btn btn-info btn-sm pull-right"
-                                        style="color:white;border-radius:0px;">ADD CATEGORY</a></h5>
+                                <h5 class="mb-4"> Listings Categories </h5>
                                 <div class=" table-responsive ">
-                                    <table class="table mb-0">
+                                    <table  id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
-                                                <th> ID </th>
-                                                <th> Category</th>
-                                                <th> Created By</th>
-                                                <th> Created On </th>
-                                                <th> Action</th>
+                                                <th class="th-sm"> ID </th>
+                                                <th class="th-sm"> User Names</th>
+                                                <th class="th-sm"> Email</th>
+                                                <th class="th-sm"> Phone</th>
+                                                <th class="th-sm"> Created On </th>
+                                                
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php if($allcategories->num_rows()>0){
+                                            <?php 
+                                            if($users->num_rows()>0){
                                             $i=1;
-                                            foreach($allcategories->result() as $row){
+                                            foreach($users->result() as $row){
                                            
                                             ?>
                                             <tr>
                                                 <td>
                                                     <div> <?php echo $i ?></div>
                                                 </td>
-                                                <td><?php echo $row->Category ?></td>
                                                 <td><?php echo $row->name ?></td>
-                                                <td><?php echo $row->CreatedOn ?></td>
-                                                <td> <a href="<?php echo base_url('Editlistingcategories/'.$row->CategoryId) ?>"
-                                                        class="btn btn-success btn-sm"
-                                                        style="color:white;border-radius:0px;">Edit Category</a> </td>
+                                                <td><?php echo $row->email ?></td>
+                                                <td><?php echo $row->phone ?></td>
+                                                <td> <?php echo $row->RecordDate ?> </td>
                                             </tr>
-                                            <?php } } ?>
+                                            <?php $i++; } } ?>
+                                            
 
                                         </tbody>
                                     </table>
@@ -97,11 +114,11 @@
                                     <div class="mb-3 col-lg-6">
                                         <input type="hidden" name="user_role" value="02">
                                         <label class="form-label">Last name</label>
-                                        <input type="lastname" class="form-control" placeholder="Last name">
+                                        <input name="lastname" type="text" class="form-control" placeholder="Last name">
                                     </div>
                                     <div class="mb-3 col-lg-6">
                                         <label class="form-label">First name</label>
-                                        <input type="firstname" class="form-control" placeholder="First name">
+                                        <input name="firstname" type="text" class="form-control" placeholder="First name">
                                     </div>
                                     <div class="mb-3 col-lg-6">
                                         <label class="form-label">Email</label>

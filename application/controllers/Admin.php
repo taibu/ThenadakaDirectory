@@ -130,4 +130,9 @@ class Admin extends CI_Controller {
         $data["type"]="add";
         $this->load->view('Pages/users',$data);
       }
+     public function ViewSystemUsers(){
+      $data["type"]="view";
+      $data["users"]=$this->Admin_Model->fetch_users();
+      $this->load->view('Pages/users',$data);
+     }
 }

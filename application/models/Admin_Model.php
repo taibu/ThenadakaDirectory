@@ -183,6 +183,15 @@ class Admin_Model extends CI_Model
        
         
     }
+    function fetch_users(){
+        $this->load->database();
+        $this->db;
+       
+            $q = $this->db->query("SELECT * FROM users where role!='01'   order by name asc;");
+            return $q;
+       
+        
+    }
     function Search_Listing(){
         $this->load->database();
         $this->db;

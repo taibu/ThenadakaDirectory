@@ -67,7 +67,7 @@ $route['AdminHome'] = 'Signin/Home';
 $route['addListing'] = 'Admin/AddListing';
 
 $route['AddApprover'] = 'Admin/AddApprover';
-$route['ViewSystemUsers'] = 'Admin/AddApprover';
+$route['ViewSystemUsers'] = 'Admin/ViewSystemUsers';
 
 $route['ViewpendingListing'] = 'Admin/ViewpendingListing';
 $route['ViewApprovedListing'] = 'Admin/ViewApprovedListing';
