@@ -68,6 +68,7 @@ $route['addListing'] = 'Admin/AddListing';
 
 $route['AddApprover'] = 'Admin/AddApprover';
 $route['ViewSystemUsers'] = 'Admin/ViewSystemUsers';
+$route['EditSystemUser/(:any)'] = 'Admin/EditSystemUser/$1';
 
 $route['ViewpendingListing'] = 'Admin/ViewpendingListing';
 $route['ViewApprovedListing'] = 'Admin/ViewApprovedListing';
@@ -85,6 +86,7 @@ $route['contactus'] = 'welcome/contactus';
 $route['register'] = 'Signin/register';
 $route['SubmitRegisterform'] = 'Signin/Add_User';
 $route['SubmitRegisterform2'] = 'Signin/Add_ApproverUser';
+$route['SubmitRegisterformEdit'] = 'Signin/EditUserDetails';
 $route['verify_useremail/(:any)'] = 'Signin/verify_useremail';
 $route['Admin/logout'] = 'Signin/logout';
 

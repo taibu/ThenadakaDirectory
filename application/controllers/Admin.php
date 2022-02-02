@@ -135,4 +135,9 @@ class Admin extends CI_Controller {
       $data["users"]=$this->Admin_Model->fetch_users();
       $this->load->view('Pages/users',$data);
      }
+     public function EditSystemUser($id){
+      $data["type"]="edit";
+      $data["user"]=$this->Admin_Model->fetch_users($id);
+      $this->load->view('Pages/users',$data);
+     }
 }

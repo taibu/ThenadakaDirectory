@@ -256,6 +256,19 @@ public function verify_useremail($code){
      }
 }
 
+public function EditUserDetails($code){
+    $userapproved = $this->Signin_Model->Approve_User($code);
+    if($userapproved){
+        $message= "Your account has been approved. Please login from here";
+           $this->session->set_flashdata('success', $message);
+       
+    }else{
+         $message= "Your account details were not found. please register from here";
+           $this->session->set_flashdata('error', $message);
+        
+    }
+    header('location:'.base_url('ViewSystemUsers'));
+}
  public function  sendMail($htmlmsgbody,$email)
  {
       $headers = "Content-Type: text/html; charset=UTF-8\r\n";

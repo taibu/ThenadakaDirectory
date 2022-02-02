@@ -51,12 +51,15 @@ $('.dataTables_length').addClass('bs-select');
                                 <div class=" table-responsive ">
                                     <table  id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                                         <thead>
-                                            <tr>
+                                            <tr style="background-color:darkcyan">
                                                 <th class="th-sm"> ID </th>
-                                                <th class="th-sm"> User Names</th>
+                                                <th class="th-sm"> Names</th>
                                                 <th class="th-sm"> Email</th>
                                                 <th class="th-sm"> Phone</th>
+                                                <th class="th-sm"> UserRole</th>
                                                 <th class="th-sm"> Created On </th>
+                                                <th class="th-sm"> Edit</th>
+                                                <th class="th-sm"> Change</th>
                                                 
                                             </tr>
                                         </thead>
@@ -74,7 +77,10 @@ $('.dataTables_length').addClass('bs-select');
                                                 <td><?php echo $row->name ?></td>
                                                 <td><?php echo $row->email ?></td>
                                                 <td><?php echo $row->phone ?></td>
+                                                <td><?php echo $row->RoleName ?></td>
                                                 <td> <?php echo $row->RecordDate ?> </td>
+                                                <td> <a class="badge mb-0 bg-success" href="<?php echo base_url('EditSystemUser/'.$row->UserId) ?>">EDIT</a> </td>
+                                                <td><a class="badge mb-0 bg-success" href="<?php echo base_url('PendingListing/'.$row->UserId) ?>">DIABLE</a> </td>
                                             </tr>
                                             <?php $i++; } } ?>
                                             
@@ -114,19 +120,19 @@ $('.dataTables_length').addClass('bs-select');
                                     <div class="mb-3 col-lg-6">
                                         <input type="hidden" name="user_role" value="02">
                                         <label class="form-label">Last name</label>
-                                        <input name="lastname" type="text" class="form-control" placeholder="Last name">
+                                        <input name="lastname" type="text" class="form-control" placeholder="Last name" required>
                                     </div>
                                     <div class="mb-3 col-lg-6">
                                         <label class="form-label">First name</label>
-                                        <input name="firstname" type="text" class="form-control" placeholder="First name">
+                                        <input name="firstname" type="text" class="form-control" placeholder="First name" required>
                                     </div>
                                     <div class="mb-3 col-lg-6">
                                         <label class="form-label">Email</label>
-                                        <input type="email" name="email" class="form-control" placeholder="Email">
+                                        <input type="email" name="email" class="form-control" placeholder="Email" required>
                                     </div>
                                     <div class="mb-3 col-lg-6">
                                         <label class="form-label">Phone</label>
-                                        <input type="phone" name="phone" class="form-control" placeholder="Phone">
+                                        <input type="phone" name="phone" class="form-control" placeholder="Phone" required>
                                     </div>
                                     <div class="col-12 mb-0">
                                        <button type="submit" class="btn btn-secondary" >Save User Details</button>
@@ -142,6 +148,56 @@ $('.dataTables_length').addClass('bs-select');
         </div>
     </section>
     <?php } ?>
+
+    <?php if($type=="edit"){ ?>
+    <section class="space-ptb bg-light">
+        <div class="containe" style="width:98%;margin:auto;">
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <?php $this->load->view("Templates/adminsidebar") ?>
+                </div>
+                <div class="col-lg-9 col-md-8">
+
+                    <div class="sidebar mb-0">
+                        <div class="widget">
+                            <div class="widget-title bg-primary">
+                                <h6 class="text-white mb-0"> <i class="far fa-address-book"></i> Add New Approver
+                                </h6>
+                            </div>
+                            <div class="mb-3 col-sm-12">
+                                <?php require_once(APPPATH . 'views/Templates/error.php'); ?>
+                            </div>
+                            <div class="widget-content">
+                                <form class="row" action="SubmitRegisterformEdit" method="post">
+                                    <div class="mb-3 col-lg-12">
+                                        <input type="hidden" name="user_role" value="02">
+                                        <label class="form-label">Names</label>
+                                        <input name="lastname" type="text" class="form-control" value="<?php echo $user['name'] ?>" required>
+                                    </div>
+                                    
+                                    <div class="mb-3 col-lg-6">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" name="email" class="form-control" value="<?php echo $user['email'] ?>" required>
+                                    </div>
+                                    <div class="mb-3 col-lg-6">
+                                        <label class="form-label">Phone</label>
+                                        <input type="phone" name="phone" class="form-control" value="<?php echo $user['phone'] ?>" required>
+                                    </div>
+                                    <div class="col-12 mb-0">
+                                       <button type="submit" class="btn btn-secondary" >Edit User Details</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php } ?>
+
     <!--=================================
 footer-->
     <?php $this->load->view("Templates/footer") ?>
