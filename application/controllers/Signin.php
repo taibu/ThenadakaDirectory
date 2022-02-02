@@ -269,6 +269,19 @@ public function EditUserDetails(){
     }
     header('location:'.base_url('ViewSystemUsers'));
 }
+public function EnableDisableUser($id,$status){
+    $userapproved = $this->Signin_Model->EnableDisableUser($id,$status);
+    if($userapproved){
+        $message= "User account updated successfully";
+           $this->session->set_flashdata('success', $message);
+       
+    }else{
+         $message= "Operation failed. Please try again";
+           $this->session->set_flashdata('error', $message);
+        
+    }
+    header('location:'.base_url('ViewSystemUsers'));
+}
  public function  sendMail($htmlmsgbody,$email)
  {
       $headers = "Content-Type: text/html; charset=UTF-8\r\n";

@@ -88,6 +88,8 @@ $route['SubmitRegisterform'] = 'Signin/Add_User';
 $route['SubmitRegisterform2'] = 'Signin/Add_ApproverUser';
 $route['SubmitRegisterformEdit'] = 'Signin/EditUserDetails';
 $route['verify_useremail/(:any)'] = 'Signin/verify_useremail';
+$route['DisableUser/(:any)'] = 'Signin/EnableDisableUser/$1/0';
+$route['EnableUser/(:any)'] = 'Signin/EnableDisableUser/$1/1';
 $route['Admin/logout'] = 'Signin/logout';
 
 

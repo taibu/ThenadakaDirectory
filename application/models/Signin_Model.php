@@ -75,6 +75,13 @@ function Edit_User(){
     $q = $this->db->query("update users set name='$name',phone='$phone' where email='$email'");
     return $q;
 }
+function EnableDisableUser($id,$status){
+    $this->load->database();
+	$this->db;
+    
+    $q = $this->db->query("update users set IsActive='$status' where UserId='$id'");
+    return $q;
+}
 }
 
 ?>

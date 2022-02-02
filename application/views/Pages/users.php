@@ -87,8 +87,12 @@ $(document).ready(function() {
                                                 <td> <a class="badge mb-0 bg-success"
                                                         href="<?php echo base_url('EditSystemUser/'.$row->UserId) ?>">EDIT</a>
                                                 </td>
-                                                <td><a class="badge mb-0 bg-success"
-                                                        href="<?php echo base_url('PendingListing/'.$row->UserId) ?>">DIABLE</a>
+                                                <td>
+                                                    <?php if($row->IsActive==1){ ?>
+                                                      <a class="badge mb-0 bg-danger" href="<?php echo base_url('DisableUser/'.$row->UserId) ?>">DIABLE</a>
+                                                    <?php }else{ ?>
+                                                        <a class="badge mb-0 bg-success" href="<?php echo base_url('EnableUser/'.$row->UserId) ?>">Enable</a>
+                                                    <?php } ?>
                                                 </td>
                                             </tr>
                                             <?php $i++; } } ?>
