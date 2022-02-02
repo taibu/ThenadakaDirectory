@@ -256,14 +256,14 @@ public function verify_useremail($code){
      }
 }
 
-public function EditUserDetails($code){
-    $userapproved = $this->Signin_Model->Approve_User($code);
+public function EditUserDetails(){
+    $userapproved = $this->Signin_Model->Edit_User();
     if($userapproved){
-        $message= "Your account has been approved. Please login from here";
+        $message= "User account updated successfully";
            $this->session->set_flashdata('success', $message);
        
     }else{
-         $message= "Your account details were not found. please register from here";
+         $message= "Operation failed. Please try again";
            $this->session->set_flashdata('error', $message);
         
     }

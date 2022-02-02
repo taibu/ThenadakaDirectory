@@ -66,6 +66,15 @@ function Add_ApproverUser($code,$password){
                                        values('$name','$email','$password','$code','$phone','02','1','$today')");
     return $q;
 }
+function Edit_User(){
+    $this->load->database();
+	$this->db;
+    $name=$this->input->get_post('name');  
+    $phone=$this->input->get_post('phone');
+    $email=$this->input->get_post('email');
+    $q = $this->db->query("update users set name='$name',phone='$phone' where email='$email'");
+    return $q;
+}
 }
 
 ?>

@@ -183,7 +183,7 @@ class Admin_Model extends CI_Model
        
         
     }
-
+    
     function fetch_users($id=null){
         $this->load->database();
         $this->db;
@@ -472,19 +472,7 @@ class Admin_Model extends CI_Model
       return  $this->insertData($insertRating,"ratings");
    }
 
-  function Add_ApproverUser(){
-    $email=$this->input->get_post('email');
-    $name=$this->input->get_post('name');  
-    $phone=$this->input->get_post('phone');
-    $password=base64_encode($password);
-    $date=date("d/m/Y/-h:i:sa");
-    //$code=random_string('alnum', 6);
-    $code=$code;
-    $today = date("Y-m-d H:i:s");
-    $q = $this->db->query("insert into users(name,email,password,verification_code,phone,role,VerifiedBy,RecordDate) 
-                                       values('$name','$email','$password','$code','$phone','02','1','$today')");
-    return $q;
-}
+  
 }
 
 ?>
