@@ -139,7 +139,7 @@
                                    <?php if($pendingads->num_rows()>0){ ?>
                                     <table class="table ">
                                         <thead>
-                                            <tr>
+                                            <tr style="background-color:darkcyan">
                                                 <th> ID </th>
                                                 <th> Name</th>
                                                 <th> Category</th>
