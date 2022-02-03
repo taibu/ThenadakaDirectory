@@ -35,7 +35,7 @@
                                 <div class=" table-responsive ">
                                     <table class="table ">
                                         <thead>
-                                            <tr>
+                                            <tr style="background-color:darkcyan">
                                                 <th> ID </th>
                                                 <th> Name</th>
                                                 <th> Category</th>
@@ -93,7 +93,7 @@
                             <div class=" table-responsive ">
                                 <table class="table ">
                                     <thead>
-                                        <tr>
+                                        <tr style="background-color:darkcyan">
                                             <th> ID </th>
                                             <th> Name</th>
                                             <th> Category</th>
@@ -153,7 +153,7 @@
                             <div class=" table-responsive ">
                                 <table class="table ">
                                     <thead>
-                                        <tr>
+                                        <tr style="background-color:darkcyan">
                                             <th> ID </th>
                                             <th> Name</th>
                                             <th> Category</th>
