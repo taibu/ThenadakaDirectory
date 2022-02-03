@@ -35,7 +35,7 @@
                                 <div class=" table-responsive ">
                                     <table class="table mb-0">
                                         <thead>
-                                            <tr>
+                                            <tr style="background-color:darkcyan">
                                                 <th> ID </th>
                                                 <th> Category</th>
                                                 <th> Created By</th>
