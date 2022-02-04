@@ -125,7 +125,15 @@ class Admin extends CI_Controller {
                 }
                 redirect( base_url('AdminHome'), 'refresh'); 
       }
-
+      public function RejectPendingListing($id){
+        $ratingadded = $this->Admin_Model->Reject_Listing($id);
+                 if($ratingadded){
+                  $this->session->set_flashdata('success', "Listing rejected Successfully");
+                }else{
+                  $this->session->set_flashdata('error', "Operation failed please try again");
+                }
+                redirect( base_url('AdminHome'), 'refresh'); 
+      }
       public function AddApprover(){
         $data["type"]="add";
         $this->load->view('Pages/users',$data);

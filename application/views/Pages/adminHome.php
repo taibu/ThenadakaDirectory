@@ -172,7 +172,7 @@
                                                 <td>
                                                 <?php echo $row->Approved ?>
                                                 </td>
-                                                <td> <a class="badge mb-0 bg-success" href="<?php echo base_url('PendingListing/'.$row->ListingId) ?>">VIEW DETAILS</a>
+                                                <td> <a class="badge mb-0 bg-success" href="<?php echo base_url('ViewListingDetails/'.$row->ListingId) ?>">VIEW DETAILS</a>
                                                 </td>
                                             </tr>
                                           <?php $i++;}    ?>

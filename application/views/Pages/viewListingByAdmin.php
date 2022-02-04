@@ -403,6 +403,42 @@
 
                                         </div>
                                     </div>
+                                    <?php if(($getdata['RoleCode']=="02") &&($addetails['Approved']=="PENDING")){ ?>
+                                    <div class="row" style="padding-bottom:30px;padding-top:20px;">
+                                        <div class="col-md-6">
+                                            <a  href="<?php echo base_url('ApprovePendingListing/'.$addetails['ListingId']) ?>" class="btn btn-primary" type="submit">Approve Listing</a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a class="btn btn-danger" onclick="hideshowrejectionform()" type="submit">Reject Listing</a>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        function hideshowrejectionform(){
+                                            
+                                            var y = document.getElementById("rejectform").style.display = "block";
+                                           
+                                        }
+                                    </script>
+                                    <form id="rejectform" style="display:none;" action="<?php echo base_url('RejectPendingListing/'.$addetails['ListingId']) ?>" method="post"> 
+                                        <div class="row">
+                                            
+                                            <div class="form-group mb-12 col-md-12">
+                                                <input type="hidden"  name="Id" value="<?php echo $addetails['ListingId'] ?>">   
+                                            
+                                            
+                                            </div>
+                                            
+                                            <div class="form-group mb-3 col-md-12">
+                                                <label class="form-label">Your Reason for rejecting</label>
+                                                <textarea class="form-control" name="message" rows="4" placeholder=""></textarea>
+                                            </div>
+                                        
+                                            <div class="col-md-12">
+                                                <button class="btn btn-primary" type="submit">Submit Review</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <?php } ?>
                                 </div>
                                 <div id="editTab">
                                     <div class="col-lg-12 col-md-12">

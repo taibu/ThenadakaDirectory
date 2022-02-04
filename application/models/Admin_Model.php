@@ -281,6 +281,15 @@ class Admin_Model extends CI_Model
         $q = $this->db->query("Update listing set Approved='APPROVED',Reason='APPROVED',ApprovedBy='$userid' where ListingId='".$this->db->escape_str($id)."';");
         return $q;
     }
+    function Reject_Listing($id){
+        $this->load->database();
+        $this->db;
+
+        $reason=$this->input->get_post('message'); 
+        $userid=$this->session->userdata('loggedinUser')['UserId'];
+        $q = $this->db->query("Update listing set Approved='REJECTED',Reason='$reason',ApprovedBy='$userid' where ListingId='".$this->db->escape_str($id)."';");
+        return $q;
+    }
     function Add_Category(){
         $this->load->database();
         $this->db;

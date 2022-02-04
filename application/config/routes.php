@@ -79,7 +79,7 @@ $route['listingcategories'] = 'Admin/ListingCategories';
 $route['addlistingcategories'] = 'Admin/AddListingCategories';
 $route['PendingListing/(:any)'] = 'Admin/PendingListing/$1';
 $route['ApprovePendingListing/(:any)'] = 'Admin/ApprovePendingListing/$1';
-
+$route['RejectPendingListing/(:any)'] = 'Admin/RejectPendingListing/$1';
 
 $route['aboutus'] = 'welcome/aboutus';
 $route['contactus'] = 'welcome/contactus';
