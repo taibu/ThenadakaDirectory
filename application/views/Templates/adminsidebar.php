@@ -50,20 +50,18 @@
             <h6 class="text-white mb-0"> Main </h6>
         </div>
         <div class="widget-content dashboard-nav">
-            <ul class="list-unstyled">
-                <li class="active"><a href="<?php echo base_url('AdminHome') ?>"> <i class="fa fa-chevron-right"
-                            aria-hidden="true"></i> Home</a></li>
-                <li class="active"><a href="<?php echo base_url('addListing') ?>"> <i class="fa fa-chevron-right"
-                            aria-hidden="true"></i> Add Listing</a></li>
+        <ul class="list-unstyled">
+            <li class="active"><a href="<?php echo base_url('AdminHome') ?>"> <i class="fa fa-chevron-right" aria-hidden="true"></i> Home</a></li>
+                            
+                           
                             <li class="active"><a href="<?php echo base_url('ViewpendingListing') ?>"> <i class="fa fa-chevron-right"
                             aria-hidden="true"></i> Pending Listing</a></li>
                             <li class="active"><a href="<?php echo base_url('ViewApprovedListing') ?>"> <i class="fa fa-chevron-right"
                             aria-hidden="true"></i> Approved listing</a></li>
                             <li class="active"><a href="<?php echo base_url('ViewRejectedListing') ?>"> <i class="fa fa-chevron-right"
                             aria-hidden="true"></i> Rejected listing</a></li>
+
             </ul>
-            
-            <a class="btn btn-secondary btn-sm mt-2" href="dashboard.html#">Logout</a>
         </div>
     </div>
 </div>
