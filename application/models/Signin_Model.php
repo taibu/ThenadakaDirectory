@@ -62,8 +62,8 @@ function Add_ApproverUser($code,$password){
     //$code=random_string('alnum', 6);
     $code=$code;
     $today = date("Y-m-d H:i:s");
-    $q = $this->db->query("insert into users(name,email,password,verification_code,phone,role,VerifiedBy,RecordDate) 
-                                       values('$name','$email','$password','$code','$phone','02','1','$today')");
+    $q = $this->db->query("insert into users(name,email,password,verification_code,phone,role,Verified,VerifiedBy,RecordDate) 
+                                       values('$name','$email','$password','$code','$phone','02','TRUE','1','$today')");
     return $q;
 }
 function Edit_User(){
