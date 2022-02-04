@@ -239,7 +239,12 @@
             Listing single -->
                 <section class=" bg-light">
                     <div class="container">
-
+                    <?php if($addetails['Approved']=="REJECTED"){ ?>
+                         <div class="alert alert-danger">
+                            <a href="#" class="close" data-dismiss="alert">&times;</a>
+                            <strong>x </strong>This listing was rejected with reason <?php echo $addetails['Reason']; ?>. Please edit and submit for review
+                        </div>
+                        <?php } ?>
                         <div class="row">
                             <div class="col-lg-12">
                                 <ul class="list-unstyled listing-detail-meta mb-4">
