@@ -8,28 +8,7 @@ header -->
             <a class="navbar-brand" href="<?php echo base_url() ?>">
                 <img class="img-fluid" src="<?php echo base_url('assets/images/logthena.jpg') ?>" alt="logo">
             </a>
-           <div class="navbar-collapse collapse justify-content-start">
-                <ul class="nav navbar-nav">
-
-                    <li class=" nav-item">
-                       <a class="" style="padding:10px;" href="<?php echo base_url('aboutus') ?>">About Us </a>
-                    </li>
-                    <li class="dropdown nav-item">
-                    <a class="" style="padding:10px;" href="<?php echo base_url('contactus') ?>">Contact Us </a>
-                    </li>
-                    <li class="dropdown nav-item">
-                    <a class="" style="padding:10px;" href="<?php echo base_url('register') ?>">Register </a>
-                    </li>
-                    <li class="dropdown nav-item">
-                    <a class="" style="padding:10px;" href="<?php echo base_url('login') ?>">Signin </a>
-                    </li>
-                    <li class="dropdown nav-item">
-                    <a class="btn btn-primary btn-md text-white" href="<?php echo base_url('login') ?>"> <i
-                            class="fa fa-plus-circle"></i>Add listing </a>
-                    </li>
-                    
-                </ul>
-            </div> 
+           
             <div class="d-block d-md-flex align-items-center">
                 <div class="call me-4 d-inline-block">
                     <a class="text-white" href="<?php echo base_url('aboutus') ?>">About Us </a>
