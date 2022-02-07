@@ -11,10 +11,10 @@ header -->
            
             <div class="d-block d-md-flex align-items-center">
                 <div class="call me-4 d-inline-block">
-                    <a class="text-white" href="<?php echo base_url('aboutus') ?>">About Us </a>
+                    <a class="text-white" href="<?php echo base_url('aboutus') ?>">AboutUs </a>
                 </div>
                 <div class="call me-4 d-inline-block">
-                    <a class="text-white" href="<?php echo base_url('contactus') ?>">Contact Us </a>
+                    <a class="text-white" href="<?php echo base_url('contactus') ?>">ContactUs </a>
                 </div>
                 <div class="login d-inline-block me-4">
                     <a class="text-white" data-bs-toggle="modal" data-bs-target="#loginModal" href="index.html#">
