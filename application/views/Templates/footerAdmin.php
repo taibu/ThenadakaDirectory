@@ -12,7 +12,7 @@ footer-->
                     </ul>
                 </div>
                 <div class="col-md-5 text-md-end text-center mt-4 mt-md-0">
-                    <p class="mb-0">©Copyright 2021 <a href="#">Thenadaka</a> All Rights Reserved</p>
+                    <p class="mb-0">©Copyright 2022 <a href="#">Thenadaka</a> All Rights Reserved</p>
                 </div>
             </div>
         </div>
