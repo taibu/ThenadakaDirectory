@@ -83,6 +83,7 @@ $route['RejectPendingListing/(:any)'] = 'Admin/RejectPendingListing/$1';
 
 $route['aboutus'] = 'welcome/aboutus';
 $route['blog'] = 'welcome/blog';
+$route['blog/(:any)'] = 'welcome/blog/$1';
 $route['contactus'] = 'welcome/contactus';
 $route['register'] = 'Signin/register';
 $route['SubmitRegisterform'] = 'Signin/Add_User';

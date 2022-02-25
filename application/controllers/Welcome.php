@@ -40,8 +40,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('Pages/aboutus');
 	}
 
-	public function blog(){
-		$this->load->view('Pages/blog');
+	public function blog($id=null){
+		if($id==null)
+		$data['displaytype']="list";
+		else{
+        $data['displaytype']="details";
+		}
+		$this->load->view('Pages/blog',$data);
 	}
 
 	public function contactus(){
