@@ -40,6 +40,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('Pages/aboutus');
 	}
 
+	public function blog(){
+		$this->load->view('Pages/blog');
+	}
+
 	public function contactus(){
 		$this->load->view('Pages/contactus');
 	}
