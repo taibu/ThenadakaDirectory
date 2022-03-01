@@ -109,37 +109,31 @@ $(document).ready(function() {
                     <div class="sidebar mb-0">
                         <div class="widget">
                             <div class="widget-title bg-primary">
-                                <h6 class="text-white mb-0"> <i class="far fa-address-book"></i> Add New Approver
+                                <h6 class="text-white mb-0"> <i class="far fa-address-book"></i> Add Article
                                 </h6>
                             </div>
                             <div class="mb-3 col-sm-12">
                                 <?php require_once(APPPATH . 'views/Templates/error.php'); ?>
                             </div>
                             <div class="widget-content">
-                                <form class="row" action="<?php echo base_url('SubmitRegisterform2') ?>" method="post">
-                                    <div class="mb-3 col-lg-6">
+                                <form class="row" action="<?php echo base_url('SubmitArticle') ?>" method="post" enctype="multipart/form-data">
+                                    <div class="mb-3 col-lg-12">
                                         <input type="hidden" name="user_role" value="02">
-                                        <label class="form-label">Last name</label>
-                                        <input name="lastname" type="text" class="form-control" placeholder="Last name"
-                                            required>
+                                        <label class="form-label">Article title</label>
+                                        <input name="title" type="text" class="form-control" placeholder="Title"
+                                            required required>
                                     </div>
-                                    <div class="mb-3 col-lg-6">
-                                        <label class="form-label">First name</label>
-                                        <input name="firstname" type="text" class="form-control"
-                                            placeholder="First name" required>
+                                    
+                                    <div class="mb-3 col-lg-12">
+                                        <label class="form-label">Article details</label>
+                                        <textarea name="article" id="" cols="30" rows="10" class="form-control" required></textarea>
                                     </div>
-                                    <div class="mb-3 col-lg-6">
-                                        <label class="form-label">Email</label>
-                                        <input type="email" name="email" class="form-control" placeholder="Email"
-                                            required>
-                                    </div>
-                                    <div class="mb-3 col-lg-6">
-                                        <label class="form-label">Phone</label>
-                                        <input type="phone" name="phone" class="form-control" placeholder="Phone"
-                                            required>
+                                    <div class="mb-3 col-lg-12">
+                                        <label class="form-label">Atatch files</label>
+                                        <input type="file" name="photos" id="" multiple class="form-control">
                                     </div>
                                     <div class="col-12 mb-0">
-                                        <button type="submit" class="btn btn-secondary">Save User Details</button>
+                                        <button type="submit" class="btn btn-secondary">Save Article</button>
                                     </div>
                                 </form>
                             </div>

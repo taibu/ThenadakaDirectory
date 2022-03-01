@@ -33,6 +33,13 @@
                 <li class="active"><a href="<?php echo base_url('ViewSystemUsers') ?>"> <i class="fa fa-chevron-right" aria-hidden="true"></i> View System Users</a></li>
                            
             </ul>
+            <h5 class="mb-4 mt-5">Comany blog</h5>
+            <ul class="list-unstyled">
+
+                <li class="active"><a href="<?php echo base_url('AddBlog') ?>"> <i class="fa fa-chevron-right" aria-hidden="true"></i> Create Approver</a></li>
+
+                           
+            </ul>
             <a class="btn btn-secondary btn-sm mt-2" href="dashboard.html#">Logout</a>
         </div>
     </div>

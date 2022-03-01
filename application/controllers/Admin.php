@@ -15,6 +15,10 @@ class Admin extends CI_Controller {
         $data["allcategories"]=$this->Admin_Model->fetch_categories();
          $this->load->view('Pages/addListing',$data);    
 	}
+  public function AddBlog(){
+    $data["type"]="add";
+    $this->load->view('Pages/addblog',$data); 
+  }
         public function AddListingCategories(){
            $data["displaytype"]="form";
            $this->load->view('Pages/listing_categories',$data); 
@@ -68,7 +72,16 @@ class Admin extends CI_Controller {
                 //redirect( base_url('addListing'), 'refresh');  
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
         }
-        
+        public function SubmitAriticle(){
+          $ratingadded = $this->Admin_Model->Add_Article();
+          if($ratingadded=='true'){
+            $this->session->set_flashdata('success', "Article saved Successfully");
+          }else{
+            $this->session->set_flashdata('error', "Operation failed please try again");
+          }
+          //redirect( base_url('addListing'), 'refresh');  
+          header('Location: ' . $_SERVER['HTTP_REFERER']);
+  }
       public function PendingListing($id){
        
         $data["ad"]=$this->Admin_Model->fetch_Pendinglisting($id);
@@ -138,6 +151,7 @@ class Admin extends CI_Controller {
         $data["type"]="add";
         $this->load->view('Pages/users',$data);
       }
+      
      public function ViewSystemUsers(){
       $data["type"]="view";
       $data["users"]=$this->Admin_Model->fetch_users();

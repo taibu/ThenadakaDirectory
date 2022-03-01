@@ -481,6 +481,27 @@ class Admin_Model extends CI_Model
       return  $this->insertData($insertRating,"ratings");
    }
 
+   function Add_Article(){
+    $title=$this->input->get_post('title'); 
+    $desc=$this->input->get_post('article'); 
+     
+   
+    $date=date("d/m/Y/-h:i:sa");
+    
+    $folder=date("dmY-hisa");
+    $directorypath="../assets/images/blog/".$folder;
+    $insertRating=array(
+        'title'=>$title,'description'=>$desc,'Folder'=> $directorypath,
+        'RecordDate'=> $date);
+       
+        if (!file_exists($directorypath)) {
+           // mkdir($directorypath, 0777, true);
+            if(!mkdir($directorypath, 0777, true)) {
+                print_r(error_get_last());
+            }
+        }
+      return  $this->insertData($insertRating,"blog");
+   }
   
 }
 
